@@ -1,0 +1,16 @@
+# Hit flash
+
+name	Blooddown
+type	none
+shadow	0
+toflip 1 
+
+
+anim idle
+	loop	0
+	delay	12
+	offset	0 7
+	frame	data/chars/misc/blood/blooddown1.png
+	frame	data/chars/misc/blood/blooddown2.png
+	frame	data/chars/misc/blood/blooddown3.png
+	frame	data/chars/misc/blood/blooddown4.png

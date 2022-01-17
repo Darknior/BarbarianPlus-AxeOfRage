@@ -1,0 +1,45 @@
+music		data/music/Orc_Hideout.ogg
+background	data/bgs/levels/Arena/Arena2.png 1 1 0 0 0 0 1 1 0
+panel	    data/bgs/levels/Arena/Arena2.png none	none
+frontpanel  data/bgs/levels/Arena/Arena_front.png
+
+order       a 
+settime	    0
+notime		1
+wall		50 240 -500 -500 0 0 100 5000
+wall		270 240 0 0 500 500 100 5000
+spawn1		160 183 0
+type		1 0 0
+
+spawn		Animated_Arena
+flip		1
+coords		0 0 0
+at			0
+
+spawn		People_Ending
+flip		1
+coords		0 0 0
+at			0
+
+spawn	empty_ending
+coords	999 999 0
+at      0 
+
+levelscript @script
+void main()
+{
+int P1 = getplayerproperty(0, "entity");
+int P2 = getplayerproperty(1, "entity");
+
+if(P1){
+changeentityproperty(P1, "position", 160,183, 0);
+changeentityproperty(P1, "direction", 1); //Face right
+changeentityproperty(P1, "animation", openborconstant("ANI_FOLLOW1"));
+}
+if(P2){
+changeentityproperty(P2, "position", 160,183, 0);
+changeentityproperty(P2, "direction", 1); //Face right
+changeentityproperty(P2, "animation", openborconstant("ANI_FOLLOW1"));
+}
+}
+@end_script

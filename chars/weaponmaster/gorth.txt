@@ -1,0 +1,1023 @@
+name		 Gorth
+type		 player
+health		 120
+mp		 	 100
+mprate		 5
+speed		 10
+running		 20 3 1.5 1 1
+jumpmove	 2
+jumpheight	 3
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 15
+holdblock 	 0
+blockback	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 3
+atchain      1 1 2 3
+icon		 data/chars/gorth/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+bflash		 block
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+com	a2	freespecial
+#com    U     freespecial6
+com     F + a2  freespecial9
+com     F  a2  freespecial9
+
+anim	waiting
+    delay	10
+	offset	290 58
+    frame	data/chars/gorth/spawn1.png
+    frame	data/chars/gorth/spawn2.png
+    frame	data/chars/gorth/spawn3.png
+    frame	data/chars/gorth/spawn4.png
+    frame	data/chars/gorth/spawn5.png
+    frame	data/chars/gorth/spawn6.png
+    frame	data/chars/gorth/spawn7.png
+    frame	data/chars/gorth/spawn8.png
+	loop	1 9 14
+	offset	80 127
+	delay	100
+	frame	data/chars/gorth/wait1.png
+	frame	data/chars/gorth/wait1.png
+	delay	30
+	frame	data/chars/gorth/wait2.png
+	frame	data/chars/gorth/wait3.png
+	frame	data/chars/gorth/wait2.png
+	frame	data/chars/gorth/wait1.png
+
+anim select
+	delay	2
+	spawnframe 0 2 0 0 1
+	custentity Gerbang
+	offset	18 61
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/gorth/idle1.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/gorth/idle2.png
+	delay	3
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	frame	data/chars/gorth/idle3.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/gorth/idle2.png
+	delay	30
+	offset	21 68
+	frame	data/chars/gorth/win1.png
+	frame	data/chars/gorth/win2.png
+	frame	data/chars/gorth/win3.png
+	frame	data/chars/gorth/win4.png
+	offset	9 54
+	frame	data/chars/gorth/enter1.png
+	frame	data/chars/gorth/enter2.png
+	frame	data/chars/gorth/enter3.png
+	frame	data/chars/gorth/enter4.png
+	frame	data/chars/gorth/enter5.png
+	frame	data/chars/gorth/enter6.png
+	delay          100
+	frame	data/chars/misc/empty.png
+
+anim	spawn
+     delay	1
+     offset	1 1
+     frame	data/chars/misc/empty.png
+     delay	10
+	 offset	290 58
+     frame	data/chars/gorth/spawn1.png
+     frame	data/chars/gorth/spawn2.png
+     frame	data/chars/gorth/spawn3.png
+     frame	data/chars/gorth/spawn4.png
+     frame	data/chars/gorth/spawn5.png
+     frame	data/chars/gorth/spawn6.png
+     frame	data/chars/gorth/spawn7.png
+     frame	data/chars/gorth/spawn8.png
+
+anim	follow1  #Arena Ending
+     loop 0
+	 delay	20
+	 offset	290 58
+     frame	data/chars/gorth/spawn1.png
+     frame	data/chars/gorth/spawn2.png
+     frame	data/chars/gorth/spawn3.png
+     frame	data/chars/gorth/spawn4.png
+     frame	data/chars/gorth/spawn5.png
+     frame	data/chars/gorth/spawn6.png
+     frame	data/chars/gorth/spawn7.png
+     frame	data/chars/gorth/spawn8.png
+	 offset	160 73
+	 frame	data/chars/gorth/ending1.png
+     frame	data/chars/gorth/ending2.png
+     frame	data/chars/gorth/ending3.png
+     frame	data/chars/gorth/ending4.png
+     frame	data/chars/gorth/ending5.png
+     delay	35
+	 frame	data/chars/gorth/ending6.png
+     frame	data/chars/gorth/ending7.png
+     frame	data/chars/gorth/ending8.png
+	 frame	data/chars/gorth/ending9.png
+     frame	data/chars/gorth/ending10.png
+     frame	data/chars/gorth/ending11.png
+     frame	data/chars/gorth/ending12.png
+     frame	data/chars/gorth/ending13.png
+     frame	data/chars/gorth/ending14.png
+     frame	data/chars/gorth/ending15.png
+	 frame	data/chars/gorth/ending16.png
+     frame	data/chars/gorth/ending17.png
+     frame	data/chars/gorth/ending18.png
+     frame	data/chars/gorth/ending19.png
+     frame	data/chars/gorth/ending20.png
+	 delay	700
+     frame	data/chars/gorth/ending20.png
+
+anim	idle
+	loop	1
+	offset	18 61
+	bbox 3 2 26 59
+	delay	100
+	frame	data/chars/gorth/idle1.png
+	frame	data/chars/gorth/idle1.png
+	delay	30
+	frame	data/chars/gorth/idle2.png
+	frame	data/chars/gorth/idle3.png
+	frame	data/chars/gorth/idle2.png
+
+anim	faint
+	loop	1
+	offset	18 61
+	bbox 3 2 26 59
+	delay	15
+	frame	data/chars/gorth/faint1.png
+	frame	data/chars/gorth/faint2.png
+	frame	data/chars/gorth/faint3.png
+	frame	data/chars/gorth/faint2.png
+	
+anim	victory
+	delay	80
+	offset	21 68
+	frame	data/chars/gorth/win1.png
+	frame	data/chars/gorth/win2.png
+	frame	data/chars/gorth/win3.png
+	frame	data/chars/gorth/win4.png
+	delay	180
+	frame	data/chars/gorth/win4.png
+	
+anim	walk
+	loop	1
+	offset	15 61
+	bbox 3 2 26 59
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	delay	15
+	frame	data/chars/gorth/walk1.png
+	frame	data/chars/gorth/walk2.png
+	frame	data/chars/gorth/walk3.png
+
+anim	run
+	loop	1
+	offset	31 58
+	bbox 20 0 26 54
+	cancel 0 5 0  A2 freespecial5
+	delay	15
+	frame	data/chars/gorth/run1.png
+	frame	data/chars/gorth/run2.png
+	frame	data/chars/gorth/run3.png
+	frame	data/chars/gorth/run4.png
+	frame	data/chars/gorth/run5.png
+	frame	data/chars/gorth/run6.png
+	frame	data/chars/gorth/run7.png
+	frame	data/chars/gorth/run8.png
+		
+anim	runattack #Head Chop
+	delay	7
+	offset	18 65
+	bbox 10 0 21 63
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/headchop1.png
+	frame	data/chars/gorth/headchop2.png
+	frame	data/chars/gorth/headchop3.png
+	sound	data/sounds/iiaaah.wav
+	bbox 8 8 29 57
+	frame	data/chars/gorth/headchop4.png
+	frame	data/chars/gorth/headchop5.png
+	frame	data/chars/gorth/headchop6.png
+	attack2 28 8 40 19 30 1 0 0 0 0
+	delay	15
+	frame	data/chars/gorth/headchop7.png
+	frame	data/chars/gorth/headchop7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	@cmd	stop
+	frame	data/chars/gorth/headchop5.png
+	frame	data/chars/gorth/headchop4.png
+
+anim	freespecial5 #Dropkick runattack
+	delay	10
+	offset	18 65
+	forcedirection -1
+	hitflash Basic
+	fastattack	1
+	hitfx	data/sounds/blood.wav
+	sound	data/sounds/hii.wav
+	@cmd leaper 1.5 2.5 0
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0
+	frame	data/chars/gorth/dropkick1.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0
+	frame	data/chars/gorth/dropkick2.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0
+	frame	data/chars/gorth/dropkick1.png
+	attack 0 0 0 0 0 0 0 0 0 0		
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0	
+	frame	data/chars/gorth/dropkick2.png
+	attack 0 0 0 0 0 0 0 0 0 0	
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0
+	frame	data/chars/gorth/dropkick1.png
+	attack 0 0 0 0 0 0 0 0 0 0	
+	dropv 	0.5 0.1 0
+	attack 18 14 45 19 10 1 0 0 10 0	
+	frame	data/chars/gorth/dropkick2.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	frame	data/chars/gorth/ducking.png
+
+anim get
+	loop	0
+	delay	12
+	offset	34 55
+	bbox 8 17 53 38
+	frame	data/chars/gorth/get.png
+
+anim	duck
+	offset	24 62
+	bbox 7 21 35 42
+	cancel 0 5 0  A2 freespecial2
+	cancel 0 5 0  S freespecial18
+	delay	6
+	@cmd	keyint "ANI_SLIDE" 0 "F" 0
+	frame	data/chars/gorth/duck.png
+
+anim	ducking
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 2);
+  }
+@end_script
+	offset	18 63
+	bbox 3 12 26 51
+	cancel 0 5 0  A2 freespecial2
+	frame	data/chars/gorth/ducking.png
+	@cmd	keyint "ANI_SLIDE" 0 "F" 0		
+	delay	6
+	frame	data/chars/gorth/ducking.png
+
+anim	duckrise
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	18 63
+	bbox 3 12 26 51
+	cancel 0 5 0  A2 freespecial2
+	frame	data/chars/gorth/ducking.png
+	delay	6
+	frame	data/chars/gorth/ducking.png
+
+anim	duckattack #Crouching Slash
+	delay	10
+	offset	24 62
+	bbox 7 21 35 42
+	hitflash blooddown	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/gorth/duckattack1.png
+	frame	data/chars/gorth/duckattack2.png
+	attack1 31 32 38 15 10 1 0 0 0 0
+	frame	data/chars/gorth/duckattack3.png
+	frame	data/chars/gorth/duckattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/duckattack2.png
+	frame	data/chars/gorth/duckattack1.png
+
+anim	freespecial2 #Ascending Slash
+	delay	8
+	offset	17 61
+	bbox 5 18 30 44
+	hitflash blooddown
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/gorth/ascending1.png
+	jumpframe 0 0 2
+	attack4 22 2 36 18 20 1 0 0 0 0
+	frame	data/chars/gorth/ascending2.png
+	frame	data/chars/gorth/ascending3.png
+	jumpframe 0 3 1
+	frame	data/chars/gorth/ascending4.png
+	frame	data/chars/gorth/ascending5.png
+	frame	data/chars/gorth/ascending6.png
+	frame	data/chars/gorth/ascending7.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/ascending8.png
+
+anim	freespecial11 #Chest Chop
+	offset	24 49
+	bbox 7 3 35 46
+	forcedirection -1
+	delay 6
+	@cmd	dasher 1 0 0 1
+	hitflash blooddown
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/chestchop1.png
+	frame	data/chars/gorth/chestchop2.png
+	frame	data/chars/gorth/chestchop3.png
+	sound	data/sounds/iiaaah.wav
+	frame	data/chars/gorth/chestchop4.png
+	frame	data/chars/gorth/chestchop5.png
+	frame	data/chars/gorth/chestchop6.png
+	attack3 25 13 50 20 30 1 0 0 0 0
+	frame	data/chars/gorth/chestchop7.png
+	frame	data/chars/gorth/chestchop7.png
+	attack3 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/chestchop4.png
+	@cmd	stop
+	frame	data/chars/gorth/chestchop5.png
+	@cmd	beidle
+	frame	data/chars/gorth/chestchop5.png
+
+anim turn
+	offset	18 61
+	bbox 3 2 26 59
+	frame data/chars/gorth/idle2.png
+	delay	6
+	frame data/chars/gorth/idle2.png
+
+anim	jump
+	delay	12
+	offset	18 61
+	bbox 10 2 25 41
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump2.png
+
+anim jumpland
+	offset	18 63
+	bbox 8 12 26 51
+	delay	12
+	frame	data/chars/gorth/ducking.png
+
+anim	jumpattack #Static Jump Sword
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/gorth/Jumpattack1.png
+	frame	data/chars/gorth/Jumpattack2.png
+	frame	data/chars/gorth/Jumpattack3.png
+	frame	data/chars/gorth/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/gorth/Jumpattack5.png
+	frame	data/chars/gorth/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/gorth/Jump1.png
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/gorth/Jumpattack1.png
+	frame	data/chars/gorth/Jumpattack2.png
+	frame	data/chars/gorth/Jumpattack3.png
+	frame	data/chars/gorth/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/gorth/Jumpattack5.png
+	frame	data/chars/gorth/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/gorth/Jump1.png
+
+anim 	freespecial3 #Static Jump special
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	loop	0
+	offset	26 78
+	bbox 10 17 25 41
+	delay	4
+	hitflash bloodup
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/Jumpspecial1.png
+	frame	data/chars/gorth/Jumpspecial2.png
+	attack1 24 45 20 35 10 1 0 0 0 0
+	frame	data/chars/gorth/Jumpspecial3.png
+	bbox 24 20 25 41
+	frame	data/chars/gorth/Jumpspecial4.png
+	frame	data/chars/gorth/Jumpspecial5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 61
+	bbox 10 2 25 41
+	frame	data/chars/gorth/jump2.png
+
+anim	forwardjump
+	cancel	0 5 0 a2 freespecial4
+	delay	12
+	offset	18 61
+	bbox 10 2 25 41
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump2.png
+
+anim	freespecial6 #Jump
+	@script
+	if(frame==1){
+    void self = getlocalvar("self");
+    changeentityproperty(self, "aiflag", "jumping", 1);
+    changeentityproperty(self, "takeaction", "common_jump");   
+  }
+@end_script
+	delay	1
+	cancel	0 5 0 a2 freespecial3
+	@cmd	keyint "ANI_FOLLOW6" 0 "F" 0
+	jumpframe 0 3 0 0
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump1.png
+	@cmd	keyint "ANI_FOLLOW6" 0 "F" 0
+	delay	12
+	offset	18 61
+	bbox 10 2 25 41
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump1.png
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump2.png
+
+anim	follow6 #Jump Forward
+	cancel	0 5 0 a2 freespecial4
+	offset	18 61
+	bbox 10 2 25 41
+	delay	12
+	jumpframe 0 3 1.5 0
+	frame	data/chars/gorth/jump1.png
+	frame	data/chars/gorth/jump2.png
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/gorth/Jumpattack1.png
+	frame	data/chars/gorth/Jumpattack2.png
+	frame	data/chars/gorth/Jumpattack3.png
+	frame	data/chars/gorth/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/gorth/Jumpattack5.png
+	frame	data/chars/gorth/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/gorth/Jump1.png
+
+anim	freespecial4 #Jump Front special
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	loop	0
+	delay	4
+	offset	26 78
+	bbox 10 17 25 41
+	delay	12
+	hitflash bloodup
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/Jumpspecial1.png
+	frame	data/chars/gorth/Jumpspecial2.png
+	attack1 24 45 20 35 10 1 0 0 0 0
+	frame	data/chars/gorth/Jumpspecial3.png
+	bbox 24 20 25 41
+	frame	data/chars/gorth/Jumpspecial4.png
+	frame	data/chars/gorth/Jumpspecial5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 61
+	bbox 10 2 25 41
+	frame	data/chars/gorth/jump2.png
+	
+anim	runjumpattack #Vertical Split
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 78
+	bbox 10 14 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	4
+	hitflash bloodup
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/gorth/Verticalchop1.png
+	frame	data/chars/gorth/Verticalchop2.png
+	frame	data/chars/gorth/Verticalchop3.png
+	sound	data/sounds/iiaaah.wav
+	attack4 10 52 50 15 30 1 1 0 0 0
+	frame	data/chars/gorth/Verticalchop4.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	attack4 10 62 50 25 30 1 1 0 0 0
+	frame	data/chars/gorth/Verticalchop5.png
+	frame	data/chars/gorth/Verticalchop6.png
+	frame	data/chars/gorth/Verticalchop7.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/Verticalchop8.png
+	frame	data/chars/gorth/Verticalchop9.png
+	frame	data/chars/gorth/Verticalchop10.png
+	frame	data/chars/gorth/Verticalchop11.png
+	delay	12
+	attack4 12 48 50 15 30 1 1 0 0 0
+	frame	data/chars/gorth/Verticalchop13.png
+	frame	data/chars/gorth/Verticalchop13.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/gorth/Jump1.png
+
+anim	attack1 #Sword Combo 1
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/attack1.png
+	frame	data/chars/gorth/attack2.png
+	frame	data/chars/gorth/attack3.png
+	attack1 36 19 40 19 10 0 0 0 0 0
+	frame	data/chars/gorth/attack4.png
+	frame	data/chars/gorth/attack4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/attack2.png
+	frame	data/chars/gorth/attack1.png
+	
+anim	attack2 #Sword Combo 2
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	hitflash blooddown	
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/attack5.png
+	frame	data/chars/gorth/attack6.png
+	frame	data/chars/gorth/attack7.png
+	attack1 36 19 40 19 10 0 0 0 0 0
+	frame	data/chars/gorth/attack8.png
+	frame	data/chars/gorth/attack8.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/attack6.png
+	frame	data/chars/gorth/attack5.png	
+	
+anim	attack3 #Sword Combo 3
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	hitflash bloodup	
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/gorth/attack9.png
+	frame	data/chars/gorth/attack10.png
+	frame	data/chars/gorth/attack11.png
+	attack1 36 19 40 19 10 1 0 0 0 0
+	frame	data/chars/gorth/attack12.png
+	frame	data/chars/gorth/attack12.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/attack10.png
+	frame	data/chars/gorth/attack9.png	
+
+anim	freespecial #Web of Death
+	delay	10
+	offset	18 73
+	bbox 3 14 28 61
+	sound	data/sounds/hii.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/gorth/webdeath1.png
+	attack1 20 16 38 24 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/gorth/webdeath2.png
+	sound	data/sounds/slash.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/gorth/webdeath3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/webdeath4.png
+	sound	data/sounds/slash.wav
+	frame	data/chars/gorth/webdeath5.png
+	attack1 20 0 38 29 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/gorth/webdeath6.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/slash.wav
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/gorth/webdeath7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/webdeath8.png
+
+anim	freespecial8 #Health Restore
+	mpcost 100
+	offset	29 82
+	bbox 15 20 26 62
+	@script
+   int iHP;
+   int i;
+   void e;
+   void ip;
+   int rng;
+   int ix;
+   int iy;
+   int iz;
+   void self = getlocalvar("self");
+   int castx = getentityproperty(self, "x");
+
+   if(frame == 5){
+     for(i=0; i<=3;i++){
+       ip = getplayerproperty(i, "entity");
+       ix = getentityproperty(ip, "x");
+       iy = getentityproperty(ip, "a");
+       iz = getentityproperty(ip, "z");
+       rng = ix - castx;
+
+            clearspawnentry();
+       if( rng > -16 && rng < 16 ){
+              setspawnentry("name", "HealFX");
+              e = spawn();
+
+         iHP = getentityproperty(ip, "health");
+         changeentityproperty(ip, "health", iHP + 80);
+         changeentityproperty(e, "position", ix, iz + 2, iy);
+       }
+     }
+   }
+@end_script
+	delay	16
+	sound	data/sounds/who_are_you.wav
+	frame	data/chars/gorth/regen1.png
+	frame	data/chars/gorth/regen2.png
+	frame	data/chars/gorth/regen3.png
+	frame	data/chars/gorth/regen4.png
+	frame	data/chars/gorth/regen5.png
+	frame	data/chars/gorth/regen6.png
+
+anim	freespecial9 #Kick
+	delay	12
+	offset	18 64
+	bbox 3 2 26 62
+	fastattack 1
+	hitflash basic
+	sound	data/sounds/hii.wav
+	frame	data/chars/gorth/kick1.png
+	attack1 6 25 45 20 10 1 0 0 0 0
+	dropv 2.0 0.7 0.0
+	frame	data/chars/gorth/kick2.png
+	frame	data/chars/gorth/kick2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/gorth/kick3.png
+	frame	data/chars/gorth/kick1.png
+
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	delay	12
+	bbox 0 0 0 0
+	sound	data/sounds/hit2.wav
+	offset	18 61
+	bbox 3 2 26 59
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/gorth/hit1.png
+	frame	data/chars/gorth/hit2.png
+
+anim	backpain
+	bbox 2 0 83 106
+	sound	data/sounds/hit2.wav
+	offset	18 61
+	bbox 3 2 26 59
+	delay	12
+	frame	data/chars/gorth/backhit.png
+	frame	data/chars/gorth/backhit.png
+
+anim grabbed
+	offset	38 106
+	delay 150
+	frame	data/chars/gorth/backhit.png
+	frame	data/chars/gorth/backhit.png
+
+anim	fall
+	offset	44 53
+	delay 12
+	bbox 35 0 26 57
+	sound	data/sounds/hit1.wav
+	cancel  1 5 0 F freespecial16
+	cancel  1 5 0 B freespecial17
+	frame	data/chars/gorth/fall1.png
+	frame	data/chars/gorth/fall2.png
+	frame	data/chars/gorth/fall3.png
+	frame	data/chars/gorth/fall4.png
+	frame	data/chars/gorth/fall5.png
+
+anim	backfall
+	delay	12
+	offset	16 62
+	sound	data/sounds/hit1.wav
+	cancel  1 5 0 F freespecial16
+	cancel  1 5 0 B freespecial17
+	frame	data/chars/gorth/backfall1.png
+	frame	data/chars/gorth/backfall2.png
+	frame	data/chars/gorth/backfall3.png
+	frame	data/chars/gorth/backfall4.png
+	frame	data/chars/gorth/backfall5.png
+	frame	data/chars/gorth/backfall6.png
+	frame	data/chars/gorth/backfall7.png
+
+anim	rise
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	44 53
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/gorth/rise1.png
+	frame	data/chars/gorth/rise2.png
+	frame	data/chars/gorth/rise3.png
+
+anim	backrise
+	offset	44 62
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/gorth/backfall7.png
+	frame	data/chars/gorth/backfall6.png
+	frame	data/chars/gorth/backfall5.png
+	offset	44 55
+	frame	data/chars/gorth/rise3.png
+
+anim	death
+@script
+  if(frame==7){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	24
+	jumpframe 0 0 0
+	offset	16 62
+	sound	data/sounds/hahaha.wav	
+	frame	data/chars/gorth/backfall1.png
+	@cmd	setmusicvolume 50 50
+	frame	data/chars/gorth/backfall2.png
+	frame	data/chars/gorth/backfall3.png
+	frame	data/chars/gorth/backfall4.png
+	frame	data/chars/gorth/backfall5.png
+	frame	data/chars/gorth/backfall6.png
+	frame	data/chars/gorth/backfall7.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/gorth/backfall7.png
+	
+anim	death2
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	30
+	jumpframe 0 0 0
+	offset	16 62
+	@cmd spawnM "gorthhead" 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/gorth/decap1.png
+	@cmd	setmusicvolume 50 50	
+	frame	data/chars/gorth/decap2.png
+	frame	data/chars/gorth/decap3.png
+	frame	data/chars/gorth/decap4.png
+	frame	data/chars/gorth/decap5.png
+	frame	data/chars/gorth/decap6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/gorth/decap6.png
+	
+anim	death3
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	30
+	jumpframe 0 0 0
+	offset	16 62
+	@cmd spawnM "gorthchest" 0 30 0
+	sound	data/sounds/hahaha.wav		
+	@cmd	setmusicvolume 50 50
+	frame	data/chars/gorth/chestrip1.png
+	frame	data/chars/gorth/chestrip2.png
+	frame	data/chars/gorth/chestrip3.png
+	frame	data/chars/gorth/chestrip4.png
+	frame	data/chars/gorth/chestrip5.png
+	frame	data/chars/gorth/chestrip6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/gorth/chestrip6.png
+
+anim	death4
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	20
+	jumpframe 0 0 0
+	offset	37 62
+	@cmd	setmusicvolume 50 50
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/gorth/verticaldeath1.png
+	frame	data/chars/gorth/verticaldeath2.png
+	frame	data/chars/gorth/verticaldeath3.png
+	frame	data/chars/gorth/verticaldeath4.png
+	frame	data/chars/gorth/verticaldeath5.png
+	frame	data/chars/gorth/verticaldeath6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/gorth/verticaldeath6.png	
+
+anim	slide #roll
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/gorth/roll1.png
+	hitflash basic
+	bbox 0 19 31 24
+	attack1 0 19 31 24 0 1 0 0 0 0
+	frame	data/chars/gorth/roll2.png
+	frame	data/chars/gorth/roll3.png
+	frame	data/chars/gorth/roll4.png
+	frame	data/chars/gorth/roll5.png
+	frame	data/chars/gorth/roll6.png
+	frame	data/chars/gorth/roll7.png
+	frame	data/chars/gorth/roll8.png
+	frame	data/chars/gorth/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/gorth/roll10.png
+
+anim	freespecial12 #roll front
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/gorth/roll1.png
+	bbox 0 19 31 24
+	frame	data/chars/gorth/roll2.png
+	frame	data/chars/gorth/roll3.png
+	frame	data/chars/gorth/roll4.png
+	frame	data/chars/gorth/roll5.png
+	frame	data/chars/gorth/roll6.png
+	frame	data/chars/gorth/roll7.png
+	frame	data/chars/gorth/roll8.png
+	frame	data/chars/gorth/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/gorth/roll10.png
+
+anim	freespecial13 #roll back
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	flipframe 1
+	jumpframe 0 0 -2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/gorth/roll1.png
+	bbox 0 19 31 24
+	frame	data/chars/gorth/roll2.png
+	frame	data/chars/gorth/roll3.png
+	frame	data/chars/gorth/roll4.png
+	frame	data/chars/gorth/roll5.png
+	frame	data/chars/gorth/roll6.png
+	frame	data/chars/gorth/roll7.png
+	frame	data/chars/gorth/roll8.png
+	frame	data/chars/gorth/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/gorth/roll10.png
+
+anim	block
+	delay	20
+	offset	18 60
+	bbox 9 2 26 59
+	cancel	0 5 0 a2 freespecial8
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/gorth/block.png
+
+anim	freespecial18 #duck block
+	delay	5
+	offset	16 62
+	bbox 5 14 29 48
+	hitflash block
+	frame	data/chars/gorth/duckblock.png
+	delay	10
+	@cmd	block 1
+	frame	data/chars/gorth/duckblock.png
+	frame	data/chars/gorth/duckblock.png
+	@cmd	keyint "ANI_FREESPECIAL18" 1 "S" 0
+	frame	data/chars/gorth/duckblock.png
+	delay	5
+	@cmd	block 0
+	frame	data/chars/gorth/duckblock.png

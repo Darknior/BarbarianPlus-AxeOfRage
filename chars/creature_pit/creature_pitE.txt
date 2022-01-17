@@ -1,0 +1,230 @@
+name		 creature_pitE
+type		 enemy
+candamage    player 
+nomove 		 1
+health		 120
+mp		 	 100
+mprate		 5
+speed		 0
+running		 20 3 2 1 1
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 15
+holdblock 	 1
+blockback	 0
+blockodds 	 1
+backpain 	 1
+death		 1
+nodieblink	 3
+atchain      1
+icon		 data/chars/creature_pit/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+weaploss	 3
+bflash		 block
+
+setlayer 	50
+
+weapons		 none creature_pit
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+com	a2	freespecial
+#com    U     freespecial6
+com     F a2  freespecial9
+
+anim	spawn
+    delay	20
+	offset	69 60
+    frame	data/chars/creature_pit/spawn1.png
+    frame	data/chars/creature_pit/spawn2.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn5.png
+    frame	data/chars/creature_pit/spawn6.png
+
+anim	idle
+	loop	1
+	offset	69 60
+	bbox 36 11 73 53
+	delay	30
+	platform 30 60 6 5 73 53 47 47
+	frame	data/chars/creature_pit/idle1.png
+	frame	data/chars/creature_pit/idle2.png
+	frame	data/chars/creature_pit/idle3.png
+	frame	data/chars/creature_pit/idle2.png
+	
+anim	victory
+	delay	80
+	offset	69 60
+	frame	data/chars/creature_pit/special5.png
+	frame	data/chars/creature_pit/special6.png
+	frame	data/chars/creature_pit/special7.png
+	frame	data/chars/creature_pit/special8.png
+	delay	180
+	frame	data/chars/creature_pit/special8.png
+
+anim turn
+	offset	69 60
+	bbox 36 11 73 53
+	delay	15
+	frame data/chars/creature_pit/turn.png
+	frame data/chars/creature_pit/turn.png
+
+anim	attack1 #Tentacle Attack
+	delay	6
+	offset	69 60
+	bbox 36 11 73 53
+	sound	data/sounds/slash.wav
+	hitflash blood
+	platform 30 60 6 5 73 53 47 47
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/creature_pit/attack1.png
+	frame	data/chars/creature_pit/attack2.png
+	attack1 97 31 38 19 20 0 0 0 0 0
+	frame	data/chars/creature_pit/attack3.png
+	frame	data/chars/creature_pit/attack3.png
+	frame	data/chars/creature_pit/attack4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/creature_pit/attack5.png
+	frame	data/chars/creature_pit/attack6.png
+	frame	data/chars/creature_pit/attack2.png
+	frame	data/chars/creature_pit/attack1.png
+
+anim	freespecial #Tentacle Upward
+	delay	15
+	offset	69 60
+	bbox 36 11 73 53
+	sound	data/sounds/slash.wav
+	hitflash blood
+	platform 30 18 36 11 73 53 20 20
+	frame	data/chars/creature_pit/spawn6.png
+    frame	data/chars/creature_pit/spawn5.png
+	frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn2.png
+	frame	data/chars/creature_pit/spawn1.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/creature_pit/special1.png
+	frame	data/chars/creature_pit/special2.png
+	attack5 57 2 18 56 120 0 0 0 0 0
+	frame	data/chars/creature_pit/special3.png
+	frame	data/chars/creature_pit/special3.png
+	frame	data/chars/creature_pit/special4.png
+	frame	data/chars/creature_pit/special5.png
+	frame	data/chars/creature_pit/special6.png
+	attack5 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/creature_pit/special7.png
+	frame	data/chars/creature_pit/special8.png
+	frame	data/chars/creature_pit/special9.png
+	frame	data/chars/creature_pit/special10.png
+	frame	data/chars/creature_pit/special11.png
+	frame	data/chars/creature_pit/special12.png
+	frame	data/chars/creature_pit/special13.png	
+	frame	data/chars/creature_pit/spawn1.png
+    frame	data/chars/creature_pit/spawn2.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn5.png
+    frame	data/chars/creature_pit/spawn6.png
+	
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	delay	12
+	sound	data/sounds/hit2.wav
+	offset	69 60
+	bbox 36 11 73 53
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/creature_pit/hit.png
+	
+anim	fall
+	loop	0
+	delay	20
+	offset	69 60
+	bbox 36 11 73 53
+	sound	data/sounds/hit1.wav
+	frame	data/chars/creature_pit/hit.png
+	frame	data/chars/creature_pit/hit.png
+	frame	data/chars/creature_pit/hit.png
+
+anim	death
+	loop	0
+	offset	69 60
+	delay	24
+	jumpframe 0 0 0
+	sound	data/sounds/hahaha.wav
+    frame	data/chars/creature_pit/spawn6.png
+    frame	data/chars/creature_pit/spawn5.png
+	frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn2.png
+	frame	data/chars/creature_pit/spawn1.png	
+	frame	data/chars/misc/empty.png
+
+anim	death2
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	69 60
+	@cmd spawnM "creature_pittentacle" 0 40 0
+	sound	data/sounds/hahaha.wav
+    frame	data/chars/creature_pit/spawn6.png
+    frame	data/chars/creature_pit/spawn5.png
+	frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn2.png
+	frame	data/chars/creature_pit/spawn1.png	
+	frame	data/chars/misc/empty.png
+
+anim	death3
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	69 60
+	@cmd spawnM "creature_pittentacle" 0 40 0
+	sound	data/sounds/hahaha.wav		
+    frame	data/chars/creature_pit/spawn6.png
+    frame	data/chars/creature_pit/spawn5.png
+	frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn2.png
+	frame	data/chars/creature_pit/spawn1.png	
+	frame	data/chars/misc/empty.png	
+	
+anim	death4
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	69 60
+	@cmd spawnM "creature_pittentacle" 0 40 0
+	sound	data/sounds/hahaha.wav		
+    frame	data/chars/creature_pit/spawn6.png
+    frame	data/chars/creature_pit/spawn5.png
+	frame	data/chars/creature_pit/spawn4.png
+    frame	data/chars/creature_pit/spawn3.png
+    frame	data/chars/creature_pit/spawn2.png
+	frame	data/chars/creature_pit/spawn1.png	
+	frame	data/chars/misc/empty.png	

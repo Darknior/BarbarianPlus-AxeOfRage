@@ -1,0 +1,45 @@
+name				energyball #THROWNED
+type				none
+candamage			player enemy obstacle
+nolife				1
+lifespan			6
+remove				1
+noquake 			1
+gfxshadow			1 1
+noatflash 			1
+animationscript		data/scripts/escript.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+
+anim idle
+	loop	1
+	delay	10
+	offset	23 6
+	bbox 9 0 20 10
+	followanim 1
+	followcond 1
+	attack2 9 0 20 10 10 1 0 0 0 0
+	frame	data/chars/magic/energyball1.png
+	frame	data/chars/magic/energyball2.png
+	frame	data/chars/magic/energyball3.png
+	
+anim follow1
+	landframe 8
+	loop	1
+	delay	10
+	offset	11 18
+	bbox -3 0 28 23
+	attack2 -3 0 28 23 5 0 0 0 0 0
+	frame	data/chars/magic/energyball1.png
+	frame	data/chars/misc/empty.png
+	@cmd	suicide
+	frame	data/chars/misc/empty.png

@@ -1,0 +1,57 @@
+name			mountain_spawner
+type			none
+facing			1
+
+animationscript 	data/scripts/player.c
+
+#--------------------------------
+
+load mountain_dust
+
+anim spawn
+	offset	7 7
+	delay	1
+	frame	data/chars/misc/empty.gif
+
+anim idle
+	loop 	1
+	offset	7 10
+
+	delay 	90	
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 90
+	delay 	60	
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 100
+
+	delay 	10	
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 120
+
+	delay 	150
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 156
+	delay 	155	
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 166
+
+	delay	200
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 64
+
+	delay	250
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 74
+
+	delay	300
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 40
+	delay	301
+	frame	data/chars/misc/empty.gif
+	@cmd    spawner3  "mountain_dust" 0 0 45
+
+
+	delay 	100	
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+

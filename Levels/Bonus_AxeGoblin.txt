@@ -1,0 +1,236 @@
+music		data/music/Goblin_Raid.ogg
+background	data/bgs/levels/Mountain/Mountain.png 1 1 0 0 0 0 1 1 0
+panel	    data/bgs/levels/panel.png none	none
+frontpanel  data/bgs/levels/Mountain/Mountain_front.png
+
+order       a 
+settime	    40
+wall		50 240 -500 -500 0 0 100 5000
+wall		350 240 0 0 500 500 100 5000
+spawn1		70 178 0
+type		1 0 0
+noslow 		1
+
+spawn		Movelist
+flip		1
+coords		0 0 0
+at			0
+
+spawn		Animated_Mountain
+flip		1
+coords		0 0 0
+at			0
+
+spawn	P1HUD
+alias	Player
+coords	30 205 0
+at      0
+
+spawn	GoblinCount
+coords	160 205 0
+at      0
+
+spawn	delay
+health	20
+coords	160 205 0
+at      0
+
+group	1 1
+at	0
+
+spawn	Gobline
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		5
+coords	320 178 0
+at      0
+
+spawn	Gobline
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		9
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		7
+coords	320 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		3
+coords	320 178 0
+at      0
+
+spawn	GoblinF
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		6
+coords	320 178 0
+at      0
+
+group	2 2
+at	0
+
+spawn	GoblinE
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		8
+coords	320 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		4
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+coords	320 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+map		2
+item	Increme
+itemalias C1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+map		5
+item	Increme
+itemalias C1
+coords	320 178 0
+at      0
+
+spawn	GoblinF
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+map		7
+item	Increme
+itemalias C1
+coords	320 178 0
+at      0
+
+group	3 3
+at	0
+
+spawn	GoblinE
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+coords	320 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		2
+coords	320 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		3
+flip	1
+coords	60 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/FenHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		4
+coords	320 178 0
+at      0
+
+spawn	GoblinF
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		5
+coords	320 178 0
+at      0
+
+spawn	GoblinE
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+map		6
+coords	320 178 0
+at      0
+
+spawn	GoblinF2
+spawnscript data/scripts/enHUD2.c
+alias 	Goblin
+item	Increme
+itemalias C1
+boss 	1
+map		7
+flip	1
+coords	60 178 0
+at      0
+
+spawn	delay
+health	20
+coords	160 205 0
+at      0

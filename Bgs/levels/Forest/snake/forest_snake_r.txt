@@ -1,0 +1,25 @@
+name            forest_snake_r
+type            none
+shadow          0
+setlayer        20
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1 3 11
+    delay   200
+    offset  0 0 
+    frame   data/bgs/levels/Forest/snake/snake1.png
+    frame   data/bgs/levels/Forest/snake/snake1.png
+    delay   16    
+    frame   data/bgs/levels/Forest/snake/snake1.png
+    frame   data/bgs/levels/Forest/snake/snake2.png
+    frame   data/bgs/levels/Forest/snake/snake3.png
+    frame   data/bgs/levels/Forest/snake/snake4.png
+    frame   data/bgs/levels/Forest/snake/snake5.png
+    frame   data/bgs/levels/Forest/snake/snake4.png
+    frame   data/bgs/levels/Forest/snake/snake3.png    
+    frame   data/bgs/levels/Forest/snake/snake2.png    
+
+    delay   100
+    frame   data/bgs/levels/Forest/snake/snake1.png

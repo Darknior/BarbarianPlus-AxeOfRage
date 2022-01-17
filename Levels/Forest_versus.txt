@@ -1,0 +1,88 @@
+music        data/music/Venomlock_Burrow.ogg
+
+#DOC -----                                               ratio  position  spacing repeat  transparency  alpha
+#bglayer         data/bgs/levels/Forest/forest_sky.png   1 1    0 -4      0 0     0 0     1             0
+# watermode  amplitude  wavelength  wavespeed  bgspeedratio
+# 1          1          2 (pixels)  0.5        0
+
+background  data/bgs/levels/Forest/forest_sky.png 0 0 0 -4
+bgspeed     0.4 0
+
+bglayer     data/bgs/levels/Forest/forest_sun.png    0.8 1 0 -4 0 0 1 1    1 0    0 0 0 0 0.1
+bglayer     data/bgs/levels/Forest/Forest_clouds.png 0.6 1 0 -4 0 0 1 9999 1 0    0 0 0 0 0.6
+
+panel       data/bgs/levels/Forest/Forest.png
+frontpanel  data/bgs/levels/Forest/forest_front.png
+
+wall        50 240 -500 -500 0 0 100 5000
+wall        350 240 0 0 500 500 100 5000
+
+light       256 -64
+at          0
+shadowalpha 2
+at          0
+
+order       a 
+settime     0
+type        1 0 0
+noslow      1
+
+#------------------------------------------
+
+spawn1      70 178 
+spawn2      330 178
+
+spawn       P1HUD
+alias       Player_1
+coords      30 205 0
+at          0
+spawn       P2HUD
+alias       Player_2
+coords      295 205 0
+at          0
+
+#------------------------------------------
+
+spawn       forest_snake_l
+flip        1
+coords      13 5
+at          0
+spawn       forest_snake_r
+coords      387 5
+at          0
+spawn       forest_spawner
+coords      0 0
+at          0
+
+spawn       birds
+coords      450 40
+flip        1
+at          0
+spawn       eyes
+coords      114 116
+flip        1
+at          0
+spawn       squirrel
+flip        1
+coords      65 167 
+at          0
+
+
+#------------------------------------------
+#------------------------------------------
+
+spawn       empty
+flip        1
+coords      999 999 0
+at          0
+
+#spawn      Movelist
+#flip       1
+#coords     50 0 0
+#at         0
+
+spawn       weaponmaster_referee
+flip        1
+coords      -160 -155 0
+at          0
+

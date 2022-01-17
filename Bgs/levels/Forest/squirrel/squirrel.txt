@@ -1,0 +1,138 @@
+name            squirrel
+type            none
+shadow          0
+setlayer        0
+subject_to_gravity 0
+
+animationscript data/scripts/player.c
+
+anim idle
+    loop    1 2 82
+    offset  18 22
+    palette data/bgs/levels/Forest/squirrel/squirrel01a.png
+    
+# HIDDEN BEFORE START
+    delay   200
+    frame   data/chars/misc/empty.gif
+# SPAWN
+    delay   50
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a.png
+# CLOSE EYES
+    delay   20
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a2.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a2.png
+    delay   50
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel01a.png
+# RUN RIGHT
+    @cmd    dasher 0.5 0 0
+    delay   9
+    frame   data/bgs/levels/Forest/squirrel/squirrel01b.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel01c.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+# WAVE / TURN
+    @cmd    stop
+    delay   10
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel09a.png
+    @cmd    flip 1
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 0
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 1
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 0
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 1
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 0
+    delay   40
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    @cmd    flip 1
+    delay   10
+    frame   data/bgs/levels/Forest/squirrel/squirrel09b.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+# RUN LEFT
+    @cmd    dasher -0.5 0 0
+    delay   9
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel02.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel03.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel04.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel05.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel06.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel07.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel08.png
+
+    frame   data/bgs/levels/Forest/squirrel/squirrel10a.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel10b.png
+# HIDE
+    @cmd    stop
+    delay   10
+    frame   data/bgs/levels/Forest/squirrel/squirrel10c.png
+    frame   data/bgs/levels/Forest/squirrel/squirrel10c.png
+    @cmd    flip 0
+    delay   500
+    frame   data/chars/misc/empty.gif
+    frame   data/chars/misc/empty.gif

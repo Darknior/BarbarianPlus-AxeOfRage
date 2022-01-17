@@ -1,0 +1,66 @@
+music       data/music/Earth_Elemental.ogg
+
+background  data/bgs/levels/Mountain/Mountain_sky.png
+bgspeed     -0.4 0
+
+panel       data/bgs/levels/Mountain/Mountain.png
+frontpanel  data/bgs/levels/Mountain/Mountain_front.png
+
+wall        50 240 -500 -500 0 0 100 5000
+wall        350 240 0 0 500 500 100 5000
+
+light       256 -44
+at          0
+shadowalpha 2
+at          0
+
+order       a 
+settime     0
+type        1 0 0
+noslow      1
+
+#------------------------------------------
+
+spawn1      70  178 
+spawn2      330 178
+
+spawn       P1HUD
+alias       Player_1
+coords      30 205 0
+at          0
+spawn       P2HUD
+alias       Player_2
+coords      295 205 0
+at          0
+
+#------------------------------------------
+
+spawn       mountain_snake_l
+flip        1
+coords      13 5
+at          0
+spawn       mountain_snake_r
+coords      387 5
+at          0
+
+spawn       mountain_spawner
+coords      0 0
+at          0
+spawn       larva
+coords      285 162
+at          0
+
+
+#------------------------------------------
+#------------------------------------------
+
+spawn       empty
+flip        1
+coords      999 999 0
+at          0
+
+spawn       weaponmaster_referee
+flip        1
+coords      -160 -155 0
+at          0
+

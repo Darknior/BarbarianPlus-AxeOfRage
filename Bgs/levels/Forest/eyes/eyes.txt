@@ -1,0 +1,32 @@
+name            eyes
+type            none
+shadow          0
+setlayer        2
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1
+    delay   40
+    offset  0 0
+# OPEN
+    frame   data/bgs/levels/Forest/eyes/eyes1.png
+    frame   data/bgs/levels/Forest/eyes/eyes2.png
+    frame   data/bgs/levels/Forest/eyes/eyes3.png
+    frame   data/bgs/levels/Forest/eyes/eyes4.png
+# MOVE
+    frame   data/bgs/levels/Forest/eyes/eyes5.png
+    frame   data/bgs/levels/Forest/eyes/eyes6.png
+    frame   data/bgs/levels/Forest/eyes/eyes5.png
+    frame   data/bgs/levels/Forest/eyes/eyes7.png    
+    frame   data/bgs/levels/Forest/eyes/eyes5.png
+# CLOSE
+    frame   data/bgs/levels/Forest/eyes/eyes4.png
+    frame   data/bgs/levels/Forest/eyes/eyes3.png
+    frame   data/bgs/levels/Forest/eyes/eyes2.png
+    frame   data/bgs/levels/Forest/eyes/eyes1.png
+
+    delay   600
+    frame   data/chars/misc/empty.gif
+    delay   1
+    frame   data/chars/misc/empty.gif

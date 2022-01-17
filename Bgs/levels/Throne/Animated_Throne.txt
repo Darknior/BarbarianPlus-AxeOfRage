@@ -1,0 +1,27 @@
+name				Animated_Throne
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	delay	16
+	offset	0 0 
+	frame	data/bgs/levels/Throne/Throne1.png
+	frame	data/bgs/levels/Throne/Throne2.png
+	frame	data/bgs/levels/Throne/Throne3.png
+	frame	data/bgs/levels/Throne/Throne4.png
+	frame	data/bgs/levels/Throne/Throne5.png
+	frame	data/bgs/levels/Throne/Throne4.png
+	frame	data/bgs/levels/Throne/Throne3.png	
+	frame	data/bgs/levels/Throne/Throne2.png	
+	frame	data/bgs/levels/Throne/Throne1.png
+	frame	data/bgs/levels/Throne/Throne6.png	
+	frame	data/bgs/levels/Throne/Throne7.png	
+	frame	data/bgs/levels/Throne/Throne8.png	
+	frame	data/bgs/levels/Throne/Throne9.png
+	frame	data/bgs/levels/Throne/Throne8.png	
+	frame	data/bgs/levels/Throne/Throne7.png	
+	frame	data/bgs/levels/Throne/Throne6.png	

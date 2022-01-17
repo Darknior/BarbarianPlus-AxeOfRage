@@ -1,0 +1,15 @@
+name				People
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	offset	0 0 
+	delay 	16
+	frame	data/bgs/levels/Arena/Arena1.png
+	frame	data/bgs/levels/Arena/Arena2.png	
+	frame	data/bgs/levels/Arena/Arena3.png
+	frame	data/bgs/levels/Arena/Arena4.png	

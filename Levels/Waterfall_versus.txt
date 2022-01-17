@@ -1,0 +1,76 @@
+music       data/music/Ringwraiths.ogg
+
+background  data/bgs/levels/Waterfall/Waterfall_water.png  1 1 0 -4
+bglayer     data/bgs/levels/Waterfall/Waterfall_lake.png  0 0 0 -4 0 0 1 1  1 0   1 1 3 0.5 0
+
+panel       data/bgs/levels/Waterfall/Waterfall.png
+frontpanel  data/bgs/levels/Waterfall/Waterfall_front.png
+
+wall        50 240 -500 -500 0 0 100 5000
+wall        350 240 0 0 500 500 100 5000
+
+light       256 -30
+at          0
+shadowalpha 2
+at          0
+
+order       a 
+settime     0
+type        1 0 0
+noslow      1
+
+#------------------------------------------
+
+spawn1      70  160 
+spawn2      330 160
+
+spawn       P1HUD
+alias       Player_1
+coords      30 205 0
+at          0
+spawn       P2HUD
+alias       Player_2
+coords      295 205 0
+at          0
+
+#------------------------------------------
+
+spawn       waterfall_snake_l
+flip        1
+coords      13 5
+at          0
+spawn       waterfall_snake_r
+coords      387 5
+at          0
+spawn       waterfall_spawner
+coords      0 0
+at          0
+
+spawn       waterfall_anim
+coords      122 46
+flip        1
+at          0
+
+spawn       waterfall_crystal1
+coords      42 117 # 50 117
+flip        1
+at          0
+spawn       waterfall_crystal2
+coords      165 165
+flip        1
+at          0
+
+
+#------------------------------------------
+#------------------------------------------
+
+spawn       empty
+flip        1
+coords      999 999 0
+at          0
+
+spawn       weaponmaster_referee
+flip        1
+coords      -160 -155 0
+at          0
+

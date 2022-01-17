@@ -1,0 +1,9 @@
+#	music		[path] [loop]		# BOR file to play
+#	animation	[path] [x] [y]		# GIF animation to play
+#	silence					# Stop music
+
+colorbg 1
+
+animation	data/bgs/logo.png 0 0 1 0
+
+

@@ -1,0 +1,295 @@
+name		 T.birdE
+type		 enemy
+hostile 	 player 
+aimove 		 chase
+aimove 		 wander
+candamage    player 
+aggression   50
+health		 10
+mp		 	 100
+mprate		 5
+speed		 12
+running		 20 3 2 1 1
+jumpheight	 3
+jumpspeed 	 13 
+antigravity	 -6
+height		 75
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 15
+holdblock 	 1
+blockback	 0
+blockodds 	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 3
+atchain      1
+icon		 data/chars/t.bird/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+bflash		 block
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+
+anim	spawn
+	delay	10
+	offset	295 65
+	frame	data/chars/t.bird/spawn1.png
+	frame	data/chars/t.bird/spawn2.png
+	frame	data/chars/t.bird/spawn3.png
+	frame	data/chars/t.bird/spawn4.png
+	frame	data/chars/t.bird/spawn5.png
+	frame	data/chars/t.bird/spawn6.png
+	frame	data/chars/t.bird/spawn7.png
+	frame	data/chars/t.bird/spawn8.png
+
+anim	follow1
+	delay	1
+	offset	12 52
+	frame	data/chars/t.bird/jump1.png
+	delay	18
+	@cmd	leaper 1.5 4 1
+	frame	data/chars/t.bird/jump1.png
+	frame	data/chars/t.bird/jump2.png	
+	frame	data/chars/t.bird/jump3.png	
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack3.png
+
+anim	idle
+	loop	1
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	100
+	frame	data/chars/t.bird/idle1.png
+	frame	data/chars/t.bird/idle1.png
+	delay	30
+	frame	data/chars/t.bird/idle2.png
+	frame	data/chars/t.bird/idle3.png
+	frame	data/chars/t.bird/idle2.png
+	
+anim	victory
+	delay	80
+	offset	47 97
+	frame	data/chars/t.bird/win1.png
+	frame	data/chars/t.bird/win2.png
+	frame	data/chars/t.bird/win3.png
+	frame	data/chars/t.bird/win4.png
+	delay	180
+	frame	data/chars/t.bird/win4.png	
+
+anim	walk
+	loop	1
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	10
+	frame	data/chars/t.bird/walk1.png
+	frame	data/chars/t.bird/walk2.png
+	frame	data/chars/t.bird/walk3.png
+	frame	data/chars/t.bird/walk4.png
+	
+anim	run
+	loop	1
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	10
+	frame	data/chars/t.bird/walk1.png
+	frame	data/chars/t.bird/walk2.png
+	frame	data/chars/t.bird/walk3.png
+	frame	data/chars/t.bird/walk4.png
+
+anim turn
+	offset	12 52
+	bbox 3 -3 26 57
+	frame data/chars/t.bird/idle2.png
+	delay	6
+	frame data/chars/t.bird/idle2.png
+
+anim	duck
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	6
+	frame	data/chars/t.bird/duck.png
+	frame	data/chars/t.bird/duck.png
+
+anim	duckattack #Crouching Slash
+	delay	10
+	offset	12 52
+	bbox 3 -3 26 57
+	sound	data/sounds/slash.wav
+	hitflash blooddown
+	sound	data/voice/t.bird_attack.wav	
+	frame	data/chars/t.bird/duckattack1.png
+	frame	data/chars/t.bird/duckattack2.png
+	attack1 12 9 35 15 10 0 0 0 0 0
+	frame	data/chars/t.bird/duckattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/t.bird/duckattack2.png
+	frame	data/chars/t.bird/duckattack1.png
+	delay	2
+	frame	data/chars/t.bird/duck.png
+	
+anim	jump
+	delay	18
+	offset	12 52
+	bbox 3 -3 26 57
+	frame	data/chars/t.bird/jump1.png
+	frame	data/chars/t.bird/jump2.png	
+	
+anim	jumpland
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	6
+	frame	data/chars/t.bird/duck.png
+	frame	data/chars/t.bird/duck.png
+
+anim	jumpattack #Jump Peak Attack
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	12 52
+	bbox 3 -3 26 57
+	delay	6
+	sound	data/sounds/slash.wav
+	hitflash bloodup
+	frame	data/chars/t.bird/Jump2.png
+	sound	data/voice/t.bird_attack.wav	
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	attack1 6 0 40 39 10 1 1 0 0 0
+	frame	data/chars/t.bird/Jumpattack3.png
+	frame	data/chars/t.bird/Jumpattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+
+anim	jumpforward #Jump Front Peak
+	fastattack	1
+	jugglecost	5
+	offset	12 52
+	bbox	3 -3 26 57
+	delay	6
+	sound	data/sounds/slash.wav
+	hitflash bloodup
+	frame	data/chars/t.bird/Jump2.png
+	sound	data/voice/t.bird_attack.wav	
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	attack1 35 57 50 20 10 1 1 0 0 0
+	forcedirection	-1
+	frame	data/chars/t.bird/Jumpattack3.png
+	frame	data/chars/t.bird/Jumpattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+
+anim	attack1 #Peak Attack
+	delay	6
+	offset	12 52
+	bbox 3 -3 26 57
+	sound	data/sounds/slash.wav
+	hitflash blood
+	sound	data/voice/t.bird_attack.wav
+	frame	data/chars/t.bird/attack1.png
+	frame	data/chars/t.bird/attack2.png
+	frame	data/chars/t.bird/attack3.png
+	attack1 22 1 40 19 10 0 0 0 0 0
+	frame	data/chars/t.bird/attack3.png
+	frame	data/chars/t.bird/attack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/t.bird/attack2.png
+	frame	data/chars/t.bird/attack1.png
+	
+anim	pain
+	jumpframe 0 0 0	
+	delay	12
+	sound	data/sounds/hit2.wav
+	offset	12 52
+	bbox 3 -3 26 57
+	frame	data/chars/t.bird/hit.png
+	
+anim	fall
+	jumpframe 0 0 0
+	landframe 1
+	loop	0
+	delay	20
+	offset	12 52
+	bbox 3 -3 26 57
+	sound	data/sounds/hit1.wav
+	frame	data/chars/t.bird/fall1.png
+	frame	data/chars/t.bird/fall2.png
+	frame	data/chars/t.bird/fall3.png
+
+anim	rise
+	offset	12 52
+	delay	12
+	frame	data/chars/t.bird/rise1.png
+	frame	data/chars/t.bird/rise2.png
+	frame	data/chars/t.bird/rise1.png
+	frame	data/chars/t.bird/rise3.png
+
+anim	death
+	offset	12 56
+	delay	18
+	jumpframe 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/backfall1.png
+	frame	data/chars/t.bird/backfall2.png
+	frame	data/chars/t.bird/backfall3.png
+	frame	data/chars/t.bird/backfall4.png
+	frame	data/chars/t.bird/backfall5.png
+	frame	data/chars/t.bird/backfall6.png
+	frame	data/chars/t.bird/backfall7.png
+	frame	data/chars/t.bird/backfall8.png
+	frame	data/chars/t.bird/backfall9.png
+	frame	data/chars/t.bird/backfall10.png	
+
+anim	death2
+	delay	30
+	jumpframe 0 0 0
+	offset	12 52
+	@cmd spawnM "t.birdhead" 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/decap1.png
+	frame	data/chars/t.bird/decap2.png
+	frame	data/chars/t.bird/decap3.png
+	frame	data/chars/t.bird/decap4.png
+	frame	data/chars/t.bird/decap5.png
+
+anim	death3
+	delay	30
+	jumpframe 0 0 0
+	offset	12 52
+	@cmd spawnM "t.birdchest" 0 30 0
+	sound	data/sounds/hahaha.wav		
+	frame	data/chars/t.bird/chestrip1.png
+	frame	data/chars/t.bird/chestrip2.png
+	frame	data/chars/t.bird/chestrip3.png
+	frame	data/chars/t.bird/chestrip4.png
+	frame	data/chars/t.bird/chestrip5.png	
+	
+anim	death4
+	delay	20
+	jumpframe 0 0 0
+	offset	12 52
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/verticaldeath1.png
+	frame	data/chars/t.bird/verticaldeath2.png
+	frame	data/chars/t.bird/verticaldeath3.png
+	frame	data/chars/t.bird/verticaldeath4.png
+	frame	data/chars/t.bird/verticaldeath5.png
+	frame	data/chars/t.bird/verticaldeath6.png

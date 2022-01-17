@@ -1,0 +1,41 @@
+name				energyshuriken #THROWNED
+type				none
+subtype				weapon
+candamage			player enemy obstacle
+nolife				1
+lifespan			6
+remove				1
+noquake 			1
+gfxshadow			1 1
+noatflash 			1
+animationscript		data/scripts/escript.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+
+anim idle
+	loop	1
+	delay	6
+	offset	17 17
+	landframe 6
+	bbox 0 0 34 34
+	followanim 1
+	followcond 1
+	attack4 0 0 34 34 5 0 0 0 0 0
+	frame	data/chars/magic/shuriken1.png
+	frame	data/chars/magic/shuriken2.png
+	
+anim	follow1
+	delay	100
+	offset	11 18
+	frame	data/chars/magic/shuriken2.png
+	@cmd	suicide
+	frame	data/chars/misc/empty.gif

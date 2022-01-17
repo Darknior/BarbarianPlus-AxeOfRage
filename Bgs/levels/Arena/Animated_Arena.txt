@@ -1,0 +1,27 @@
+name				Animated_Arena
+type				none
+shadow				0
+setlayer			1
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	delay	16
+	offset	0 0 
+	frame	data/bgs/levels/Arena/Arenas1.png
+	frame	data/bgs/levels/Arena/Arenas2.png
+	frame	data/bgs/levels/Arena/Arenas3.png
+	frame	data/bgs/levels/Arena/Arenas4.png
+	frame	data/bgs/levels/Arena/Arenas5.png
+	frame	data/bgs/levels/Arena/Arenas4.png
+	frame	data/bgs/levels/Arena/Arenas3.png	
+	frame	data/bgs/levels/Arena/Arenas2.png	
+	frame	data/bgs/levels/Arena/Arenas1.png
+	frame	data/bgs/levels/Arena/Arenas6.png	
+	frame	data/bgs/levels/Arena/Arenas7.png	
+	frame	data/bgs/levels/Arena/Arenas8.png	
+	frame	data/bgs/levels/Arena/Arenas9.png
+	frame	data/bgs/levels/Arena/Arenas8.png	
+	frame	data/bgs/levels/Arena/Arenas7.png	
+	frame	data/bgs/levels/Arena/Arenas6.png	

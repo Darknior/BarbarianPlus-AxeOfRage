@@ -1,0 +1,52 @@
+music		data/music/Shadow_Ninja.ogg
+panel	    data/bgs/levels/Dojo.png
+
+order           a 
+settime	        0
+notime		1
+wall	0 450 -500 -500 0 0 100 5000
+wall	640 450 0 0 500 500 100 5000
+spawn1		60 450 0
+type		1 0 0
+setweap 	11
+
+wall 20 280 0 0 620 620 0 20
+
+spawn	empty
+coords	100 400 0
+at      0
+
+spawn	P1HUD
+coords	47 38 0
+at      0
+
+spawn		kagi
+flip		1
+coords		60 450 0
+at			0
+
+
+#spawn	MPlat1
+#coords	0 460 200
+#at	0
+
+#spawn	karatedoE
+#spawnscript data/scripts/enHUD2.c
+#alias	Ishikawa
+#map		3
+#coords	47 460 200 
+#at      0
+
+#spawn	karatedoE
+#spawnscript data/scripts/enHUD3.c
+#alias	Hattori
+#map		4
+#coords	600 300 260
+#at      0
+
+spawn	judowE
+spawnscript data/scripts/enHUD4.c
+alias	Jinichi
+map		5
+coords	548 450 0
+at      0

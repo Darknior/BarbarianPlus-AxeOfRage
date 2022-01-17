@@ -1,0 +1,1153 @@
+name		 Kran
+type		 player
+health		 120
+mp		 	 100
+mprate		 5
+speed		 12
+running		 20 3 1.5 1 1
+jumpmove	 2
+jumpheight	 3
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 0
+holdblock 	 1
+blockback	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 2
+atchain      1 1 2 3
+icon		 data/chars/kran/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+weaploss	 3
+modelflag	 7
+bflash		 block
+
+weapons		 none kran
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+com	a2	freespecial
+com    U     	freespecial6
+com     F A2  	freespecial9
+com     D  A2  	freespecial2
+com	a3	freespecial7
+
+load kranname
+
+anim	waiting
+    delay	10
+	offset	290 58
+    frame	data/chars/kran/spawn1.png
+    frame	data/chars/kran/spawn2.png
+    frame	data/chars/kran/spawn3.png
+    frame	data/chars/kran/spawn4.png
+    frame	data/chars/kran/spawn5.png
+    frame	data/chars/kran/spawn6.png
+    frame	data/chars/kran/spawn7.png
+    frame	data/chars/kran/spawn8.png
+	loop	1 9 27
+	offset	23 61
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png	
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle1.png
+
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle3.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle3.png	
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle3.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+	@cmd	shootname "kranname" -25 140 0
+	frame	data/chars/kran/idle2.png
+
+anim select
+	delay	2
+	spawnframe 0 2 0 0 1
+	custentity Gerbang
+	offset	23 61
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/kran/idle1.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/kran/idle2.png
+	delay	3
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	frame	data/chars/kran/idle3.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/kran/idle2.png
+	delay	30
+	offset	23 71
+	frame	data/chars/kran/win1.png
+	frame	data/chars/kran/win2.png
+	frame	data/chars/kran/win3.png
+	frame	data/chars/kran/win4.png
+	offset	9 54
+	frame	data/chars/kran/enter1.png
+	frame	data/chars/kran/enter2.png
+	frame	data/chars/kran/enter3.png
+	frame	data/chars/kran/enter4.png
+	frame	data/chars/kran/enter5.png
+	frame	data/chars/kran/enter6.png
+	delay          100
+	frame	data/chars/misc/empty.png
+
+anim	spawn
+@script
+    if(frame==1){
+      void self = getlocalvar("self");
+      void Det1 = getglobalvar("KranDed");
+      void Det2 = getglobalvar("GortDed");
+
+      if(Det2=="S"){
+        int PIndex = getentityproperty(self,"playerindex");
+
+        changeplayerproperty(PIndex, "lives", 1);
+        changeentityproperty(self, "model", "Mariana", 1);
+        changeentityproperty(self, "name", "Mariana");
+        changeentityproperty(self, "health", 120);
+        changeentityproperty(self, "mp", 100);
+      } else if(Det1=="S"){
+        changeentityproperty(self, "model", "kran", 1);
+        changeentityproperty(self, "name", "kran");
+        changeentityproperty(self, "health", 120);
+        changeentityproperty(self, "mp", 100);
+      }
+    }
+@end_script
+     delay	1
+     offset	1 1
+     frame	data/chars/misc/empty.png
+     frame	data/chars/misc/empty.png
+     delay	10
+     offset	290 58
+     frame	data/chars/kran/spawn1.png
+     frame	data/chars/kran/spawn2.png
+     frame	data/chars/kran/spawn3.png
+     frame	data/chars/kran/spawn4.png
+     frame	data/chars/kran/spawn5.png
+     frame	data/chars/kran/spawn6.png
+     frame	data/chars/kran/spawn7.png
+     frame	data/chars/kran/spawn8.png
+
+
+anim	follow1  #Arena Ending
+     loop 0
+	 delay	20
+	 offset	290 58
+     frame	data/chars/kran/spawn1.png
+     frame	data/chars/kran/spawn2.png
+     frame	data/chars/kran/spawn3.png
+     frame	data/chars/kran/spawn4.png
+     frame	data/chars/kran/spawn5.png
+     frame	data/chars/kran/spawn6.png
+     frame	data/chars/kran/spawn7.png
+     frame	data/chars/kran/spawn8.png
+	 offset	160 75
+	 frame	data/chars/kran/ending1.png
+     frame	data/chars/kran/ending2.png
+     frame	data/chars/kran/ending3.png
+     frame	data/chars/kran/ending4.png
+     frame	data/chars/kran/ending5.png
+     delay	35
+	 frame	data/chars/kran/ending6.png
+     frame	data/chars/kran/ending7.png
+     frame	data/chars/kran/ending8.png
+	 frame	data/chars/kran/ending9.png
+     frame	data/chars/kran/ending10.png
+     frame	data/chars/kran/ending11.png
+     frame	data/chars/kran/ending12.png
+     frame	data/chars/kran/ending13.png
+     frame	data/chars/kran/ending14.png
+     frame	data/chars/kran/ending15.png
+	 frame	data/chars/kran/ending16.png
+     frame	data/chars/kran/ending17.png
+     frame	data/chars/kran/ending18.png
+     frame	data/chars/kran/ending19.png
+     frame	data/chars/kran/ending20.png
+	 delay	700
+     frame	data/chars/kran/ending20.png
+
+anim	idle
+	loop	1
+	offset	23 61
+	bbox 9 2 26 59
+	delay	100
+	frame	data/chars/kran/idle1.png
+	frame	data/chars/kran/idle1.png
+	delay	30
+	frame	data/chars/kran/idle2.png
+	frame	data/chars/kran/idle3.png
+	frame	data/chars/kran/idle2.png
+
+anim	faint
+	loop	1
+	offset	23 61
+	bbox 9 2 26 59
+	delay	15
+	frame	data/chars/kran/faint1.png
+	frame	data/chars/kran/faint2.png
+	frame	data/chars/kran/faint3.png
+	frame	data/chars/kran/faint2.png
+
+anim	victory
+	delay	80
+	offset	23 71
+	frame	data/chars/kran/win1.png
+	frame	data/chars/kran/win2.png
+	frame	data/chars/kran/win3.png
+	frame	data/chars/kran/win4.png
+	delay	180
+	frame	data/chars/kran/win4.png
+	
+anim	walk
+	loop	1
+	offset	23 61
+	bbox 9 2 26 59
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	delay	10
+	frame	data/chars/kran/walk1.png
+	frame	data/chars/kran/walk2.png
+	frame	data/chars/kran/walk3.png
+
+anim	run
+	loop	1
+	offset	31 58
+	bbox 20 0 26 54
+	cancel 0 5 0  A2 freespecial5
+	delay	10
+	frame	data/chars/kran/run1.png
+	frame	data/chars/kran/run2.png
+	frame	data/chars/kran/run3.png
+	frame	data/chars/kran/run4.png
+	frame	data/chars/kran/run5.png
+	frame	data/chars/kran/run6.png
+	frame	data/chars/kran/run7.png
+	frame	data/chars/kran/run8.png
+		
+anim	runattack #Head Chop
+	delay	7
+	offset	18 65
+	bbox 10 0 21 63
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/headchop1.png
+	frame	data/chars/kran/headchop2.png
+	frame	data/chars/kran/headchop3.png
+	sound	data/sounds/iiaaah.wav
+	bbox 8 8 29 57
+	frame	data/chars/kran/headchop4.png
+	frame	data/chars/kran/headchop5.png
+	frame	data/chars/kran/headchop6.png
+	attack2 28 8 40 19 30 1 0 0 0 0
+	delay	15
+	frame	data/chars/kran/headchop7.png
+	frame	data/chars/kran/headchop7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	@cmd	stop
+	frame	data/chars/kran/headchop5.png
+	frame	data/chars/kran/headchop4.png
+	
+anim	attackbackward #Head Chop
+	delay	7
+	offset	18 65
+	bbox 10 0 21 63
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/headchop1.png
+	frame	data/chars/kran/headchop2.png
+	frame	data/chars/kran/headchop3.png
+	sound	data/sounds/iiaaah.wav
+	bbox 8 8 29 57
+	frame	data/chars/kran/headchop4.png
+	frame	data/chars/kran/headchop5.png
+	frame	data/chars/kran/headchop6.png
+	attack2 28 8 40 19 30 1 0 0 0 0
+	delay	15
+	frame	data/chars/kran/headchop7.png
+	frame	data/chars/kran/headchop7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	@cmd	stop
+	frame	data/chars/kran/headchop5.png
+	frame	data/chars/kran/headchop4.png	
+
+anim	freespecial5 #Dropkick runattack
+	delay	10
+	offset	18 65
+	jumpframe 0 0 2 
+	forcedirection -1
+	hitflash Basic
+	hitfx	data/sounds/blood.wav
+	sound	data/sounds/hii.wav
+	@cmd	dasher 2 0 0 1
+	attack1 18 14 45 19 10 0 0 0 0 0
+	frame	data/chars/kran/dropkick1.png
+	frame	data/chars/kran/dropkick2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	attack1 18 14 45 19 10 0 0 0 0 0
+	frame	data/chars/kran/dropkick1.png
+	frame	data/chars/kran/dropkick2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	attack1 18 14 45 19 10 1 0 0 0 0
+	frame	data/chars/kran/dropkick1.png
+	frame	data/chars/kran/dropkick2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	@cmd	stop
+	delay	12
+
+anim	get
+	delay	12
+	offset	34 55
+	bbox	8 17 53 38
+	frame	data/chars/kran/get.png
+
+anim	freespecial7 # Interaction & Find door
+	delay	20
+	offset	23 71
+	bbox	3 2 26 59
+	frame	data/chars/kran/win1.png
+	@cmd	FindDoor 10 -10 100 "ANI_FOLLOW7"	
+	frame	data/chars/kran/win2.png
+	frame	data/chars/kran/win3.png
+	frame	data/chars/kran/win4.png
+
+anim	follow7 # enter door
+	delay	30
+	offset	9 54
+	frame	data/chars/kran/enter1.png
+	frame	data/chars/kran/enter2.png
+	frame	data/chars/kran/enter3.png
+	frame	data/chars/kran/enter4.png
+	frame	data/chars/kran/enter5.png
+	frame	data/chars/kran/enter6.png
+	frame	data/chars/misc/empty.png
+	delay   100
+	@cmd	EnterDoor 10 -10 100
+	frame	data/chars/misc/empty.png
+
+anim	duck
+	offset	24 62
+	bbox 7 21 35 42
+	cancel 0 5 0  A2 freespecial2
+	cancel 0 5 0  S freespecial18
+	delay	6
+	@cmd	keyint "ANI_SLIDE" 0 "F" 0
+	frame	data/chars/kran/duck.png
+
+anim	ducking
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 2);
+  }
+@end_script
+	offset	18 63
+	bbox 3 12 26 51
+	cancel 0 5 0  A2 freespecial2
+	frame	data/chars/kran/ducking.png
+	@cmd	keyint "ANI_SLIDE" 0 "F" 0		
+	delay	6
+	frame	data/chars/kran/ducking.png
+
+anim	duckrise
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	18 63
+	bbox 3 12 26 51
+	cancel 0 5 0  A2 freespecial2
+	frame	data/chars/kran/ducking.png
+	delay	6
+	frame	data/chars/kran/ducking.png
+
+anim	duckattack #Crouching Slash
+	delay	10
+	offset	24 62
+	bbox 7 21 35 42
+	hitflash blooddown	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/kran/duckattack1.png
+	frame	data/chars/kran/duckattack2.png
+	frame	data/chars/kran/duckattack3.png
+	attack1 31 32 38 15 10 0 0 0 0 0
+	frame	data/chars/kran/duckattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/duckattack3.png
+	frame	data/chars/kran/duckattack1.png
+	delay	2
+	frame	data/chars/kran/duck.png
+
+anim	freespecial2 #Ascending Slash
+	delay	8
+	offset	17 61
+	bbox 5 18 30 44
+	hitflash blooddown
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/kran/ascending1.png
+	jumpframe 0 0 2
+	attack4 22 2 36 18 20 1 0 0 0 0
+	frame	data/chars/kran/ascending2.png
+	frame	data/chars/kran/ascending3.png
+	jumpframe 0 3 1
+	frame	data/chars/kran/ascending4.png
+	frame	data/chars/kran/ascending5.png
+	frame	data/chars/kran/ascending6.png
+	frame	data/chars/kran/ascending7.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/ascending8.png
+
+anim	freespecial11 #Chest Chop
+	offset	24 49
+	bbox 7 3 35 46
+	forcedirection -1
+	delay 6
+	@cmd	dasher 1 0 0 1
+	hitflash blooddown
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/chestchop1.png
+	frame	data/chars/kran/chestchop2.png
+	frame	data/chars/kran/chestchop3.png
+	sound	data/sounds/iiaaah.wav
+	frame	data/chars/kran/chestchop4.png
+	frame	data/chars/kran/chestchop5.png
+	frame	data/chars/kran/chestchop6.png
+	attack3 25 13 50 20 30 1 0 0 0 0
+	frame	data/chars/kran/chestchop7.png
+	frame	data/chars/kran/chestchop7.png
+	attack3 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/chestchop4.png
+	@cmd	stop
+	frame	data/chars/kran/chestchop5.png
+	@cmd	beidle
+	frame	data/chars/kran/chestchop5.png
+
+anim turn
+	offset	23 61
+	bbox 9 2 26 59
+	frame data/chars/kran/idle2.png
+	delay	6
+	frame data/chars/kran/idle2.png
+
+anim	jump
+	delay	12
+	offset	18 61
+	bbox 10 2 25 41
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump2.png
+
+anim jumpland
+	offset	18 63
+	bbox 8 12 26 51
+	delay	12
+	frame	data/chars/kran/ducking.png
+
+anim	jumpattack #Static Jump Sword
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/kran/Jumpattack1.png
+	frame	data/chars/kran/Jumpattack2.png
+	frame	data/chars/kran/Jumpattack3.png
+	frame	data/chars/kran/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/kran/Jumpattack5.png
+	frame	data/chars/kran/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/kran/Jump1.png
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/kran/Jumpattack1.png
+	frame	data/chars/kran/Jumpattack2.png
+	frame	data/chars/kran/Jumpattack3.png
+	frame	data/chars/kran/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/kran/Jumpattack5.png
+	frame	data/chars/kran/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/kran/Jump1.png
+
+anim 	freespecial3 #Static Jump special
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	loop	0
+	offset	26 78
+	bbox 10 17 25 41
+	delay	4
+	hitflash bloodup
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/Jumpspecial1.png
+	frame	data/chars/kran/Jumpspecial2.png
+	attack1 24 45 20 35 10 1 0 0 0 0
+	frame	data/chars/kran/Jumpspecial3.png
+	bbox 24 20 25 41
+	frame	data/chars/kran/Jumpspecial4.png
+	frame	data/chars/kran/Jumpspecial5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 61
+	bbox 10 2 25 41
+	frame	data/chars/kran/jump2.png
+
+anim	forwardjump
+	cancel	0 5 0 a2 freespecial4
+	delay	12
+	offset	18 61
+	bbox 10 2 25 41
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump2.png
+
+anim	freespecial6 #Jump
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    changeentityproperty(self, "aiflag", "jumping", 1);
+    changeentityproperty(self, "takeaction", "common_jump");   
+  }
+@end_script
+	delay	1
+	offset	18 61
+	cancel	0 5 0 a2 freespecial3
+	@cmd	keyint "ANI_FOLLOW6" 0 "F" 0
+	jumpframe 0 3 0 0
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump1.png
+	@cmd	keyint "ANI_FOLLOW6" 0 "F" 0
+	delay	12
+	bbox 10 2 25 41
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump1.png
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel	0 5 0 a2 freespecial3
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump2.png
+
+anim	follow6 #Jump Forward
+	cancel	0 5 0 a2 freespecial4
+	offset	18 61
+	bbox 10 2 25 41
+	delay	12
+	jumpframe 0 3 1.5 0
+	frame	data/chars/kran/jump1.png
+	frame	data/chars/kran/jump2.png
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 61
+	bbox 10 2 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash bloodup	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/Jump2.png
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/kran/Jumpattack1.png
+	frame	data/chars/kran/Jumpattack2.png
+	frame	data/chars/kran/Jumpattack3.png
+	frame	data/chars/kran/Jumpattack4.png
+	attack1 12 48 50 15 10 1 1 0 0 0
+	frame	data/chars/kran/Jumpattack5.png
+	frame	data/chars/kran/Jumpattack5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/kran/Jump1.png
+
+anim	freespecial4 #Jump Front special
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	loop	0
+	delay	4
+	offset	26 78
+	bbox 10 17 25 41
+	delay	12
+	hitflash bloodup
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/Jumpspecial1.png
+	frame	data/chars/kran/Jumpspecial2.png
+	attack1 24 45 20 35 10 1 0 0 0 0
+	frame	data/chars/kran/Jumpspecial3.png
+	bbox 24 20 25 41
+	frame	data/chars/kran/Jumpspecial4.png
+	frame	data/chars/kran/Jumpspecial5.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	offset	18 61
+	bbox 10 2 25 41
+	frame	data/chars/kran/jump2.png
+	
+anim	runjumpattack #Vertical Split
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	18 78
+	bbox 10 14 25 41
+	cancel	0 5 0 a2 freespecial3
+	delay	4
+	hitflash bloodup
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav	
+	offset	18 78
+	bbox 10 14 25 41
+	frame	data/chars/kran/Verticalchop1.png
+	frame	data/chars/kran/Verticalchop2.png
+	frame	data/chars/kran/Verticalchop3.png
+	sound	data/sounds/iiaaah.wav
+	attack4 10 52 50 15 30 1 1 0 0 0
+	frame	data/chars/kran/Verticalchop4.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	attack4 10 62 50 25 30 1 1 0 0 0
+	frame	data/chars/kran/Verticalchop5.png
+	frame	data/chars/kran/Verticalchop6.png
+	frame	data/chars/kran/Verticalchop7.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/Verticalchop8.png
+	frame	data/chars/kran/Verticalchop9.png
+	frame	data/chars/kran/Verticalchop10.png
+	frame	data/chars/kran/Verticalchop11.png
+	delay	12
+	attack4 12 48 50 15 30 1 1 0 0 0
+	frame	data/chars/kran/Verticalchop13.png
+	frame	data/chars/kran/Verticalchop13.png
+	attack4 0 0 0 0 0 0 0 0 0 0
+	offset	18 62
+	bbox 10 2 25 41
+	frame	data/chars/kran/Jump1.png
+
+anim	attack1 #Sword Combo 1
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/attack1.png
+	frame	data/chars/kran/attack2.png
+	frame	data/chars/kran/attack3.png
+	attack1 36 19 40 19 10 0 0 0 0 0
+	frame	data/chars/kran/attack4.png
+	frame	data/chars/kran/attack4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/attack2.png
+	frame	data/chars/kran/attack1.png
+	
+anim	attack2 #Sword Combo 2
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	hitflash blooddown	
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/attack5.png
+	frame	data/chars/kran/attack6.png
+	frame	data/chars/kran/attack7.png
+	attack1 36 19 40 19 10 0 0 0 0 0
+	frame	data/chars/kran/attack8.png
+	frame	data/chars/kran/attack8.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/attack6.png
+	frame	data/chars/kran/attack5.png	
+	
+anim	attack3 #Sword Combo 3
+	delay	6
+	offset	29 76
+	bbox 18 18 28 58
+	hitflash bloodup	
+	sound	data/sounds/slash.wav	
+	hitfx	data/sounds/blood.wav	
+	frame	data/chars/kran/attack9.png
+	frame	data/chars/kran/attack10.png
+	frame	data/chars/kran/attack11.png
+	attack1 36 19 40 19 10 0 0 0 0 0
+	frame	data/chars/kran/attack12.png
+	frame	data/chars/kran/attack12.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/attack10.png
+	frame	data/chars/kran/attack9.png	
+
+anim	freespecial #Web of Death
+	delay	10
+	offset	18 73
+	bbox 3 14 28 61
+	sound	data/sounds/hii.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/kran/webdeath1.png
+	attack1 20 16 38 24 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/kran/webdeath2.png
+	sound	data/sounds/slash.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/kran/webdeath3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/webdeath4.png
+	sound	data/sounds/slash.wav
+	frame	data/chars/kran/webdeath5.png
+	attack1 20 0 38 29 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/kran/webdeath6.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/slash.wav
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/kran/webdeath7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/webdeath8.png
+
+anim	freespecial8 #Health Restore
+@script
+  if(frame==5){
+    void self = getlocalvar("self");
+    int HP = getentityproperty(self,"health");
+
+    changeentityproperty(self, "health", HP+120);
+  }
+@end_script
+	delay	16
+	offset	29 82
+	mpcost	100
+	bbox	15 20 26 62
+	sound	data/sounds/who_are_you.wav
+	frame	data/chars/kran/regen1.png
+	frame	data/chars/kran/regen2.png
+	frame	data/chars/kran/regen3.png
+	frame	data/chars/kran/regen4.png
+	frame	data/chars/kran/regen5.png
+	@cmd	spawn01 "HealFX" 0 0 1
+	frame	data/chars/kran/regen6.png
+
+anim	freespecial9 #Kick
+	delay	12
+	offset	18 64
+	bbox 3 2 26 62
+	hitflash basic
+	sound	data/sounds/hii.wav	
+	frame	data/chars/kran/kick1.png
+	attack1 68 33 70 20 10 0 0 0 0 0
+	frame	data/chars/kran/kick2.png
+	frame	data/chars/kran/kick2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/kran/kick3.png
+	frame	data/chars/kran/kick1.png
+
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	jumpframe 0 0 0	
+	delay	12
+	bbox 0 0 0 0
+	sound	data/sounds/hit2.wav
+	offset	18 61
+	bbox 3 2 26 59
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/kran/hit1.png
+	frame	data/chars/kran/hit2.png
+
+anim	backpain
+	bbox 2 0 83 106
+	sound	data/sounds/hit2.wav
+	offset	18 61
+	bbox 3 2 26 59
+	delay	12
+	frame	data/chars/kran/backhit.png
+	frame	data/chars/kran/backhit.png
+
+anim grabbed
+	offset	38 106
+	delay 150
+	frame	data/chars/kran/backhit.png
+	frame	data/chars/kran/backhit.png
+
+anim	fall
+	offset	44 53
+	delay 12
+	bbox 35 0 26 57
+	sound	data/sounds/hit1.wav
+	cancel  1 5 0 F freespecial16
+	cancel  1 5 0 B freespecial17
+	frame	data/chars/kran/fall1.png
+	frame	data/chars/kran/fall2.png
+	frame	data/chars/kran/fall3.png
+	frame	data/chars/kran/fall4.png
+	frame	data/chars/kran/fall5.png
+
+anim	backfall
+	delay	12
+	offset	16 62
+	sound	data/sounds/hit1.wav
+	cancel  1 5 0 F freespecial16
+	cancel  1 5 0 B freespecial17
+	frame	data/chars/kran/backfall1.png
+	frame	data/chars/kran/backfall2.png
+	frame	data/chars/kran/backfall3.png
+	frame	data/chars/kran/backfall4.png
+	frame	data/chars/kran/backfall5.png
+	frame	data/chars/kran/backfall6.png
+	frame	data/chars/kran/backfall7.png
+
+anim	rise
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	44 53
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/kran/rise1.png
+	frame	data/chars/kran/rise2.png
+	frame	data/chars/kran/rise3.png
+
+anim	backrise
+	offset	44 62
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/kran/backfall7.png
+	frame	data/chars/kran/backfall6.png
+	frame	data/chars/kran/backfall5.png
+	offset	44 55
+	frame	data/chars/kran/rise3.png
+
+anim	death
+@script
+  if(frame==7){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	24
+	jumpframe 0 0 0
+	offset	16 62
+	sound	data/sounds/hahaha.wav	
+	frame	data/chars/kran/backfall1.png
+	@cmd	setmusicvolume 50 50
+	frame	data/chars/kran/backfall2.png
+	@cmd	DeathCode 3
+	frame	data/chars/kran/backfall3.png
+	frame	data/chars/kran/backfall4.png
+	frame	data/chars/kran/backfall5.png
+	frame	data/chars/kran/backfall6.png
+	frame	data/chars/kran/backfall7.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/kran/backfall7.png
+	
+anim	death2
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	30
+	jumpframe 0 0 0
+	offset	16 62
+	spawnframe 0 0 0 0 0
+	@cmd	spawnM "kranhead" 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/kran/decap1.png
+	@cmd	setmusicvolume 50 50	
+	frame	data/chars/kran/decap2.png
+	@cmd	DeathCode 3
+	frame	data/chars/kran/decap3.png
+	frame	data/chars/kran/decap4.png
+	frame	data/chars/kran/decap5.png
+	frame	data/chars/kran/decap6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/kran/decap6.png
+	
+anim	death3
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	30
+	jumpframe 0 0 0
+	offset	16 62
+	@cmd spawnM "kranchest" 0 30 0
+	sound	data/sounds/hahaha.wav		
+	@cmd	setmusicvolume 50 50
+	frame	data/chars/kran/chestrip1.png
+	@cmd	DeathCode 3
+	frame	data/chars/kran/chestrip2.png
+	frame	data/chars/kran/chestrip3.png
+	frame	data/chars/kran/chestrip4.png
+	frame	data/chars/kran/chestrip5.png
+	frame	data/chars/kran/chestrip6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/kran/chestrip6.png
+
+anim	death4
+@script
+  if(frame==6){
+    int Screen = openborvariant("hResolution"); // Get screen width
+
+    spawn02("handskull", Screen*0.5, 0, 0);
+  }
+@end_script
+	delay	20
+	jumpframe 0 0 0
+	offset	37 62
+	@cmd	setmusicvolume 50 50
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/kran/verticaldeath1.png
+	@cmd	DeathCode 3
+	frame	data/chars/kran/verticaldeath2.png
+	frame	data/chars/kran/verticaldeath3.png
+	frame	data/chars/kran/verticaldeath4.png
+	frame	data/chars/kran/verticaldeath5.png
+	frame	data/chars/kran/verticaldeath6.png
+	delay	700
+	@cmd	setmusicvolume 100 100
+	frame	data/chars/kran/verticaldeath6.png	
+
+
+anim	slide #roll
+	offset	20 43
+	bbox 9 4 25 39
+	delay	10
+	jumpframe 0 0 2 1
+	cancel 0 10 0  A1 freespecial11	
+	sound	data/sounds/roll.wav
+	frame	data/chars/kran/roll1.png
+	hitflash basic
+	bbox 0 19 31 24
+	attack1 0 19 31 24 0 1 0 0 0 0
+	frame	data/chars/kran/roll2.png
+	frame	data/chars/kran/roll3.png
+	frame	data/chars/kran/roll4.png
+	frame	data/chars/kran/roll5.png
+	frame	data/chars/kran/roll6.png
+	frame	data/chars/kran/roll7.png
+	frame	data/chars/kran/roll8.png
+	frame	data/chars/kran/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/kran/roll10.png
+
+anim	freespecial12 #roll front
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/kran/roll1.png
+	bbox 0 19 31 24
+	frame	data/chars/kran/roll2.png
+	frame	data/chars/kran/roll3.png
+	frame	data/chars/kran/roll4.png
+	frame	data/chars/kran/roll5.png
+	frame	data/chars/kran/roll6.png
+	frame	data/chars/kran/roll7.png
+	frame	data/chars/kran/roll8.png
+	frame	data/chars/kran/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/kran/roll10.png
+
+anim	freespecial13 #roll back
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	flipframe 1
+	jumpframe 0 0 -2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/kran/roll1.png
+	bbox 0 19 31 24
+	frame	data/chars/kran/roll2.png
+	frame	data/chars/kran/roll3.png
+	frame	data/chars/kran/roll4.png
+	frame	data/chars/kran/roll5.png
+	frame	data/chars/kran/roll6.png
+	frame	data/chars/kran/roll7.png
+	frame	data/chars/kran/roll8.png
+	frame	data/chars/kran/roll9.png
+	bbox 9 4 25 39
+	frame	data/chars/kran/roll10.png
+
+anim	freespecial16 #Esquive front
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/kran/roll1.png
+	bbox 0 19 31 24
+	hitflash basic
+	attack1 0 19 31 24 0 1 0 0 0 0
+	frame	data/chars/kran/roll2.png
+	frame	data/chars/kran/roll3.png
+	frame	data/chars/kran/roll4.png
+	frame	data/chars/kran/roll5.png
+	frame	data/chars/kran/roll6.png
+	frame	data/chars/kran/roll7.png
+	frame	data/chars/kran/roll8.png
+	frame	data/chars/kran/roll9.png
+	bbox 9 4 25 39
+	@cmd	beidle
+	frame	data/chars/kran/roll10.png
+
+anim	freespecial17 #Esquive back
+	offset	20 43
+	bbox 9 4 25 39
+	cancel 0 10 0  A1 freespecial11
+	delay	10
+	flipframe 1
+	jumpframe 0 0 -2 1
+	hitflash basic	
+	sound	data/sounds/roll.wav
+	frame	data/chars/kran/roll1.png
+	bbox 0 19 31 24
+	attack1 0 19 31 24 0 1 0 0 0 0
+	frame	data/chars/kran/roll2.png
+	frame	data/chars/kran/roll3.png
+	frame	data/chars/kran/roll4.png
+	frame	data/chars/kran/roll5.png
+	frame	data/chars/kran/roll6.png
+	frame	data/chars/kran/roll7.png
+	frame	data/chars/kran/roll8.png
+	frame	data/chars/kran/roll9.png
+	bbox 9 4 25 39
+	@cmd	beidle
+	frame	data/chars/kran/roll10.png
+
+anim	block
+	delay	20
+	offset	18 60
+	bbox 9 2 26 59
+	cancel	0 5 0 a2 freespecial8
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/kran/block.png
+
+anim	freespecial18 #duck block
+	delay	5
+	offset	16 62
+	bbox 5 14 29 48
+	hitflash block
+	frame	data/chars/kran/duckblock.png
+	delay	10
+	@cmd	block 1
+	frame	data/chars/kran/duckblock.png
+	frame	data/chars/kran/duckblock.png
+	@cmd	keyint "ANI_FREESPECIAL18" 1 "S" 0
+	frame	data/chars/kran/duckblock.png
+	delay	5
+	@cmd	block 0
+	frame	data/chars/kran/duckblock.png

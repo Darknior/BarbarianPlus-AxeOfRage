@@ -1,0 +1,262 @@
+music		data/music/Goblin_Raid.ogg
+
+background      data/bgs/levels/Lake/lake_sky.png
+bgspeed 	0.2 0
+
+bglayer		data/bgs/levels/Lake/lake_water.png    0 0 0 -4 0 0 20 2  1 0   1 1 2 0.5 0
+
+panel		data/bgs/levels/Lake/lake.png
+frontpanel  	data/bgs/levels/Lake/lake_front.png
+
+wall		50 240 -500 -500 0 0 100 5000
+wall		350 240 0 0 500 500 100 5000
+
+light		256 -64
+at		0
+shadowalpha 	2
+at		0
+
+order       	a 
+settime	    	30
+type		1 0 0
+noslow 		1
+
+spawn		Movelist
+flip		1
+coords		0 0 0
+at			0
+
+#------------------------------------------
+
+spawn		lake_snake_l
+flip		1
+coords		13 5
+at		0
+spawn		lake_snake_r
+coords		387 5
+at		0
+spawn   	lake_spawner
+coords  	0 0
+at     		0
+
+spawn   	birds
+coords  	0 40
+at      	0
+spawn		lake_monster
+flip		1
+coords  	105 100
+at      	0
+
+spawn	P1HUD
+alias	Player
+coords	30 205 0
+at      0
+
+spawn	BirdCount
+coords	160 205 0
+at      0
+
+spawn	delay
+health	20
+coords	160 205 0
+at      0
+
+group	1 1
+at	0
+
+spawn	T.BirdE
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		5
+coords	350 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		9
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		7
+coords	350 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		3
+coords	350 178 0
+at      0
+
+spawn	T.BirdF
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		6
+coords	350 178 0
+at      0
+
+group	2 2
+at	0
+
+spawn	T.BirdE
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		8
+coords	350 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		4
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+coords	350 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+map		2
+item	Increme
+itemalias C1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+map		5
+item	Increme
+itemalias C1
+coords	350 178 0
+at      0
+
+spawn	T.BirdF
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+map		7
+item	Increme
+itemalias C1
+coords	350 178 0
+at      0
+
+group	3 3
+at	0
+
+spawn	T.BirdE
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+coords	350 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		1
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		2
+coords	350 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		3
+flip	1
+coords	60 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/FenHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		4
+coords	350 178 0
+at      0
+
+spawn	T.BirdF
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		5
+coords	350 178 0
+at      0
+
+spawn	T.BirdE
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+map		6
+coords	350 178 0
+at      0
+
+spawn	T.BirdF2
+spawnscript data/scripts/enHUD2.c
+alias 	Terror_Bird
+item	Increme
+itemalias C1
+boss 	1
+map		7
+flip	1
+coords	60 178 0
+at      0
+
+spawn	delay
+health	20
+coords	160 205 0
+at      0

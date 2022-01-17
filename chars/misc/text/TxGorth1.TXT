@@ -1,0 +1,32 @@
+name		txgorth1
+type		none
+nomove		1 1
+lifespan	100
+subject_to_gravity 0
+setlayer	1
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+
+anim	idle
+loop 0
+	delay	80
+	offset	0 0
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png	
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png
+	frame	data/chars/misc/text/txgorth.png		

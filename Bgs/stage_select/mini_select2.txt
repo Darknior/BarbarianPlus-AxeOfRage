@@ -1,0 +1,217 @@
+name		mini_select2
+type		panel
+speed		10
+shadow		0
+setlayer	13
+facing		1
+palette		none
+
+
+anim	idle
+	loop	1
+	delay	10
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+
+anim	follow1
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW8")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW2")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+	delay	2
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+
+anim	follow2
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW1")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW3")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+	delay	2
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+
+anim	follow3
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW2")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW4")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+	delay	2
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+
+anim	follow4
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW3")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW5")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+	delay	2
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+
+anim	follow5
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW4")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW6")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+	delay	2
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+
+anim	follow6
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW5")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW7")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+	delay	2
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+
+anim	follow7
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW6")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW8")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	delay	2
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	
+anim	follow8
+@script
+  if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+
+    if(X1 < 0){ // left is pressed
+      performattack(self, openborconstant("ANI_FOLLOW7")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      performattack(self, openborconstant("ANI_FOLLOW1")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	drawmethod	tintmode 2
+	drawmethod	tintcolor 70_70_70
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png
+	delay	2
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png

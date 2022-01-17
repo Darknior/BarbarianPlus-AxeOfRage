@@ -1,0 +1,119 @@
+name		Exit
+type		none
+antigravity     100
+offscreenkill	4000
+	
+
+anim	idle
+@script
+    void self = getlocalvar("self");
+    void P1 = getplayerproperty(0, "entity");
+
+    float x = getentityproperty(self, "x");
+    float y = getentityproperty(self, "a");
+    float Dir = getentityproperty(self, "direction");
+    char Name = getentityproperty(self,"name");
+    float Tx1 = getentityproperty(P1, "x");
+    float Ty1 = getentityproperty(P1, "a");
+
+    float Disx1 = Tx1 - x;
+    float Disy1 = Ty1 - y;
+
+    if(frame >= 1){
+      if(Disx1 >= -20 && Disx1 <= 20 && Disy1 >= -10 && Disy1 <= 300){
+        int Health = getentityproperty(self,"health");
+        int Rx; int Ry;
+
+        Rx = Health/1000;
+        Ry = Health%1000;
+
+        setglobalvar("x0", Rx);
+        setglobalvar("y0", Ry+Disy1);
+        setglobalvar("Dir0", Dir);
+        jumptobranch(Name, 1);
+      }
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	30 30
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+
+anim	follow1
+@script
+    void self = getlocalvar("self");
+    void P1 = getplayerproperty(0, "entity");
+
+    float x = getentityproperty(self, "x");
+    float y = getentityproperty(self, "a");
+    float Dir = getentityproperty(self, "direction");
+    char Name = getentityproperty(self,"name");
+    float Tx1 = getentityproperty(P1, "x");
+    float Ty1 = getentityproperty(P1, "a");
+
+    float Disx1 = Tx1 - x;
+    float Disy1 = Ty1 - y;
+
+    if(frame >= 1){
+      if(Disx1 >= -20 && Disx1 <= 20 && Disy1 >= -10){
+        int Health = getentityproperty(self,"health");
+        int Rx; int Ry;
+
+        Rx = Health/1000;
+        Ry = Health%1000;
+
+        setglobalvar("x0", Rx);
+        setglobalvar("y0", Ry);
+        setglobalvar("Dir0", Dir);
+        jumptobranch(Name, 1);
+      }
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	30 30
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+
+anim	follow2
+@script
+    void self = getlocalvar("self");
+    void P1 = getplayerproperty(0, "entity");
+
+    float x = getentityproperty(self, "x");
+    float y = getentityproperty(self, "a");
+    float Dir = getentityproperty(self, "direction");
+    char Name = getentityproperty(self,"name");
+    float Tx1 = getentityproperty(P1, "x");
+    float Ty1 = getentityproperty(P1, "a");
+
+    float Disx1 = Tx1 - x;
+    float Disy1 = Ty1 - y;
+
+    if(frame >= 1){
+      if(Disx1 >= -20 && Disx1 <= 20 && Disy1 >= -10 && Disy1 <= 10){
+        int Health = getentityproperty(self,"health");
+        int Rx; int Ry;
+
+        Rx = Health/1000;
+        Ry = Health%1000;
+
+        setglobalvar("x0", Rx);
+        setglobalvar("y0", Ry);
+        setglobalvar("Dir0", Dir);
+        jumptobranch(Name, 1);
+      }
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	30 30
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png

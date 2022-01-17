@@ -1,0 +1,17 @@
+name		bgselect
+type		panel
+speed		10
+setlayer	10
+facing		1
+
+
+anim	idle
+	loop	1
+	delay	20
+	offset	200 100
+	frame	data/bgs/select/select_flame1.png
+	frame	data/bgs/select/select_flame2.png
+	frame	data/bgs/select/select_flame3.png	
+	frame	data/bgs/select/select_flame4.png
+	frame	data/bgs/select/select_flame5.png	
+	frame	data/bgs/select/select_flame6.png

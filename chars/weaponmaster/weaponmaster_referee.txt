@@ -1,0 +1,131 @@
+name    	weaponmaster_referee
+type		none
+facing		1
+setlayer	1
+animationscript	data/scripts/wasitS.c
+
+
+anim	spawn
+@script
+  if(frame>=1){
+    void P1 = getplayerproperty(0, "entity");
+    void P2 = getplayerproperty(1, "entity");
+
+    if(P1 && P2){
+      void self = getlocalvar("self");
+      setglobalvar("F1", P1);
+      setglobalvar("F2", P2);
+
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+  }
+@end_script
+	loop	1
+	delay	1
+	offset	17 61
+        frame   data/chars/weaponmaster/idle1.png
+        frame   data/chars/weaponmaster/idle1.png
+        frame   data/chars/weaponmaster/idle1.png
+        frame   data/chars/weaponmaster/idle1.png
+
+anim	idle
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    void Lead = LeaderFind();
+    int Habis = Desid();
+
+    if(Habis==1){
+      performattack(self, openborconstant("ANI_FOLLOW3"));
+    }
+    if(Lead){
+      int Lx = getentityproperty(Lead, "x");
+
+      if(Lx <= 140){
+        performattack(self, openborconstant("ANI_FOLLOW1"));
+      } else if(Lx >= 180){
+        performattack(self, openborconstant("ANI_FOLLOW2"));
+      }
+    }
+  }
+@end_script
+	loop	1
+	delay	2
+	offset	17 61
+        frame   data/chars/weaponmaster/idle1.png
+        frame   data/chars/weaponmaster/idle1.png
+
+anim	follow1 # face left
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    void Lead = LeaderFind();
+    int Habis = Desid();
+
+    if(Habis==1){
+      performattack(self, openborconstant("ANI_FOLLOW3"));
+    }
+    if(Lead){
+      int Lx = getentityproperty(Lead, "x");
+
+      if(Lx > 140){
+        setidle(self, openborconstant("ANI_IDLE"));
+      }
+    }
+  }
+@end_script
+	loop	1
+	delay	2
+	offset	17 61
+        frame   data/chars/weaponmaster/idle2.png
+        frame   data/chars/weaponmaster/idle2.png
+
+anim	follow2 # face right
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    void Lead = LeaderFind();
+    int Habis = Desid();
+
+    if(Habis==1){
+      performattack(self, openborconstant("ANI_FOLLOW3"));
+    }
+    if(Lead){
+      int Lx = getentityproperty(Lead, "x");
+
+      if(Lx <180){
+        setidle(self, openborconstant("ANI_IDLE"));
+      }
+    }
+  }
+@end_script
+	loop	1
+	delay	2
+	offset	17 61
+        frame   data/chars/weaponmaster/idle3.png
+        frame   data/chars/weaponmaster/idle3.png
+
+anim	follow3 # Announces winner
+@script
+  if(frame==1){
+    void Lead = LeaderFind();
+
+    changeentityproperty(Lead, "velocity", 0, 0, 0);
+    performattack(Lead, openborconstant("ANI_VICTORY"));
+  }
+  if(frame==7){
+    jumptobranch("Lanjut", 1);
+  }
+@end_script
+	delay	100
+	offset	17 61
+	frame   data/chars/weaponmaster/idle1.png
+	frame   data/chars/weaponmaster/idle1.png
+    frame   data/chars/weaponmaster/idle2.png
+    frame   data/chars/weaponmaster/idle3.png
+	offset	24 68
+    frame   data/chars/weaponmaster/draw1.png
+    frame   data/chars/weaponmaster/draw2.png
+ 	delay	400
+	frame   data/chars/weaponmaster/draw3.png
+    frame   data/chars/weaponmaster/draw3.png

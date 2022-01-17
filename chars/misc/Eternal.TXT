@@ -1,0 +1,29 @@
+name	Eternal
+type	none
+
+
+anim	idle
+@script
+      void vEntity;                                     //Target entity placeholder.
+      int iEntity;                                     //Entity enumeration holder.
+      int iType;                                       //Entity type.
+      int iMax      = openborvariant("count_entities");       //Entity count.
+      int MPHP;
+
+      for(iEntity=0; iEntity<iMax; iEntity++){    
+        vEntity = getentity(iEntity);                 //Get target entity 
+        iType   = getentityproperty(vEntity, "type"); //Get target type.
+      
+        if(iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_PLAYER")){ //enemy or player type?
+          MPHP = getentityproperty(vEntity, "maxhealth");
+
+          changeentityproperty(vEntity, "health", MPHP);
+        }
+      }
+@end_script
+	loop	1
+	delay	10
+	offset	1 1
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif

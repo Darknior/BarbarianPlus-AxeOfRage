@@ -1,0 +1,33 @@
+name				Lizard_King
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	offset	0 0 
+	delay	20
+	frame	data/bgs/levels/Pit/Lizard_King1.png	
+	frame	data/bgs/levels/Pit/Lizard_King2.png
+	frame	data/bgs/levels/Pit/Lizard_King3.png
+	frame	data/bgs/levels/Pit/Lizard_King4.png
+	frame	data/bgs/levels/Pit/Lizard_King3.png
+	frame	data/bgs/levels/Pit/Lizard_King2.png
+	frame	data/bgs/levels/Pit/Lizard_King1.png	
+	frame	data/bgs/levels/Pit/Lizard_King5.png	
+	frame	data/bgs/levels/Pit/Lizard_King6.png
+	frame	data/bgs/levels/Pit/Lizard_King7.png	
+	frame	data/bgs/levels/Pit/Lizard_King8.png
+	frame	data/bgs/levels/Pit/Lizard_King7.png	
+	frame	data/bgs/levels/Pit/Lizard_King6.png	
+	frame	data/bgs/levels/Pit/Lizard_King5.png
+	frame	data/bgs/levels/Pit/Lizard_King4.png	
+	frame	data/bgs/levels/Pit/Lizard_King9.png	
+	frame	data/bgs/levels/Pit/Lizard_King10.png	
+	frame	data/bgs/levels/Pit/Lizard_King11.png
+	frame	data/bgs/levels/Pit/Lizard_King12.png	
+	frame	data/bgs/levels/Pit/Lizard_King11.png	
+	frame	data/bgs/levels/Pit/Lizard_King10.png	
+	frame	data/bgs/levels/Pit/Lizard_King9.png	

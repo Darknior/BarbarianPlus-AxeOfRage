@@ -1,0 +1,255 @@
+name		mini_select
+type		panel
+speed		10
+shadow		0
+setlayer	13
+facing		1
+palette		none
+
+
+anim	idle
+	loop	1
+	delay	10
+	offset	0 0
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+
+anim	follow1
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      playsample(SFX, 0, 120, 120, 100, 0);
+      setglobalvar("Destine", "Arena");
+      performattack(self, openborconstant("ANI_FOLLOW8")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Lake");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW2")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+	delay	2
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+	frame	data/bgs/stage_select/forest_mini.png
+
+anim	follow2
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Forest");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW1")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Mountain");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW3")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+	delay	2
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+	frame	data/bgs/stage_select/lake_mini.png
+
+anim	follow3
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Lake");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW2")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Waterfall");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW4")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+	delay	2
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+	frame	data/bgs/stage_select/mountain_mini.png
+
+anim	follow4
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Mountain");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW3")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Castle");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW5")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+	delay	2
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+	frame	data/bgs/stage_select/waterfall_mini.png
+
+anim	follow5
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Waterfall");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW4")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Pit");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW6")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+	delay	2
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+	frame	data/bgs/stage_select/castle_mini.png
+
+anim	follow6
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Castle");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW5")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Throne");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW7")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+	delay	2
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+	frame	data/bgs/stage_select/pit_mini.png
+
+anim	follow7
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Pit");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW6")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Arena");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW8")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	delay	2
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	frame	data/bgs/stage_select/throne_mini.png
+	
+anim	follow8
+@script
+  if(frame==1){
+    setglobalvar("0X", 0);
+  } else if(frame>=2){
+    void self = getlocalvar("self");
+    int X1 = getglobalvar("0X"); // gets left or right pressed status from player 1
+    int SFX = loadsample("data/sounds/beep.wav");
+
+    if(X1 < 0){ // left is pressed
+      setglobalvar("Destine", "Throne");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW7")); // change to left
+    } else if(X1 > 0){ // right is pressed?
+      setglobalvar("Destine", "Forest");
+      playsample(SFX, 0, 120, 120, 100, 0);
+      performattack(self, openborconstant("ANI_FOLLOW1")); // change to right
+    }
+  }
+@end_script
+	loop	1 2 4
+	delay	15
+	offset	0 0
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png
+	delay	2
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png
+	frame	data/bgs/stage_select/arena_mini.png

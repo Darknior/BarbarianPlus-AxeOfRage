@@ -1,0 +1,63 @@
+music		data/music/Venomlock_Burrow.ogg
+
+panel			data/bgs/levels/Forest/Forest.png
+frontpanel  	data/bgs/levels/Forest/forest_front.png
+
+#DOC -----                                                ratio  position  spacing repeat  transparency  alpha
+#bglayer         data/bgs/levels/Forest/forest_sky.png    1 1    0 -4      0 0     0 0     1             0
+
+background      data/bgs/levels/Forest/forest_sky.png
+bgspeed 	0.5 0
+
+bglayer         data/bgs/levels/Forest/forest_sun.png    0.8 1 0 -4 0 0 1 1    1 0	0 0 0 0 0.1
+bglayer         data/bgs/levels/Forest/Forest_clouds.png 0.6 1 0 -4 0 0 1 9999 1 0	0 0 0 0 0.5
+
+wall		50 240 -500 -500 0 0 100 5000
+wall		350 240 0 0 500 500 100 5000
+
+order       	a 
+settime	    	30
+type		1 0 0
+noslow 		1
+
+spawn	P1HUD
+alias	Player
+coords	30 205 0
+at      0
+
+#------------------------------------------
+
+spawn		forest_snake_l
+flip		1
+coords		13 5
+at		0
+spawn		forest_snake_r
+coords		387 5
+at		0
+spawn   	forest_spawner
+coords  	0 0
+at     		0
+
+spawn   	birds
+coords  	450 40
+flip		1
+at      	0
+spawn		eyes
+coords		114 116
+flip		1
+at		0
+spawn		squirrel
+flip		1
+coords		65 167 
+at		0
+
+
+#------------------------------------------
+
+spawn	BrodaE
+alias	Kam
+spawnscript data/scripts/enHUD2.c
+boss 1
+map	 3
+coords	320 178 0
+at      0

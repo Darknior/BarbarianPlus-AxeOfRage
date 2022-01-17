@@ -1,0 +1,72 @@
+music       data/music/Water_Elemental.ogg
+
+background  data/bgs/levels/Lake/lake_sky.png
+bgspeed     0.2 0
+
+bglayer     data/bgs/levels/Lake/lake_water.png    0 0 0 -4 0 0 20 2  1 0   1 1 2 0.5 0
+
+panel       data/bgs/levels/Lake/lake.png
+frontpanel  data/bgs/levels/Lake/lake_front.png
+
+wall        50 240 -500 -500 0 0 100 5000
+wall        350 240 0 0 500 500 100 5000
+
+light       256 -44
+at          0
+shadowalpha 2
+at          0
+
+order       a 
+settime     0
+type        1 0 0
+noslow      1
+
+#------------------------------------------
+
+spawn1      70  178 
+spawn2      330 178
+
+spawn       P1HUD
+alias       Player_1
+coords      30 205 0
+at          0
+spawn       P2HUD
+alias       Player_2
+coords      295 205 0
+at          0
+
+#------------------------------------------
+
+spawn       lake_snake_l
+flip        1
+coords      13 5
+at          0
+spawn       lake_snake_r
+coords      387 5
+at          0
+spawn       lake_spawner
+coords      0 0
+at          0
+
+spawn       birds
+coords      0 40
+at          0
+spawn       lake_monster
+flip        1
+coords      105 100
+at          0
+
+
+#------------------------------------------
+#------------------------------------------
+
+spawn       empty
+flip        1
+coords      999 999 0
+at          0
+
+spawn       weaponmaster_referee
+flip        1
+coords      -160 -155 0
+at          0
+

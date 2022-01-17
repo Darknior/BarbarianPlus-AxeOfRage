@@ -1,0 +1,16 @@
+# Hit flash
+
+name	Flash
+type	none
+shadow	0
+toflip 1 
+
+
+anim idle
+	loop	0
+	delay	12
+	offset	0 7
+	frame	data/chars/misc/blood/blood1.png
+	frame	data/chars/misc/blood/blood2.png
+	frame	data/chars/misc/blood/blood3.png
+	frame	data/chars/misc/blood/blood4.png

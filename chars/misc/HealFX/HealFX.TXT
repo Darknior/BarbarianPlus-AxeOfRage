@@ -1,0 +1,21 @@
+# Hit flash
+
+name	HealFX
+type	none
+shadow	0
+toflip 1 
+
+
+anim idle
+	loop	0
+	delay	6
+	offset	24 40
+	frame	data/chars/misc/healfx/healfx1.png
+	frame	data/chars/misc/healfx/healfx2.png
+	frame	data/chars/misc/healfx/healfx3.png
+	frame	data/chars/misc/healfx/healfx4.png
+	frame	data/chars/misc/healfx/healfx5.png
+	frame	data/chars/misc/healfx/healfx6.png
+	frame	data/chars/misc/healfx/healfx7.png
+	frame	data/chars/misc/healfx/healfx8.png	
+	frame	data/chars/misc/empty.png	

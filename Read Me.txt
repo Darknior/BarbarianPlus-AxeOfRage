@@ -1,0 +1,9 @@
+ There are 3 crows in this rar:
+
+ Crow1 : Waits in spawned spot, if player is close enough flies backward, stop then flies toward player. Stops after that then flies toward player again and the cycle repeats
+ Crow2 : Same as #1 but flies away after flying toward player
+ Crow3 : Flies in then waits in mid air, if player is close enough, flies toward player then flies away
+
+ These crows are tested in Castlevania Collab demo and all of them works
+
+ Required scripts are included also 

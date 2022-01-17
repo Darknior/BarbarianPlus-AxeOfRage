@@ -1,0 +1,34 @@
+name            waterfall_anim
+type            none
+shadow          0
+setlayer        2
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1
+    delay   18
+    offset  0 0
+    palette data/bgs/levels/Waterfall/waterfall/waterfall01.png
+
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall01.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall02.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall03.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall04.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall05.png
+
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall06.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall07.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall08.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall09.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall10.png
+
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall11.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall12.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall13.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall14.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall15.png
+
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall16.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall17.png
+    frame   data/bgs/levels/Waterfall/waterfall/waterfall18.png

@@ -1,0 +1,50 @@
+music		data/music/Water_Elemental.ogg
+
+background      data/bgs/levels/Lake/lake_sky.png
+bgspeed 	0.2 0
+
+bglayer		data/bgs/levels/Lake/lake_water.png    0 0 0 -4 0 0 20 2  1 0   1 1 2 0.5 0
+
+panel		data/bgs/levels/Lake/lake.png
+frontpanel  	data/bgs/levels/Lake/lake_front.png
+
+wall		50 240 -500 -500 0 0 100 5000
+wall		350 240 0 0 500 500 100 5000
+
+light		256 -64
+at		0
+shadowalpha 	2
+at		0
+
+order       	a 
+settime	    	0
+type		1 0 0
+noslow 		1
+
+spawn		Movelist
+flip		1
+coords		0 0 0
+at			0
+
+spawn		Animated_Lake
+flip		1
+coords		0 0 0
+at			0
+
+#spawn		Squirrel
+#flip		1
+#coords		0 0 0
+#at			0
+
+spawn	P1HUD
+alias	Player
+coords	30 205 0
+at      0
+
+spawn	ZagulE
+spawnscript data/scripts/enHUD2.c
+alias 	Kurzol
+boss 1
+map		2
+coords	320 178 0
+at      0

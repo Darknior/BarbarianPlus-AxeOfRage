@@ -1,0 +1,16 @@
+# Hit flash
+
+name	Bloodup
+type	none
+shadow	0
+toflip 1 
+
+
+anim idle
+	loop	0
+	delay	12
+	offset	17 9
+	frame	data/chars/misc/blood/bloodup1.png
+	frame	data/chars/misc/blood/bloodup2.png
+	frame	data/chars/misc/blood/bloodup3.png
+	frame	data/chars/misc/blood/bloodup4.png

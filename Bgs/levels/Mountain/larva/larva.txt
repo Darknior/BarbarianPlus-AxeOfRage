@@ -1,0 +1,187 @@
+name            larva
+type            none
+shadow          0
+setlayer        2
+subject_to_gravity     0
+
+animationscript data/scripts/player.c
+
+anim idle
+    loop    1
+    offset  13 7
+    palette data/bgs/levels/Mountain/larva/larva00.png
+    
+# HIDDEN BEFORE START
+    delay   200
+    frame   data/chars/misc/empty.gif
+# SPAWN
+    @cmd    flip 1
+    delay   10
+    frame   data/bgs/levels/Mountain/larva/larva00.png
+    frame   data/bgs/levels/Mountain/larva/larva07.png
+
+# RUN RIGHT
+    @cmd    dasher -0.01 0 0
+    delay   40
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+# WAVE / TURN
+    @cmd    stop
+    delay   10
+    frame   data/bgs/levels/Mountain/larva/larva07.png
+    frame   data/bgs/levels/Mountain/larva/larva00.png
+    @cmd    flip 0
+    delay   1000
+    frame   data/chars/misc/empty.gif
+    delay   10
+    frame   data/bgs/levels/Mountain/larva/larva00.png
+    frame   data/bgs/levels/Mountain/larva/larva07.png
+
+# RUN LEFT
+    @cmd    dasher 0.01 0 0
+    delay   40
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+    frame   data/bgs/levels/Mountain/larva/larva01.png
+    frame   data/bgs/levels/Mountain/larva/larva02.png
+    frame   data/bgs/levels/Mountain/larva/larva03.png
+    frame   data/bgs/levels/Mountain/larva/larva04.png
+    frame   data/bgs/levels/Mountain/larva/larva05.png
+    frame   data/bgs/levels/Mountain/larva/larva06.png
+
+# HIDE
+    @cmd    stop
+    delay   10
+    frame   data/bgs/levels/Mountain/larva/larva07.png
+    frame   data/bgs/levels/Mountain/larva/larva00.png
+    delay   800
+    frame   data/chars/misc/empty.gif

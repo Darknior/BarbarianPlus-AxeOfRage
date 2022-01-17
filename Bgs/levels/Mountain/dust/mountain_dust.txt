@@ -1,0 +1,45 @@
+name            mountain_dust
+type            none
+setlayer        90
+facing          1
+subject_to_maxz 1
+
+animationscript data/scripts/player.c
+
+#--------------------------------
+
+anim spawn
+    offset  7 7
+    delay   1
+    palette data/bgs/levels/mountain/dust/dust.png
+    frame   data/chars/misc/empty.gif
+
+anim idle
+    offset  7 10
+    delay   5
+    frame   data/chars/misc/empty.gif
+    delay   200
+    bbox    2 0 10 10
+    
+    @cmd    dasher  0.3 0 -0.01
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.3 0 0.02
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.4 0 -0.02
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.4 0 0.02
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.5 0 -0.02
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.4 0 0.01
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.5 0 -0.01
+    frame   data/bgs/levels/mountain/dust/dust.png
+    @cmd    dasher  0.4 0 -0.01
+    frame   data/bgs/levels/mountain/dust/dust.png
+
+    @cmd    stop
+    frame   data/bgs/levels/mountain/dust/dust.png
+    delay   50
+    @cmd    suicide
+    frame   data/chars/misc/empty.gif

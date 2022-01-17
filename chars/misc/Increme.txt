@@ -1,0 +1,20 @@
+name		Increme
+type		none
+offscreenkill	3000
+
+
+anim	idle
+@script
+  if(frame == 1){
+    void self = getlocalvar("self");
+    char Code = getentityproperty(self, "name");
+    int Value = getglobalvar(Code);
+
+    setglobalvar(Code, Value + 1);
+    killentity(self);
+  }
+@end_script
+	delay	5
+	offset	1 1
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif

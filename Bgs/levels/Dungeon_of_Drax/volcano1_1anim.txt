@@ -1,0 +1,19 @@
+name		volcano1_1anim
+type		none
+shadow		0
+setlayer	1
+
+
+anim	idle
+	loop	1
+	offset	0 0 
+	delay 	25
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim1.png	
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim2.png
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim3.png
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim4.png
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim5.png
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim6.png
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim7.png	
+	frame	data/bgs/levels/dungeon_of_drax/volcano1_1_anim8.png	
+	

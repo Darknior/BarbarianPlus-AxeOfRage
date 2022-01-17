@@ -1,0 +1,14 @@
+renamekey  Moveup        Up or Jump
+renamekey  Movedown      Down or Duck
+renamekey  Moveleft      Left
+renamekey  Moveright     Right 
+renamekey  attack        Slash
+renamekey  attack2       Special
+renamekey  attack3       Interaction
+disablekey attack4
+renamekey  Jump          Jump
+renamekey  Special       Block
+renamekey  Start         Start
+renamekey  Screenshot    Screenshot
+
+

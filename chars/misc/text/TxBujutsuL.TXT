@@ -1,0 +1,27 @@
+name		TxbujutsuL
+type		none
+nomove		1 1
+subject_to_gravity 0
+setlayer	9999
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+alternatepal	data/chars/misc/alt11.gif
+alternatepal	data/chars/misc/alt12.gif
+
+
+anim	idle
+	loop	1
+	delay	10
+	offset	90 40
+	frame	data/chars/misc/text/txbujutsu.gif
+	frame	data/chars/misc/text/txbujutsu.gif

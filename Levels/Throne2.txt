@@ -1,0 +1,40 @@
+music		data/music/Red_Goblin_stronghold.ogg
+background	data/bgs/levels/Throne/Throne.png 1 1 0 0 0 0 1 1 0
+panel	    data/bgs/levels/panel.png none	none
+frontpanel  data/bgs/levels/Throne/Throne_front.png
+
+order       a 
+settime	    30
+wall		50 240 -500 -500 0 0 100 5000
+wall		350 240 0 0 500 500 100 5000
+spawn1		70 178 0
+type		1 0 0
+noslow 		1
+
+spawn		Movelist
+flip		1
+coords		0 0 0
+at			0
+
+spawn		Animated_Throne
+flip		1
+coords		0 0 0
+at			0
+
+spawn		Drax_King
+flip		1
+coords		0 0 0
+at			0
+
+spawn	P1HUD
+alias	Player
+coords	30 205 0
+at      0
+
+spawn	zagulE
+spawnscript data/scripts/enHUD2.c
+alias 	Gamjee
+map 	9
+boss 1
+coords	320 178 0
+at      0

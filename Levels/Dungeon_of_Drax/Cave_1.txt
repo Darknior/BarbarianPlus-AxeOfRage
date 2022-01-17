@@ -1,0 +1,48 @@
+music		data/music/Water_Elemental.ogg
+background	data/bgs/levels/Dungeon_of_Drax/Cave_prisoner_test.png 1 1 0 0 0 0 1 1 0
+panel	    data/bgs/levels/panel.png none	none
+
+order		a 
+settime		0
+notime		1
+wall		0 240 -500 -500 0 0 100 5000
+wall		320 240 0 0 500 500 100 5000
+spawn1		70 178 
+type		1 0 0
+noslow 		1
+
+spawn		Movelist
+flip		1
+coords		0 0 
+at		0
+
+spawn		prisoner
+flip		1
+map 		1
+coords		285 168
+at		0
+
+spawn	empty
+coords	320 340 
+at      0 
+
+spawn	P1HUD
+alias	Player
+coords	30 205 
+at      0
+
+group	1 1
+at	0
+
+spawn	ZagulE
+spawnscript data/scripts/enHUD2.c
+health 80
+alias 	Orc
+map 8
+coords	220 178 
+at      0
+
+spawn	Door
+alias	Volcano
+coords	78 178
+at      0 

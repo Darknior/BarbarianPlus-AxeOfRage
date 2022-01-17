@@ -1,0 +1,72 @@
+name		P1HUD
+type		none
+facing		1
+animationscript	data/scripts/lescript.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+load	Health1A
+load	Health1B
+load	Health1C
+load	Health1D
+load	Health1E
+load	Health1F
+load	Mana1
+
+
+
+anim	idle
+@script
+    int P1 = getplayerproperty(0, "entity");
+
+    if(P1 && frame>1){
+      void self = getlocalvar("self");
+
+      performattack(self, openborconstant("ANI_FOLLOW1"));
+    }
+@end_script
+	loop	1
+	delay	1
+	offset	0 0
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+
+anim	follow1
+@script
+    if(frame==1){
+      void self = getlocalvar("self");
+      int P1 = getplayerproperty(0, "entity");
+      int M = getentityproperty(P1,"map");
+      char Nama = getentityproperty(self,"name");
+
+      changeentityproperty(self, "map", M);
+      changeentityproperty(P1, "name", Nama);
+      setglobalvar("F1", P1);
+    }
+@end_script
+	delay	3
+	offset	0 0
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+	@cmd	spawnM "Health1A" 0 0 0
+	@cmd	spawnM "Health1B" 16 0 0
+	@cmd	spawnM "Health1C" 32 0 0
+	@cmd	spawnM "Health1D" 48 0 0
+	@cmd	spawnM "Health1E" 64 0 0
+	@cmd	spawnM "Health1F" 80 0 0
+	@cmd	spawnM "Mana1" 0 0 18
+	frame	data/chars/misc/empty.gif
+	@cmd	suicide
+	frame	data/chars/misc/empty.gif

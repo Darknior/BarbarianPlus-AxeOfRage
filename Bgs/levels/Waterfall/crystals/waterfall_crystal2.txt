@@ -1,0 +1,27 @@
+name            waterfall_crystal2
+type            none
+shadow          0
+setlayer        120
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1
+    palette data/bgs/levels/Waterfall/crystals/t01.png
+
+    delay   500    
+    frame   data/chars/misc/empty.gif
+
+    delay   15
+    frame   data/bgs/levels/Waterfall/crystals/t01.png
+    frame   data/bgs/levels/Waterfall/crystals/t02.png
+    frame   data/bgs/levels/Waterfall/crystals/t03.png
+    frame   data/bgs/levels/Waterfall/crystals/t02.png
+    frame   data/bgs/levels/Waterfall/crystals/t01.png
+    delay   16
+    frame   data/bgs/levels/Waterfall/crystals/t01.png
+    frame   data/bgs/levels/Waterfall/crystals/t02.png
+    frame   data/bgs/levels/Waterfall/crystals/t03.png
+    frame   data/bgs/levels/Waterfall/crystals/t03.png
+    frame   data/bgs/levels/Waterfall/crystals/t02.png
+    frame   data/bgs/levels/Waterfall/crystals/t01.png

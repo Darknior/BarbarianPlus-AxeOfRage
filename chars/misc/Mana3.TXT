@@ -1,0 +1,149 @@
+name		Mana3
+type		panel
+speed		10
+facing		1
+setlayer	9999
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+alternatepal	data/chars/misc/alt11.gif
+alternatepal	data/chars/misc/alt12.gif
+
+
+anim	follow1
+@script
+    void self = getlocalvar("self");
+    int P1 = getplayerproperty(2, "entity");
+    int MP1 = getentityproperty(P1,"mp");
+
+    if(!P1){
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+
+    if(MP1 < 100){
+      performattack(self, openborconstant("ANI_FOLLOW2"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/naga1.png
+	frame	data/chars/misc/naga1.png
+	frame	data/chars/misc/naga1.png
+
+anim	follow2
+@script
+    void self = getlocalvar("self");
+    int P1 = getplayerproperty(2, "entity");
+    int MP1 = getentityproperty(P1,"mp");
+
+    if(!P1){
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+
+    if(MP1 < 75){
+      performattack(self, openborconstant("ANI_FOLLOW3"));
+    } else if(MP1 >= 100){
+      performattack(self, openborconstant("ANI_FOLLOW1"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/naga2.png
+	frame	data/chars/misc/naga2.png
+	frame	data/chars/misc/naga2.png
+
+anim	follow3
+@script
+    void self = getlocalvar("self");
+    int P1 = getplayerproperty(2, "entity");
+    int MP1 = getentityproperty(P1,"mp");
+
+    if(!P1){
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+
+    if(MP1 < 50){
+      performattack(self, openborconstant("ANI_FOLLOW4"));
+    } else if(MP1 >= 75){
+      performattack(self, openborconstant("ANI_FOLLOW2"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/naga3.png
+	frame	data/chars/misc/naga3.png
+	frame	data/chars/misc/naga3.png
+
+anim	follow4
+@script
+    void self = getlocalvar("self");
+    int P1 = getplayerproperty(2, "entity");
+    int MP1 = getentityproperty(P1,"mp");
+
+    if(!P1){
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+
+    if(MP1 < 25){
+      performattack(self, openborconstant("ANI_FOLLOW5"));
+    } else if(MP1 >= 50){
+      performattack(self, openborconstant("ANI_FOLLOW3"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/naga4.png
+	frame	data/chars/misc/naga4.png
+	frame	data/chars/misc/naga4.png
+
+anim	follow5
+@script
+    void self = getlocalvar("self");
+    int P1 = getplayerproperty(2, "entity");
+    int MP1 = getentityproperty(P1,"mp");
+
+    if(!P1){
+      setidle(self, openborconstant("ANI_IDLE"));
+    }
+
+    if(MP1 >= 25){
+      performattack(self, openborconstant("ANI_FOLLOW4"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/naga5.png
+	frame	data/chars/misc/naga5.png
+	frame	data/chars/misc/naga5.png
+
+anim	idle
+@script
+    int P1 = getplayerproperty(2, "entity");
+
+    if(P1){
+      void self = getlocalvar("self");
+      int M = getentityproperty(P1,"map");
+
+      changeentityproperty(self, "map", M);
+      performattack(self, openborconstant("ANI_FOLLOW1"));
+    }
+@end_script
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif

@@ -1,0 +1,73 @@
+name		Iconer
+type		panel
+speed		10
+facing		1
+setlayer	9999
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+
+
+anim	follow1
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/Gorth/icon.png
+	frame	data/chars/Gorth/icon.png
+
+anim	follow2
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/Kran/icon.png
+	frame	data/chars/Kran/icon.png
+
+anim	follow3
+	loop	1
+	delay	5
+	offset	0 0
+	frame	data/chars/Mariana/icon.png
+	frame	data/chars/Mariana/icon.png
+
+anim	spawn
+@script
+    void self = getlocalvar("self");
+    void P1 = getentityproperty(self, "parent");
+
+    if(P1){
+      if(frame==1){
+        int M = getentityproperty(P1,"map");
+
+        changeentityproperty(self, "map", M);
+      }
+
+      if(frame==2){
+        char Name = getentityproperty(P1,"defaultname");
+
+        if(Name=="GorthE"){
+          performattack(self, openborconstant("ANI_FOLLOW1"));
+        } else if(Name=="KranE"){
+          performattack(self, openborconstant("ANI_FOLLOW2"));
+        } else if(Name=="MarianaE"){
+          performattack(self, openborconstant("ANI_FOLLOW3"));
+        }
+      }
+    }
+@end_script
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+
+anim	idle
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png

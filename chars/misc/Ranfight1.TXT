@@ -1,0 +1,152 @@
+name		Ranfight1
+type		none
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+alternatepal	data/chars/misc/empty.png
+
+
+load		karatedoE
+load		karatejutsuE
+load		chuckE 
+load		taidoE
+load		taijutsuE
+load		kareemE
+load		budoE
+load		daveE 
+load		bujutsuE
+load		judoE
+load		jujutsuE 
+load	 	jeanE
+load 		iaidoE
+load		stevenE	
+load		uechiE
+load		seikoE
+load		kempoE
+load		tongpoE 
+load		sumoE
+load		taihoE
+load		kendoE
+load		kitsuneE
+load		aikidoE
+load		caineE
+load 		aikijutsuE
+load		kyudoE
+load		kyujutsuE
+load		jetE
+load		nindoE
+load		ninjutsuE
+load		ibukiE
+
+
+anim	idle
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    char Nama = getentityproperty(self,"name");
+    int x = getentityproperty(self,"x");
+    int y = getentityproperty(self,"y");
+    int z = getentityproperty(self,"z");
+    int dir = getentityproperty(self,"direction");
+    int Map = getentityproperty(self,"map");
+    int r = (rand()%17)+17;
+    void e; void f; char Fight;
+
+    if(r >= 33){
+      Fight = "karatedoE";
+    } else if(r == 32){
+      Fight = "karatejutsuE";
+    } else if(r == 31){
+      Fight = "chuckE";
+    } else if(r == 30){
+      Fight = "taidoE";
+    } else if(r == 29){
+      Fight = "taijutsuE";
+    } else if(r == 28){
+      Fight = "kareemE";
+    } else if(r == 27){
+      Fight = "budoE";
+    } else if(r == 26){
+      Fight = "daveE";
+    } else if(r == 25){
+      Fight = "bujutsuE";
+    } else if(r == 24){
+      Fight = "judoE";
+    } else if(r == 23){
+      Fight = "jujutsuE";
+    } else if(r == 22){
+      Fight = "jujutsuE";
+    } else if(r == 21){
+      Fight = "jeanE";
+    } else if(r == 20){
+      Fight = "iaidoE";
+    } else if(r == 19){
+      Fight = "stevenE";
+    } else if(r == 18){
+      Fight = "uechiE";
+    } else if(r == 17){
+      Fight = "seikoE";
+    } else if(r == 16){
+      Fight = "kempoE";
+    } else if(r == 15){
+      Fight = "tongpoE";
+    } else if(r == 14){
+      Fight = "sumoE";
+    } else if(r == 13){
+      Fight = "taihoE";
+    } else if(r == 12){
+      Fight = "kendoE";
+    } else if(r == 11){
+      Fight = "kitsuneE";
+    } else if(r == 10){
+      Fight = "aikidoE";
+    } else if(r == 9){
+      Fight = "kyudoE";
+    } else if(r == 8){
+      Fight = "caineE";
+    } else if(r == 7){
+      Fight = "aikijutsuE";
+    } else if(r == 6){
+      Fight = "kyudoE";
+    } else if(r == 5){
+      Fight = "kyujutsuE";
+    } else if(r == 4){
+      Fight = "jetE";
+    } else if(r == 3){
+      Fight = "nindoE";
+    } else if(r == 2){
+      Fight = "ninjutsuE";
+    } else {
+      Fight = "ibukiE";
+    }
+
+    clearspawnentry();
+    setspawnentry("name", Fight);
+    e = spawn();
+
+    changeentityproperty(e, "name", Nama);
+    changeentityproperty(e, "position", x, z, y);
+    changeentityproperty(e, "direction", dir);
+    changeentityproperty(e, "map", Map);
+
+    clearspawnentry();
+    setspawnentry("name", "EnemyHUD1");
+    f = spawn();
+
+    changeentityproperty(f, "parent", e);
+    changeentityproperty(f, "name", Nama);
+    changeentityproperty(f, "position", 30, 38, 0);
+    changeentityproperty(f, "map", Map);
+    setglobalvar("F1", e);
+
+    killentity(self);
+  }
+@end_script
+	delay	5
+	offset	0 0
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png
+	frame	data/chars/misc/empty.png

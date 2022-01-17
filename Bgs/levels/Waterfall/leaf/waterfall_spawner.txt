@@ -1,0 +1,38 @@
+name            waterfall_spawner
+type            none
+facing          1
+
+animationscript data/scripts/player.c
+
+#--------------------------------
+
+load waterfall_leaf
+
+anim spawn
+    offset  7 7
+    delay   1
+    frame   data/chars/misc/empty.gif
+
+anim idle
+    loop    1
+    offset  7 10
+
+    delay   60    
+    frame   data/chars/misc/empty.gif
+    @cmd    spawner3  "waterfall_leaf" 54  0 54 
+
+    delay   150
+    frame   data/chars/misc/empty.gif
+    @cmd    spawner3  "waterfall_leaf" 312 0 56
+
+    delay   200
+    frame   data/chars/misc/empty.gif
+    @cmd    spawner3  "waterfall_leaf" 335 0 48
+
+    delay   240
+    frame   data/chars/misc/empty.gif
+    @cmd    spawner3  "waterfall_leaf" 74  0 56 
+
+    delay   200    
+    frame   data/chars/misc/empty.gif
+    frame   data/chars/misc/empty.gif

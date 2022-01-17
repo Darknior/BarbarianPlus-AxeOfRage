@@ -1,0 +1,32 @@
+name		t.birdname
+type		none
+nomove		1 1
+lifespan	1
+subject_to_gravity 0
+setlayer	9999
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+
+anim	idle
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    killentity(self); //Suicide!
+  }
+@end_script
+	delay	10
+	offset	0 0
+	frame	data/chars/t.bird/t.birdname.png
+	frame	data/chars/misc/empty.gif

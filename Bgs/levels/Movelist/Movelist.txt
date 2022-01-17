@@ -1,0 +1,14 @@
+name				Movelist
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	delay	500
+	offset	0 0 
+	frame	data/bgs/levels/Movelist/Movelist1.png
+	frame	data/bgs/levels/Movelist/Movelist2.png
+	frame	data/bgs/levels/Movelist/Movelist3.png

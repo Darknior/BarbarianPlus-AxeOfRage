@@ -1,0 +1,2 @@
+music       data/music/Boulderheart.ogg     1
+animation	data/scenes/cutscene_rollcombo.gif 0 0 1 0

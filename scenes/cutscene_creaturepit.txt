@@ -1,0 +1,3 @@
+music       data/music/Boulderheart.ogg     1
+animation	data/scenes/cutscene_creaturepit.gif 0 0 1 0
+#animation	data/scenes/nightmare_ture_pit.gif 0 0 1 0

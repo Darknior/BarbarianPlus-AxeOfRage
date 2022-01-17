@@ -1,0 +1,16 @@
+name    	Gerbang
+type		none
+facing		1
+setlayer	11
+palette		none
+
+
+anim	idle
+	delay	40
+	offset	400 0
+	frame   data/bgs/select/select1.png
+	frame   data/bgs/select/select2.png
+	frame   data/bgs/select/select3.png
+	frame   data/bgs/select/select4.png
+	frame   data/bgs/select/select5.png
+	frame   data/bgs/select/select6.png

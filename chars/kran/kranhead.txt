@@ -1,0 +1,87 @@
+name				kranhead #THROWNED
+type				none
+nolife				1
+lifespan			6
+remove				1
+noquake 			1
+gfxshadow			1 1
+noatflash 			1
+flash				flash
+facing		0
+offscreenkill	20
+subject_to_wall 0
+subject_to_hole 1
+no_adjust_base  0
+noquake		1
+subject_to_gravity 1
+subject_to_obstacle 0
+subject_to_platform 0
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+anim idle
+	loop	0
+	delay	6
+	offset	5 12
+	bbox 0 0 11 12
+	bounce		1
+	bouncefactor 1
+	sound	data/sounds/bounce.wav
+	@cmd	bbounce "ANI_FOLLOW1"
+	frame	data/chars/kran/head1.png
+	frame	data/chars/kran/head2.png
+	frame	data/chars/kran/head3.png
+	frame	data/chars/kran/head4.png
+	frame	data/chars/kran/head5.png
+	frame	data/chars/kran/head6.png
+	frame	data/chars/kran/head7.png
+	frame	data/chars/kran/head8.png
+	
+anim follow1
+	landframe 1
+	loop	0
+	delay	6
+	offset	5 12
+	bbox 0 0 11 12
+	jumpframe	1 1.5 -0.4 0
+	move    -2
+	hitfx	data/sounds/bounce.wav
+	sound	data/sounds/bounce.wav
+	frame	data/chars/kran/head1.png
+	frame	data/chars/kran/head2.png
+	frame	data/chars/kran/head3.png
+	frame	data/chars/kran/head4.png
+	frame	data/chars/kran/head5.png
+	frame	data/chars/kran/head6.png
+	frame	data/chars/kran/head7.png
+	frame	data/chars/kran/head8.png
+	bouncefactor 0.5
+	frame	data/chars/kran/head7.png
+	frame	data/chars/kran/head6.png
+	frame	data/chars/kran/head5.png
+	frame	data/chars/kran/head4.png
+	frame	data/chars/kran/head3.png
+	frame	data/chars/kran/head2.png
+	frame	data/chars/kran/head1.png
+	frame	data/chars/kran/head8.png
+	bounce 0
+	frame	data/chars/kran/head7.png
+	frame	data/chars/kran/head6.png
+	frame	data/chars/kran/head5.png
+	frame	data/chars/kran/head4.png
+	frame	data/chars/kran/head3.png
+	frame	data/chars/kran/head2.png
+	frame	data/chars/kran/head1.png
+	frame	data/chars/kran/head8.png	

@@ -1,0 +1,229 @@
+name		T.BirdF2
+health		10
+speedf		0
+type		enemy
+gfxshadow	1
+falldie     1
+death		1
+nomove		1
+nodieblink	3
+noquake		1
+antigrab	30
+knockdowncount	-1
+hostile		player npc
+candamage	player npc obstacle
+icon		data/chars/t.bird/icon.png 1
+animationscript	data/scripts/escript.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+
+anim	idle
+	loop	1
+	delay	6
+	seta	70
+	offset	12 52
+	bbox	3 -3 26 57
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	
+anim	spawn
+	delay	6
+	seta	250
+	offset	12 52
+	frame	data/chars/t.bird/Jumpattack1.png
+	seta	70
+	@cmd	dasher 0 -1 0 0
+	@cmd	degravity 1
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+
+anim	fall
+	delay	50
+	seta	10
+	offset	12 52
+	@cmd	degravity 0
+	sound	data/sounds/hit2.wav
+	frame	data/chars/t.bird/hit.png
+
+anim	rise
+	delay	12
+	seta	10
+	offset	47 50
+	frame	data/chars/t.bird/rise3.png
+	delay	6
+	offset	12 52
+	@cmd	degravity 1
+	@cmd	dasher 0 1 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	seta	70
+	@cmd	degravity 0
+	@cmd	dasher 0 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+
+anim	death
+	offset	12 56
+	delay	18
+	seta	0
+	jumpframe 0 0 0
+	@cmd	degravity 0	
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/backfall1.png
+	frame	data/chars/t.bird/backfall2.png
+	frame	data/chars/t.bird/backfall3.png
+	frame	data/chars/t.bird/backfall4.png
+	frame	data/chars/t.bird/backfall5.png
+	frame	data/chars/t.bird/backfall6.png
+	frame	data/chars/t.bird/backfall7.png
+	frame	data/chars/t.bird/backfall8.png
+	frame	data/chars/t.bird/backfall9.png
+	frame	data/chars/t.bird/backfall10.png
+
+anim	death2
+	delay	30
+	seta	0
+	offset	12 52
+	@cmd	degravity 0
+	@cmd	spawnM "t.birdhead" 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/decap1.png
+	frame	data/chars/t.bird/decap2.png
+	frame	data/chars/t.bird/decap3.png
+	frame	data/chars/t.bird/decap4.png
+	frame	data/chars/t.bird/decap5.png
+
+anim	death3
+	delay	30
+	seta	0
+	offset	12 52
+	@cmd	degravity 0
+	@cmd	spawnM "t.birdchest" 0 30 0
+	sound	data/sounds/hahaha.wav		
+	frame	data/chars/t.bird/chestrip1.png
+	frame	data/chars/t.bird/chestrip2.png
+	frame	data/chars/t.bird/chestrip3.png
+	frame	data/chars/t.bird/chestrip4.png
+	frame	data/chars/t.bird/chestrip5.png	
+	
+anim	death4
+	delay	20
+	seta	0
+	offset	12 52
+	@cmd	degravity 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/t.bird/verticaldeath1.png
+	frame	data/chars/t.bird/verticaldeath2.png
+	frame	data/chars/t.bird/verticaldeath3.png
+	frame	data/chars/t.bird/verticaldeath4.png
+	frame	data/chars/t.bird/verticaldeath5.png
+	frame	data/chars/t.bird/verticaldeath6.png
+
+anim	attack1
+    range   0 60
+	delay	6
+	seta	70
+	offset	12 52
+	bbox	3 -3 26 57
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+        delay   30
+	seta	0
+	@cmd	degravity 1
+	@cmd	dasher 0 -2 0 1
+	sound	data/voice/t.bird_attack.wav	
+	attack1 6 0 40 39 10 1 0 0 0 0
+	frame	data/chars/t.bird/Jumpattack3.png
+	delay	6
+        attack	0
+	@cmd	dasher 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	@cmd	dasher 0 1.5 0 1
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	@cmd	degravity 0
+	@cmd	dasher 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	seta	70
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+
+anim	attack2
+    range   60 100
+	delay	6
+	seta	70
+	offset	12 52
+	bbox	3 -3 26 57
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+        delay   30
+	seta	0
+	@cmd	degravity 1
+	@cmd	dasher 2 -2 0 1
+	sound	data/voice/t.bird_attack.wav	
+	attack1 6 0 40 39 10 1 0 0 0 0
+	frame	data/chars/t.bird/Jumpattack3.png
+	delay	6
+        attack	0
+	@cmd	dasher 1 0 0 1
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	@cmd	dasher 1.5 1.5 0 1
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	@cmd	degravity 0
+	@cmd	dasher 1.5 0 0 1
+	frame	data/chars/t.bird/Jumpattack1.png
+	seta	70
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png #
+	@cmd	dasher 0 0 0
+	frame	data/chars/t.bird/Jumpattack1.png
+	frame	data/chars/t.bird/Jumpattack2.png

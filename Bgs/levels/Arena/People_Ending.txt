@@ -1,0 +1,15 @@
+name				People_Ending
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	offset	0 0 
+	delay 	16
+	frame	data/bgs/levels/Arena/Arena1_Ending.png
+	frame	data/bgs/levels/Arena/Arena2_Ending.png	
+	frame	data/bgs/levels/Arena/Arena3_Ending.png
+	frame	data/bgs/levels/Arena/Arena4_Ending.png	

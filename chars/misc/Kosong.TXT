@@ -1,0 +1,54 @@
+name		_____
+type		player
+health		100
+speed		10
+subject_to_gravity 0
+subject_to_obstacle 0
+subject_to_wall	1
+subject_to_platform 0
+subject_to_hole 1
+no_adjust_base  0
+shadow		0
+stealth		350
+secret		1
+
+
+anim spawn
+	delay 4
+	offset 1 1
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+
+anim idle
+	loop 1
+	delay 6
+	offset 1 1
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+
+
+anim pain
+	delay 4
+	offset 1 1
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+
+anim fall
+	delay 4
+	offset 1 1
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+
+anim rise
+	delay 4
+	offset 1 1
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png
+	frame data/chars/misc/empty.png

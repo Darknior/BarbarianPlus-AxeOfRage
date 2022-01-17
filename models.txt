@@ -1,0 +1,229 @@
+# List all character models to be loaded.
+
+
+Colourselect    1
+ajspecial       1
+maxattacks      20
+maxfreespecials 20
+maxattacktypes  20
+maxfollows      20
+nodropen
+
+
+# Required objects. These must always be loaded.
+load    Flash        data/chars/misc/blood/blood.txt
+load    Bloodup      data/chars/misc/blood/bloodup.txt
+load    Blooddown    data/chars/misc/blood/blooddown.txt
+load    Block        data/chars/misc/blood/block.txt
+load    Basic        data/chars/misc/blood/basic.txt
+load    HealFX       data/chars/misc/HealFX/HealFX.txt
+load    handskull    data/chars/misc/handskull/handskull.txt
+
+# Players must also be loaded.
+load    Gorth        data/chars/gorth/gorth.txt
+load    Mariana      data/chars/mariana/mariana.txt
+load    Kran         data/chars/kran/kran.txt
+load    Broda        data/chars/broda/broda.txt
+load    Keymaster    data/chars/keymaster/keymaster.txt
+load    Zagul        data/chars/zagul/zagul.txt
+load    Drax         data/chars/drax/drax.txt
+load    Skeleton     data/chars/skeleton/skeleton.txt
+load    T.Bird       data/chars/t.bird/t.bird.txt
+load    Goblin       data/chars/axe_goblin/axe_goblin.txt
+#load   Ape          data/chars/ape/ape.txt
+load    Apeboss      data/chars/apeboss/apeboss.txt
+know    _____        data/chars/misc/kosong.txt
+
+# Name Texts
+know    gorthname       data/chars/gorth/gorthname.txt
+know    mariananame     data/chars/mariana/mariananame.txt
+know    kranname        data/chars/kran/kranname.txt
+know    brodaname       data/chars/broda/brodaname.txt
+know    keymastername   data/chars/keymaster/keymastername.txt
+know    zagulname       data/chars/zagul/zagulname.txt
+know    draxname        data/chars/drax/draxname.txt
+know    skeletonname    data/chars/skeleton/skeletonname.txt
+load    t.birdname      data/chars/t.bird/t.birdname.txt
+know    axe_goblinname  data/chars/axe_goblin/axe_goblinname.txt
+know    apebossname     data/chars/apeboss/apebossname.txt
+
+# Bodyparts
+load    gorthhead       data/chars/gorth/gorthhead.txt
+load    gorthchest      data/chars/gorth/gorthchest.txt
+load    marianahead     data/chars/mariana/marianahead.txt
+load    marianachest    data/chars/mariana/marianachest.txt
+load    kranhead        data/chars/kran/kranhead.txt
+load    kranchest       data/chars/kran/kranchest.txt
+load    zagulhead       data/chars/zagul/zagulhead.txt
+load    zagulchest      data/chars/zagul/zagulchest.txt
+load    keymasterheart  data/chars/keymaster/keymasterheart.txt
+load    keymasterchest  data/chars/keymaster/keymasterchest.txt
+load    brodahead       data/chars/broda/brodahead.txt
+load    brodachest      data/chars/broda/brodachest.txt
+load    draxhead        data/chars/drax/draxhead.txt
+load    draxchest       data/chars/drax/draxchest.txt
+load    t.birdhead      data/chars/t.bird/t.birdhead.txt
+load    t.birdchest     data/chars/t.bird/t.birdchest.txt
+load    axe_goblinhead  data/chars/axe_goblin/axe_goblinhead.txt
+load    skeletonhead    data/chars/skeleton/skeletonhead.txt
+load    apehead         data/chars/ape/apehead.txt
+load    apebosshead     data/chars/apeboss/apebosshead.txt
+load    creature_pittentacle    data/chars/creature_pit/creature_pittentacle.txt
+
+#Select screen
+load    bgselect        data/bgs/select/bgselect.txt
+load    bgtitle         data/bgs/title/bgtitle.txt
+
+#Stage select
+load    mini_select     data/bgs/stage_select/mini_select.txt
+load    hands_select    data/bgs/stage_select/hands_select.txt
+
+# Enemies
+load    gorthE          data/chars/gorth/gorthE.txt
+load    gorthB          data/chars/gorth/gorthB.txt
+load    marianaE        data/chars/mariana/marianaE.txt
+load    kranE           data/chars/kran/kranE.txt
+load    zagulE          data/chars/zagul/zagulE.txt
+load    keymasterE      data/chars/keymaster/keymasterE.txt
+load    brodaE          data/chars/broda/brodaE.txt
+load    draxE           data/chars/drax/draxE.txt
+load    skeletonE       data/chars/skeleton/skeletonE.txt
+load    T.birdE         data/chars/t.bird/t.birdE.txt
+load    T.birdF         data/chars/t.bird/t.birdF.txt
+load    T.birdF2        data/chars/t.bird/t.birdF2.txt
+load    GoblinE         data/chars/axe_goblin/axe_goblinE.txt
+load    GoblinF         data/chars/axe_goblin/axe_goblinF.txt
+load    GoblinF2        data/chars/axe_goblin/axe_goblinF2.txt
+load    apeE            data/chars/ape/apeE.txt
+load    ApebossE        data/chars/apeboss/apebossE.txt
+
+# Boss
+know    creature_pitE   data/chars/creature_pit/creature_pitE.txt
+
+#NPC
+load    krannpc         data/chars/kran/krannpc.txt
+
+#Obstacle NPC
+load    prisoner        data/chars/prisoner/prisoner.txt
+
+# Tutorial/Bonus
+know    Ranfight1       data/chars/misc/Ranfight1.txt
+know    Ranfight2       data/chars/misc/Ranfight2.txt
+know    Ranfight3       data/chars/misc/Ranfight3.txt
+know    Ranfight4       data/chars/misc/Ranfight4.txt
+know    BirdCount       data/chars/misc/birdcount.txt
+know    GoblinCount     data/chars/misc/goblincount.txt
+know    Increme         data/chars/misc/increme.txt
+load    empty_ending    data/chars/misc/empty_ending.txt
+load    BrodaD          data/chars/broda/brodaD.txt
+
+
+## Misc stages ##
+
+know    Movelist        data/bgs/levels/Movelist/Movelist.txt
+know    snake           data/bgs/levels/Forest/snake/snake.txt
+know    snake2          data/bgs/levels/Forest/snake/snake2.txt
+know    Animated_Castle data/bgs/levels/Castle/Animated_Castle.txt
+know    Animated_Pit    data/bgs/levels/Pit/Animated_Pit.txt
+know    Lizard_King     data/bgs/levels/Pit/Lizard_King.txt
+know    Animated_Throne data/bgs/levels/Throne/Animated_Throne.txt
+know    Drax_King       data/bgs/levels/Throne/Drax_King.txt
+know    Animated_Arena  data/bgs/levels/Arena/Animated_Arena.txt
+know    People          data/bgs/levels/Arena/People.txt
+know    People_Ending   data/bgs/levels/Arena/People_Ending.txt
+
+# FOREST
+know    forest_snake_l  data/bgs/levels/Forest/snake/forest_snake_l.txt
+know    forest_snake_r  data/bgs/levels/Forest/snake/forest_snake_r.txt
+know    forest_spawner  data/bgs/levels/Forest/leaf/forest_spawner.txt
+know    forest_leaf     data/bgs/levels/Forest/leaf/forest_leaf.txt
+know    birds           data/bgs/levels/Forest/birds/birds.txt
+know    eyes            data/bgs/levels/Forest/eyes/eyes.txt
+know    squirrel        data/bgs/levels/Forest/squirrel/squirrel.txt
+
+# LAKE
+know    lake_snake_l    data/bgs/levels/Lake/snake/lake_snake_l.txt
+know    lake_snake_r    data/bgs/levels/Lake/snake/lake_snake_r.txt
+know    lake_spawner    data/bgs/levels/Lake/leaf/lake_spawner.txt
+know    lake_leaf       data/bgs/levels/Lake/leaf/lake_leaf.txt
+know    lake_monster    data/bgs/levels/Lake/monster/lake_monster.txt
+
+# MOUNTAIN
+know    mountain_snake_l    data/bgs/levels/Mountain/snake/mountain_snake_l.txt
+know    mountain_snake_r    data/bgs/levels/Mountain/snake/mountain_snake_r.txt
+know    mountain_spawner    data/bgs/levels/Mountain/dust/mountain_spawner.txt
+know    mountain_dust       data/bgs/levels/Mountain/dust/mountain_dust.txt
+know    larva               data/bgs/levels/Mountain/larva/larva.txt
+
+# WATERFALL
+know    waterfall_snake_l   data/bgs/levels/Waterfall/snake/waterfall_snake_l.txt
+know    waterfall_snake_r   data/bgs/levels/Waterfall/snake/waterfall_snake_r.txt
+know    waterfall_spawner   data/bgs/levels/Waterfall/leaf/waterfall_spawner.txt
+know    waterfall_leaf      data/bgs/levels/Waterfall/leaf/waterfall_leaf.txt
+know    waterfall_anim      data/bgs/levels/Waterfall/waterfall/waterfall_anim.txt
+know    waterfall_crystal1  data/bgs/levels/Waterfall/crystals/waterfall_crystal1.txt
+know    waterfall_crystal2  data/bgs/levels/Waterfall/crystals/waterfall_crystal2.txt
+
+
+# Dungeon of Drax stages
+know    volcano1_1anim      data/bgs/levels/dungeon_of_drax/volcano1_1anim.txt
+
+#Magic
+load    energyball      data/chars/magic/energyball.txt
+load    energywave      data/chars/magic/energywave.txt
+load    energyshuriken  data/chars/magic/energyshuriken.txt
+
+# Branches & Doors
+know    Exit            data/chars/misc/exit.txt
+
+know    empty           data/chars/misc/empty.txt
+know    delay           data/chars/misc/delay.txt
+know    eternal         data/chars/misc/eternal.txt
+load    Gerbang         data/bgs/select/Gerbang.txt
+
+# Platforms
+
+
+## Referee
+load    weaponmaster_referee    data/chars/weaponmaster/weaponmaster_referee.txt
+
+# HP & MP display set
+## Player 1
+know    P1HUD           data/chars/misc/P1HUD.txt
+know    Health1A        data/chars/misc/health1A.txt
+know    Health1B        data/chars/misc/health1B.txt
+know    Health1C        data/chars/misc/health1C.txt
+know    Health1D        data/chars/misc/health1D.txt
+know    Health1E        data/chars/misc/health1E.txt
+know    Health1F        data/chars/misc/health1F.txt
+know    Mana1           data/chars/misc/mana1.txt
+## Player 2
+know    P2HUD           data/chars/misc/P2HUD.txt
+know    Health2A        data/chars/misc/health2A.txt
+know    Health2B        data/chars/misc/health2B.txt
+know    Health2C        data/chars/misc/health2C.txt
+know    Health2D        data/chars/misc/health2D.txt
+know    Health2E        data/chars/misc/health2E.txt
+know    Health2F        data/chars/misc/health2F.txt
+know    Mana2           data/chars/misc/mana2.txt
+## Enemy
+load    EnemyHUD1       data/chars/misc/EnemyHUD1.txt
+load    EnemyHUD2       data/chars/misc/EnemyHUD2.txt
+load    EnemyHUD3       data/chars/misc/EnemyHUD3.txt
+load    EnemyHUD4       data/chars/misc/EnemyHUD4.txt
+know    HealtherA       data/chars/misc/healtherA.txt
+know    HealtherB       data/chars/misc/healtherB.txt
+know    HealtherC       data/chars/misc/healtherC.txt
+know    HealtherD       data/chars/misc/healtherD.txt
+know    HealtherE       data/chars/misc/healtherE.txt
+know    HealtherF       data/chars/misc/healtherF.txt
+know    Manaer          data/chars/misc/manaer.txt
+know    Iconer          data/chars/misc/iconer.txt
+
+# Branches & Doors
+know    Door            data/chars/misc/door.txt
+
+
+#Stage select
+know    mini_select2    data/bgs/stage_select/mini_select2.txt
+

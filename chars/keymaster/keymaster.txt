@@ -1,0 +1,526 @@
+name		 Keymaster
+type		 player
+health		 120
+mp		 	 100
+mprate		 5
+speed		 12
+running		 20 3 1.5 1 1
+jumpmove	 2
+jumpheight	 3
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 0
+holdblock 	 1
+blockback	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 2
+atchain      1 1 2
+icon		 data/chars/keymaster/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+weaploss	 3
+bflash		 block
+
+secret 		0 1
+
+weapons		 none keymaster
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+com	a2	freespecial
+com    U   freespecial6
+com     a2  freespecial9
+
+load keymastername
+
+anim	waiting
+    delay	10
+	offset	295 76
+    frame	data/chars/keymaster/spawn1.png
+    frame	data/chars/keymaster/spawn2.png
+    frame	data/chars/keymaster/spawn3.png
+    frame	data/chars/keymaster/spawn4.png
+    frame	data/chars/keymaster/spawn5.png
+    frame	data/chars/keymaster/spawn6.png
+    frame	data/chars/keymaster/spawn7.png
+    frame	data/chars/keymaster/spawn8.png
+	loop	1 9 27
+	offset	24 72
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png	
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle1.png
+
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle3.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle3.png	
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle3.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	@cmd	shootname "keymastername" -25 140 0
+	frame	data/chars/keymaster/idle2.png
+	
+anim select
+	delay	2
+	spawnframe 0 2 0 0 1
+	custentity Gerbang
+	offset	25 72
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/keymaster/idle1.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/keymaster/idle2.png
+	delay	3
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	frame	data/chars/keymaster/idle3.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/keymaster/idle2.png
+	delay	30
+	offset	25 71
+	frame	data/chars/keymaster/win1.png
+	frame	data/chars/keymaster/win2.png
+	frame	data/chars/keymaster/win3.png
+	frame	data/chars/keymaster/win4.png	
+
+anim	spawn
+    delay	10
+	offset	295 76
+    frame	data/chars/keymaster/spawn1.png
+    frame	data/chars/keymaster/spawn2.png
+    frame	data/chars/keymaster/spawn3.png
+    frame	data/chars/keymaster/spawn4.png
+    frame	data/chars/keymaster/spawn5.png
+    frame	data/chars/keymaster/spawn6.png
+    frame	data/chars/keymaster/spawn7.png
+    frame	data/chars/keymaster/spawn8.png
+
+anim	idle
+	loop	1
+	offset	24 72
+	bbox 11 0 29 72
+	delay	100
+	frame	data/chars/keymaster/idle1.png
+	frame	data/chars/keymaster/idle1.png
+	delay	30
+	frame	data/chars/keymaster/idle2.png
+	frame	data/chars/keymaster/idle3.png
+	frame	data/chars/keymaster/idle2.png
+	
+anim	victory
+	delay	80
+	offset	25 71
+	frame	data/chars/keymaster/win1.png
+	sound	data/voice/keymaster_laugh.wav		
+	frame	data/chars/keymaster/win2.png
+	frame	data/chars/keymaster/win3.png
+	frame	data/chars/keymaster/win4.png
+	delay	180
+	frame	data/chars/keymaster/win4.png	
+
+anim	walk
+	loop	1
+	offset	24 74
+	bbox 11 2 29 72
+	delay	10
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel  0 5 0 D freespecial12
+	frame	data/chars/keymaster/walk1.png
+	frame	data/chars/keymaster/walk2.png
+	frame	data/chars/keymaster/walk3.png
+	frame	data/chars/keymaster/walk4.png	
+
+anim	run
+	loop	1
+	offset	24 74
+	bbox 11 2 29 72
+	cancel 0 5 0  A2 freespecial5
+	delay	10
+	frame	data/chars/keymaster/walk1.png
+	frame	data/chars/keymaster/walk2.png
+	frame	data/chars/keymaster/walk3.png
+	frame	data/chars/keymaster/walk4.png
+
+anim	runattack #Head Chop
+	delay	10
+	offset	23 75
+	bbox 11 0 29 75
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	hitflash bloodup
+	sound	data/voice/keymaster_attack.wav		
+	frame	data/chars/keymaster/attack1.png
+	frame	data/chars/keymaster/attack2.png
+	frame	data/chars/keymaster/attack3.png
+	attack2 48 19 40 19 20 1 0 0 0 0
+	frame	data/chars/keymaster/attack3.png
+	frame	data/chars/keymaster/attack3.png
+	attack2 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/attack3.png
+	frame	data/chars/keymaster/attack2.png
+	delay	12
+	@cmd	stop
+	frame	data/chars/keymaster/attack1.png
+
+anim turn
+	offset	24 72
+	bbox 11 1 29 72
+	delay	6	
+	frame data/chars/keymaster/idle2.png
+	frame data/chars/keymaster/idle2.png
+
+anim	duck
+	offset	19 63
+	bbox 0 0 35 63
+	delay	6
+	frame	data/chars/keymaster/duck.png
+	frame	data/chars/keymaster/duck.png
+
+anim	duckattack #Crouching Punch
+	delay	10
+	offset	22 63
+	bbox 7 0 35 63
+	sound	data/voice/keymaster_attack.wav	
+	hitflash basic	
+	frame	data/chars/keymaster/duckattack1.png
+	frame	data/chars/keymaster/duckattack2.png
+	attack1 31 13 38 15 10 0 0 0 0 0
+	frame	data/chars/keymaster/duckattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/duckattack2.png
+	frame	data/chars/keymaster/duckattack1.png
+	delay	2
+
+anim	attack1 #Punch
+	delay	6
+	offset	23 75
+	bbox 11 0 29 75
+	sound	data/voice/keymaster_attack.wav	
+	hitflash basic
+	frame	data/chars/keymaster/attack1.png
+	frame	data/chars/keymaster/attack2.png
+	frame	data/chars/keymaster/attack3.png
+	attack1 31 12 40 15 10 0 0 0 0 0
+	frame	data/chars/keymaster/attack3.png
+	frame	data/chars/keymaster/attack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/attack2.png
+	frame	data/chars/keymaster/attack1.png
+
+anim	attack2 #Kick
+	delay	12
+	offset	24 76
+	bbox 11 4 29 72
+	hitflash basic
+	sound	data/voice/keymaster_kick.wav	
+	frame	data/chars/keymaster/kick1.png
+	frame	data/chars/keymaster/kick2.png
+	attack1 27 33 62 20 10 1 0 0 0 0
+	frame	data/chars/keymaster/kick3.png
+	frame	data/chars/keymaster/kick3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/kick2.png
+	frame	data/chars/keymaster/kick1.png
+	
+anim	freespecial9 #Kick
+	delay	12
+	offset	24 76
+	bbox 11 4 29 72
+	sound	data/sounds/hii.wav
+	hitflash basic
+	sound	data/voice/keymaster_kick.wav	
+	frame	data/chars/keymaster/kick1.png
+	frame	data/chars/keymaster/kick2.png
+	attack1 27 33 62 20 10 0 0 0 0 0
+	frame	data/chars/keymaster/kick3.png
+	frame	data/chars/keymaster/kick3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/kick2.png
+	frame	data/chars/keymaster/kick1.png
+	
+anim	freespecial6
+	@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "aiflag", "jumping", 1);
+    changeentityproperty(self, "takeaction", "common_jump");   
+  }
+@end_script
+	delay	12
+	offset	37 82
+	bbox 21 0 38 49
+	frame	data/chars/keymaster/jump1.png
+	frame	data/chars/keymaster/jump2.png	
+
+anim	jump
+	delay	12
+	offset	37 82
+	bbox 21 0 38 49
+	frame	data/chars/keymaster/jump1.png
+	frame	data/chars/keymaster/jump2.png	
+	
+anim jumpland
+	offset	19 63
+	bbox 0 0 35 63
+	delay	6
+	frame	data/chars/keymaster/duck.png
+	frame	data/chars/keymaster/duck.png
+
+anim	jumpattack #Jump Kick
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	37 82
+	bbox 21 0 38 49
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	sound	data/sounds/slash.wav
+	hitflash bloodup
+	sound	data/voice/keymaster_kick.wav	
+	frame	data/chars/keymaster/Jump2.png
+	frame	data/chars/keymaster/Jumpattack1.png
+	frame	data/chars/keymaster/Jumpattack2.png
+	attack1 35 34 50 26 10 1 1 0 0 0
+	frame	data/chars/keymaster/Jumpattack2.png
+	frame	data/chars/keymaster/Jumpattack2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/Jumpattack1.png
+
+anim	follow6 #Jump Forward
+	delay	12
+	offset	37 82
+	bbox 21 0 38 49
+	jumpframe 0 3 1.5 0
+	frame	data/chars/keymaster/jump1.png
+	frame	data/chars/keymaster/jump2.png	
+
+anim	jumpforward #Jump Front Kick
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	37 82
+	bbox 21 0 38 49
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	sound	data/voice/keymaster_kick.wav	
+	hitflash bloodup
+	frame	data/chars/keymaster/Jump2.png
+	frame	data/chars/keymaster/Jumpattack1.png
+	frame	data/chars/keymaster/Jumpattack2.png
+	attack1 35 34 50 26 10 1 1 0 0 0
+	frame	data/chars/keymaster/Jumpattack2.png
+	frame	data/chars/keymaster/Jumpattack2.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/keymaster/Jumpattack1.png
+
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	jumpframe 0 0 0	
+	delay	12
+	sound	data/voice/keymaster_pain.wav
+	offset	21 75
+	bbox 11 0 29 75
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/keymaster/hit.png
+	
+anim	fall
+	jumpframe 0 0 0
+	delay 12
+	offset	83 75
+	bbox 70 0 29 75
+	sound	data/voice/keymaster_pain.wav
+	frame	data/chars/keymaster/fall1.png
+	frame	data/chars/keymaster/fall2.png
+	frame	data/chars/keymaster/fall3.png
+
+anim	rise
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	83 75
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/keymaster/rise1.png
+	frame	data/chars/keymaster/rise2.png
+	frame	data/chars/keymaster/rise1.png
+	offset	83 65
+	frame	data/chars/keymaster/rise3.png
+
+anim	death
+	loop	0
+	offset	24 75
+	delay	24
+	jumpframe 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/keymaster/backfall1.png
+	frame	data/chars/keymaster/backfall2.png
+	frame	data/chars/keymaster/backfall3.png
+	frame	data/chars/keymaster/backfall4.png
+	frame	data/chars/keymaster/backfall5.png
+
+anim	death2
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	24 81
+	spawnframe 0 0 0 0 0
+	@cmd spawnM "keymasterheart" 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/keymaster/heartrip1.png
+	frame	data/chars/keymaster/heartrip2.png
+	frame	data/chars/keymaster/heartrip3.png
+	frame	data/chars/keymaster/heartrip4.png
+	frame	data/chars/keymaster/heartrip5.png
+
+anim	death3
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	24 75
+	spawnframe 0 0 0 0 0
+	@cmd spawnM "keymasterchest" 0 30 0
+	sound	data/sounds/hahaha.wav		
+	frame	data/chars/keymaster/chestrip1.png
+	frame	data/chars/keymaster/chestrip2.png
+	frame	data/chars/keymaster/chestrip3.png
+	frame	data/chars/keymaster/chestrip4.png
+	frame	data/chars/keymaster/chestrip5.png	
+	
+anim	death4
+	loop	0
+	delay	20
+	jumpframe 0 0 0
+	offset	63 76
+	spawnframe 0 0 0 0 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/keymaster/verticaldeath1.png
+	frame	data/chars/keymaster/verticaldeath2.png
+	frame	data/chars/keymaster/verticaldeath3.png
+	frame	data/chars/keymaster/verticaldeath4.png
+	frame	data/chars/keymaster/verticaldeath5.png
+	frame	data/chars/keymaster/verticaldeath6.png
+	
+anim	slide #roll
+	offset	18 57
+	bbox 0 0 30 57
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/keymaster/roll1.png
+	hitflash basic
+	attack1 0 0 30 57 0 1 0 0 0 0
+	frame	data/chars/keymaster/roll2.png
+	frame	data/chars/keymaster/roll3.png
+	frame	data/chars/keymaster/roll4.png
+	frame	data/chars/keymaster/roll5.png
+	frame	data/chars/keymaster/roll6.png
+	frame	data/chars/keymaster/roll7.png
+	frame	data/chars/keymaster/roll8.png
+	frame	data/chars/keymaster/roll1.png
+
+anim	freespecial12 #roll front
+	offset	18 57
+	bbox 0 0 30 57
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/keymaster/roll1.png
+	hitflash basic
+	attack1 0 0 30 57 0 1 0 0 0 0
+	frame	data/chars/keymaster/roll2.png
+	frame	data/chars/keymaster/roll3.png
+	frame	data/chars/keymaster/roll4.png
+	frame	data/chars/keymaster/roll5.png
+	frame	data/chars/keymaster/roll6.png
+	frame	data/chars/keymaster/roll7.png
+	frame	data/chars/keymaster/roll8.png
+	frame	data/chars/keymaster/roll1.png
+
+anim	freespecial13 #roll back
+	offset	18 57
+	bbox 0 0 30 57
+	delay	10
+	jumpframe 0 0 -2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/keymaster/roll1.png
+	hitflash basic
+	attack1 0 0 30 57 0 1 0 0 0 0
+	frame	data/chars/keymaster/roll2.png
+	frame	data/chars/keymaster/roll3.png
+	frame	data/chars/keymaster/roll4.png
+	frame	data/chars/keymaster/roll5.png
+	frame	data/chars/keymaster/roll6.png
+	frame	data/chars/keymaster/roll7.png
+	frame	data/chars/keymaster/roll8.png
+	frame	data/chars/keymaster/roll1.png	
+	
+anim	block
+	delay	20
+	offset	24 72
+	bbox 11 0 29 72
+	cancel	0 5 0 a2 freespecial8
+	cancel  0 5 0 F freespecial14
+	cancel  0 5 0 B freespecial15
+	frame	data/chars/keymaster/block.png

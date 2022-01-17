@@ -1,0 +1,35 @@
+name        birds
+type        none
+shadow      0
+setlayer    0
+
+speed       5
+offscreenkill 300
+antigravity 100
+
+
+anim spawn
+    loop    0
+    offset  56 49
+    delay   1
+    move    -2
+    drawmethod 85 85
+    frame   data/bgs/levels/forest/birds/1.gif
+
+
+anim idle
+    loop    1
+    offset  56 49
+    delay   13
+    move    -2
+    drawmethod 85 85
+    frame   data/bgs/levels/forest/birds/1.gif
+    offset  56 50
+    frame   data/bgs/levels/forest/birds/2.gif
+    offset  56 49
+    frame   data/bgs/levels/forest/birds/3.gif
+    offset  56 48
+    frame   data/bgs/levels/forest/birds/4.gif
+
+
+

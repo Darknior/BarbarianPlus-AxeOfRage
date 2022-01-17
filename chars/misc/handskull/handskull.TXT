@@ -1,0 +1,94 @@
+# Player Game Over "Follow me"
+
+name	handskull
+type	none
+shadow	0
+toflip 1 
+
+
+anim idle
+	loop	0
+	delay	8
+	offset	160 195
+	sound	data/sounds/Follow_me.wav
+	frame data/chars/misc/handskull/handskull01.png
+	frame data/chars/misc/handskull/handskull02.png
+	frame data/chars/misc/handskull/handskull03.png
+	frame data/chars/misc/handskull/handskull04.png
+	frame data/chars/misc/handskull/handskull05.png
+	frame data/chars/misc/handskull/handskull06.png
+	frame data/chars/misc/handskull/handskull07.png
+	frame data/chars/misc/handskull/handskull08.png
+	frame data/chars/misc/handskull/handskull09.png
+	frame data/chars/misc/handskull/handskull10.png
+	frame data/chars/misc/handskull/handskull11.png
+	frame data/chars/misc/handskull/handskull12.png
+	frame data/chars/misc/handskull/handskull13.png
+	frame data/chars/misc/handskull/handskull14.png
+	frame data/chars/misc/handskull/handskull15.png
+	frame data/chars/misc/handskull/handskull16.png
+	frame data/chars/misc/handskull/handskull17.png
+	frame data/chars/misc/handskull/handskull18.png
+	frame data/chars/misc/handskull/handskull19.png
+	frame data/chars/misc/handskull/handskull20.png
+	frame data/chars/misc/handskull/handskull21.png
+	frame data/chars/misc/handskull/handskull22.png
+	frame data/chars/misc/handskull/handskull23.png
+	frame data/chars/misc/handskull/handskull24.png
+	frame data/chars/misc/handskull/handskull25.png
+	frame data/chars/misc/handskull/handskull26.png
+	frame data/chars/misc/handskull/handskull27.png
+	frame data/chars/misc/handskull/handskull28.png
+	frame data/chars/misc/handskull/handskull29.png
+	frame data/chars/misc/handskull/handskull30.png
+	frame data/chars/misc/handskull/handskull31.png
+	frame data/chars/misc/handskull/handskull32.png
+	frame data/chars/misc/handskull/handskull33.png
+	frame data/chars/misc/handskull/handskull34.png
+	frame data/chars/misc/handskull/handskull35.png
+	frame data/chars/misc/handskull/handskull36.png
+	frame data/chars/misc/handskull/handskull37.png
+	frame data/chars/misc/handskull/handskull38.png
+	frame data/chars/misc/handskull/handskull39.png
+	frame data/chars/misc/handskull/handskull40.png
+	frame data/chars/misc/handskull/handskull41.png
+	frame data/chars/misc/handskull/handskull42.png
+	frame data/chars/misc/handskull/handskull43.png
+	frame data/chars/misc/handskull/handskull44.png
+	frame data/chars/misc/handskull/handskull45.png
+	frame data/chars/misc/handskull/handskull47.png
+	frame data/chars/misc/handskull/handskull48.png
+	frame data/chars/misc/handskull/handskull49.png
+	frame data/chars/misc/handskull/handskull50.png
+	frame data/chars/misc/handskull/handskull51.png
+	frame data/chars/misc/handskull/handskull52.png
+	frame data/chars/misc/handskull/handskull53.png
+	frame data/chars/misc/handskull/handskull54.png
+	frame data/chars/misc/handskull/handskull55.png
+	frame data/chars/misc/handskull/handskull56.png
+	frame data/chars/misc/handskull/handskull57.png
+	frame data/chars/misc/handskull/handskull58.png
+	frame data/chars/misc/handskull/handskull59.png
+	frame data/chars/misc/handskull/handskull60.png
+	frame data/chars/misc/handskull/handskull61.png
+	frame data/chars/misc/handskull/handskull62.png
+	frame data/chars/misc/handskull/handskull63.png
+	frame data/chars/misc/handskull/handskull64.png
+	frame data/chars/misc/handskull/handskull65.png
+	frame data/chars/misc/handskull/handskull66.png
+	frame data/chars/misc/handskull/handskull67.png
+	frame data/chars/misc/handskull/handskull68.png
+	frame data/chars/misc/handskull/handskull69.png
+	frame data/chars/misc/handskull/handskull70.png
+	frame data/chars/misc/handskull/handskull71.png
+	frame data/chars/misc/handskull/handskull72.png
+	frame data/chars/misc/handskull/handskull73.png
+	frame data/chars/misc/handskull/handskull74.png
+	frame data/chars/misc/handskull/handskull75.png
+	frame data/chars/misc/handskull/Handskull76.png
+	frame data/chars/misc/handskull/Handskull77.png
+	frame data/chars/misc/handskull/Handskull78.png
+	frame data/chars/misc/handskull/Handskull79.png
+	frame data/chars/misc/handskull/Handskull80.png
+	frame data/chars/misc/handskull/Handskull81.png
+	frame	data/chars/misc/empty.png	

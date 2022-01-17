@@ -1,0 +1,53 @@
+name		EnemyHUD3
+type		none
+facing		1
+animationscript	data/scripts/lescript.c
+
+lifebarstatus 250 5 1 1 0 0 0 -300 -300
+lifeposition  34 -200
+nameposition  391 22
+iconposition  19 -200
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+load	HealtherA
+load	HealtherB
+load	HealtherC
+load	HealtherD
+load	Manaer
+load	Iconer
+
+
+anim	idle
+@script
+    if(frame==1){
+      void self = getlocalvar("self");
+      void P1 = getentityproperty(self, "parent");
+      int M = getentityproperty(P1,"map");
+
+      changeentityproperty(self, "map", M);
+    }
+@end_script
+	delay	1
+	offset	0 0
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+	@cmd	spawnPM "Iconer" -26 0 0
+	@cmd	spawnPM "HealtherA" 0 0 0
+	@cmd	spawnPM "HealtherB" 18 0 0
+	@cmd	spawnPM "HealtherC" 36 0 0
+	@cmd	spawnPM "HealtherD" 54 0 0
+	@cmd	spawnPM "Manaer" 0 0 18
+	frame	data/chars/misc/empty.gif
+	delay	200
+	frame	data/chars/misc/empty.gif

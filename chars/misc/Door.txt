@@ -1,0 +1,14 @@
+name	        Door
+health		10
+type	        None
+subject_to_platform 1
+subject_to_wall 1
+no_adjust_base	0
+setlayer	2
+offscreenkill	3000
+
+
+anim	idle
+	delay	100
+	offset	25 50
+	frame	data/chars/misc/empty.png

@@ -1,0 +1,27 @@
+name				Animated_Castle
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	delay	16
+	offset	0 0 
+	frame	data/bgs/levels/Castle/Castle1.png
+	frame	data/bgs/levels/Castle/Castle2.png
+	frame	data/bgs/levels/Castle/Castle3.png
+	frame	data/bgs/levels/Castle/Castle4.png
+	frame	data/bgs/levels/Castle/Castle5.png
+	frame	data/bgs/levels/Castle/Castle4.png
+	frame	data/bgs/levels/Castle/Castle3.png	
+	frame	data/bgs/levels/Castle/Castle2.png	
+	frame	data/bgs/levels/Castle/Castle1.png
+	frame	data/bgs/levels/Castle/Castle6.png	
+	frame	data/bgs/levels/Castle/Castle7.png	
+	frame	data/bgs/levels/Castle/Castle8.png	
+	frame	data/bgs/levels/Castle/Castle9.png
+	frame	data/bgs/levels/Castle/Castle8.png	
+	frame	data/bgs/levels/Castle/Castle7.png	
+	frame	data/bgs/levels/Castle/Castle6.png	

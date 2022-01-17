@@ -1,0 +1,65 @@
+name            lake_monster
+type            none
+shadow          0
+setlayer        0
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1
+    offset  0 0
+    palette data/bgs/levels/Lake/monster/monster08.png
+    
+# HIDDEN BEFORE START
+    delay   300
+    frame   data/chars/misc/empty.gif
+
+# TENTACLE
+    delay   30
+    frame   data/bgs/levels/Lake/monster/monster01.png
+    frame   data/bgs/levels/Lake/monster/monster02.png
+    frame   data/bgs/levels/Lake/monster/monster03.png
+    frame   data/bgs/levels/Lake/monster/monster04.png
+    frame   data/bgs/levels/Lake/monster/monster05.png
+    frame   data/bgs/levels/Lake/monster/monster04.png
+
+    frame   data/bgs/levels/Lake/monster/monster03b.png
+    frame   data/bgs/levels/Lake/monster/monster04b.png
+    frame   data/bgs/levels/Lake/monster/monster04c.png
+    frame   data/bgs/levels/Lake/monster/monster05b.png
+
+    frame   data/bgs/levels/Lake/monster/monster04.png
+    frame   data/bgs/levels/Lake/monster/monster03.png
+    frame   data/bgs/levels/Lake/monster/monster04.png
+    frame   data/bgs/levels/Lake/monster/monster05.png
+# SHOW MONSTER
+    delay   10
+    frame   data/bgs/levels/Lake/monster/monster06.png
+    frame   data/bgs/levels/Lake/monster/monster07.png
+    frame   data/bgs/levels/Lake/monster/monster08.png
+    delay   10
+    frame   data/bgs/levels/Lake/monster/monster08.png
+    frame   data/bgs/levels/Lake/monster/monster09.png
+    frame   data/bgs/levels/Lake/monster/monster10.png
+    delay   30
+    frame   data/bgs/levels/Lake/monster/monster10a.png
+    frame   data/bgs/levels/Lake/monster/monster10b.png
+    frame   data/bgs/levels/Lake/monster/monster10c.png
+    frame   data/bgs/levels/Lake/monster/monster10d.png
+    frame   data/bgs/levels/Lake/monster/monster10c.png
+    frame   data/bgs/levels/Lake/monster/monster10b.png
+    frame   data/bgs/levels/Lake/monster/monster10a.png
+# HIDE MONSTER
+    delay   20
+    frame   data/bgs/levels/Lake/monster/monster10.png
+    frame   data/bgs/levels/Lake/monster/monster11.png
+    frame   data/bgs/levels/Lake/monster/monster12.png
+    frame   data/bgs/levels/Lake/monster/monster13.png
+    delay   10
+    frame   data/bgs/levels/Lake/monster/monster14.png
+    frame   data/bgs/levels/Lake/monster/monster15.png
+
+    delay   600
+    frame   data/chars/misc/empty.gif
+    delay   1
+    frame   data/chars/misc/empty.gif

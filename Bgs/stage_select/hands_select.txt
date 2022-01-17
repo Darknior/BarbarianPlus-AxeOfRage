@@ -1,0 +1,112 @@
+name    	hands_select
+type		none
+setlayer	14
+facing		1
+
+
+anim	idle
+@script
+  if(frame>=1){
+    int Dest = getglobalvar("Destine");
+    int A1 = getglobalvar("0A"); // gets attack pressed status from player 1
+
+    if(A1 == 1 && Dest){ // attack is pressed
+      void self = getlocalvar("self");
+
+      setglobalvar("0A", NULL());
+      performattack(self, openborconstant("ANI_FOLLOW1"));
+    }
+  }
+@end_script
+	loop 	1
+	delay	6
+	offset	0 0
+	frame   data/bgs/stage_select/hands1.png
+	frame   data/bgs/stage_select/hands2.png
+	frame   data/bgs/stage_select/hands3.png
+	frame   data/bgs/stage_select/hands4.png
+	frame   data/bgs/stage_select/hands5.png
+	frame   data/bgs/stage_select/hands6.png
+	frame   data/bgs/stage_select/hands7.png
+	frame   data/bgs/stage_select/hands8.png
+	frame   data/bgs/stage_select/hands9.png
+	frame   data/bgs/stage_select/hands10.png
+	frame   data/bgs/stage_select/hands11.png
+	frame   data/bgs/stage_select/hands12.png
+	frame   data/bgs/stage_select/hands13.png
+	frame   data/bgs/stage_select/hands14.png
+	frame   data/bgs/stage_select/hands15.png
+	frame   data/bgs/stage_select/hands16.png
+	frame   data/bgs/stage_select/hands17.png
+	frame   data/bgs/stage_select/hands18.png
+	frame   data/bgs/stage_select/hands19.png
+	frame   data/bgs/stage_select/hands20.png #
+	frame   data/bgs/stage_select/hands19.png
+	frame   data/bgs/stage_select/hands18.png
+	frame   data/bgs/stage_select/hands17.png
+	frame   data/bgs/stage_select/hands16.png
+	frame   data/bgs/stage_select/hands15.png
+	frame   data/bgs/stage_select/hands14.png
+	frame   data/bgs/stage_select/hands13.png
+	frame   data/bgs/stage_select/hands12.png
+	frame   data/bgs/stage_select/hands11.png
+	frame   data/bgs/stage_select/hands10.png
+	frame   data/bgs/stage_select/hands9.png
+	frame   data/bgs/stage_select/hands8.png
+	frame   data/bgs/stage_select/hands7.png
+	frame   data/bgs/stage_select/hands6.png
+	frame   data/bgs/stage_select/hands5.png	
+	frame   data/bgs/stage_select/hands4.png
+	frame   data/bgs/stage_select/hands3.png
+	frame   data/bgs/stage_select/hands2.png
+
+anim	follow1
+@script
+  if(frame==1){
+    int P1 = getplayerproperty(0, "entity");
+    int P2 = getplayerproperty(1, "entity");
+    void subent;
+
+    clearspawnentry();
+    setspawnentry("name", "Gerbang");
+    subent = spawn();  //  spawn the entity
+    changeentityproperty(subent, "position", 400,0,0);
+
+    if(P1){
+      performattack(P1, openborconstant("ANI_VICTORY"));
+    }
+    if(P2){
+      performattack(P2, openborconstant("ANI_VICTORY"));
+    }
+  }
+  if(frame==7){
+    int P1 = getplayerproperty(0, "entity");
+    int P2 = getplayerproperty(1, "entity");
+
+    if(P1){
+      performattack(P1, openborconstant("ANI_FOLLOW7"));
+    }
+    if(P2){
+      performattack(P2, openborconstant("ANI_FOLLOW7"));
+    }
+  }
+  if(frame==8){
+    int Dest = getglobalvar("Destine");
+
+    jumptobranch(Dest, 1);
+  }
+@end_script
+	delay	6
+	offset	0 0
+	sound	data/sounds/beep2.wav
+	frame   data/bgs/stage_select/hands14.png
+	frame   data/bgs/stage_select/hands15.png
+	frame   data/bgs/stage_select/hands16.png
+	frame   data/bgs/stage_select/hands17.png
+	frame   data/bgs/stage_select/hands18.png
+	frame   data/bgs/stage_select/hands19.png
+	delay	210
+	frame   data/bgs/stage_select/hands20.png
+	delay	300
+	frame   data/bgs/stage_select/hands20.png
+	frame   data/bgs/stage_select/hands20.png #

@@ -1,0 +1,27 @@
+name				Animated_Pit
+type				none
+shadow				0
+setlayer			1
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	delay	16
+	offset	0 0 
+	frame	data/bgs/levels/Pit/Pit1.png
+	frame	data/bgs/levels/Pit/Pit2.png
+	frame	data/bgs/levels/Pit/Pit3.png
+	frame	data/bgs/levels/Pit/Pit4.png
+	frame	data/bgs/levels/Pit/Pit5.png
+	frame	data/bgs/levels/Pit/Pit4.png
+	frame	data/bgs/levels/Pit/Pit3.png	
+	frame	data/bgs/levels/Pit/Pit2.png	
+	frame	data/bgs/levels/Pit/Pit1.png
+	frame	data/bgs/levels/Pit/Pit6.png	
+	frame	data/bgs/levels/Pit/Pit7.png	
+	frame	data/bgs/levels/Pit/Pit8.png	
+	frame	data/bgs/levels/Pit/Pit9.png
+	frame	data/bgs/levels/Pit/Pit8.png	
+	frame	data/bgs/levels/Pit/Pit7.png	
+	frame	data/bgs/levels/Pit/Pit6.png	

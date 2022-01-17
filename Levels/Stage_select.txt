@@ -1,0 +1,89 @@
+music		data/music/menu.ogg
+panel		data/bgs/select/Select1.png none	none
+
+order		a 
+settime		0
+notime		1
+#wall		50 240 -500 -500 0 0 100 5000
+#wall		350 240 0 0 500 500 100 5000
+spawn1		120 170
+spawn2		280 170
+noslow 		1
+nopause		1
+#type		1 0 0
+type		2 0 0
+
+
+nojoin
+at		0
+
+spawn		empty
+flip		1
+coords		999 999 
+at      	0
+
+spawn		weaponmaster_referee
+flip		1
+coords		-160 -155 
+at		0
+
+spawn		bgselect
+@script
+void main(){
+  void self = getlocalvar("self"); //Get calling entity
+
+  changeentityproperty(self,"setlayer",1);
+}
+@end_script
+coords		200 100
+at      	0
+
+spawn		hands_select
+flip		1
+coords		142 190 
+at		0
+
+spawn		mini_select
+@script
+void main(){
+  void self = getlocalvar("self"); //Get calling entity
+  int P1 = getplayerproperty(0, "entity");
+  int P2 = getplayerproperty(1, "entity");
+
+  if(P1){
+    changeentityproperty(P1,"noaicontrol",1);
+  }
+  if(P2){
+    changeentityproperty(P2,"noaicontrol",1);
+  }
+  setglobalvar("Destine", "Forest");
+  performattack(self, openborconstant("ANI_FOLLOW1"));
+}
+@end_script
+flip		1
+coords		146 190 
+at		0
+
+spawn		mini_select2
+@script
+void main(){
+  void self = getlocalvar("self"); //Get calling entity
+
+  performattack(self, openborconstant("ANI_FOLLOW8"));
+}
+@end_script
+flip		1
+coords		46 190 
+at		0
+
+spawn		mini_select2
+@script
+void main(){
+  void self = getlocalvar("self"); //Get calling entity
+
+  performattack(self, openborconstant("ANI_FOLLOW2"));
+}
+@end_script
+flip		1
+coords		246 190 
+at		0

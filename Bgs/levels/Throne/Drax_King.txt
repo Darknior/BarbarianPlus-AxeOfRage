@@ -1,0 +1,32 @@
+name				Drax_King
+type				none
+shadow				0
+setlayer			0
+
+animationscript 	data/scripts/script.c
+
+anim idle
+	loop	1
+	offset	0 0 
+	delay	24
+	frame	data/bgs/levels/Throne/ThroneD1.png	
+	frame	data/bgs/levels/Throne/ThroneD2.png
+	frame	data/bgs/levels/Throne/ThroneD3.png
+	frame	data/bgs/levels/Throne/ThroneD4.png
+	frame	data/bgs/levels/Throne/ThroneD3.png
+	frame	data/bgs/levels/Throne/ThroneD2.png
+	frame	data/bgs/levels/Throne/ThroneD1.png	
+	frame	data/bgs/levels/Throne/ThroneD5.png	
+	frame	data/bgs/levels/Throne/ThroneD6.png
+	frame	data/bgs/levels/Throne/ThroneD7.png	
+	frame	data/bgs/levels/Throne/ThroneD8.png
+	frame	data/bgs/levels/Throne/ThroneD7.png	
+	frame	data/bgs/levels/Throne/ThroneD6.png	
+	frame	data/bgs/levels/Throne/ThroneD5.png
+	frame	data/bgs/levels/Throne/ThroneD4.png	
+	frame	data/bgs/levels/Throne/ThroneD9.png	
+	frame	data/bgs/levels/Throne/ThroneD10.png	
+	frame	data/bgs/levels/Throne/ThroneD11.png
+	frame	data/bgs/levels/Throne/ThroneD11.png	
+	frame	data/bgs/levels/Throne/ThroneD10.png	
+	frame	data/bgs/levels/Throne/ThroneD9.png	

@@ -1,0 +1,41 @@
+name	prisoner
+health	1
+type	obstacle
+
+shadow   0
+setlayer 1
+facing 	 1
+death    1
+nodieblink	 2
+animationscript	data/scripts/lescript.c
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+
+anim idle
+	loop	1
+	delay	40
+	offset	30 62
+	bbox 6 16 49 46
+	frame	data/chars/prisoner/torture1.png
+	frame	data/chars/prisoner/torture2.png
+	frame	data/chars/prisoner/torture3.png
+	frame	data/chars/prisoner/torture4.png
+	frame	data/chars/prisoner/torture5.png
+
+anim	death
+	loop	0
+	delay	30
+	jumpframe 0 0 0
+	offset	30 62
+	spawnframe 0 0 0 0 0
+	@cmd spawnM "krannpc" 0 0 0
+	frame	data/chars/misc/empty.png

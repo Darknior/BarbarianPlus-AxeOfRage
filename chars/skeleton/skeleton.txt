@@ -1,0 +1,519 @@
+name		 skeleton
+type		 player
+health		 120
+mp		 	 100
+mprate		 5
+speed		 12
+running		 20 3 1.5 1 1
+jumpmove	 2
+jumpheight	 3
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 0
+holdblock 	 1
+blockback	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 2
+atchain      1 1 2 3
+icon		 data/chars/skeleton/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow	 1
+weaploss	 3
+bflash		 block
+
+secret 		0 1
+
+weapons		 none skeleton
+
+animationscript	data/scripts/player.c
+
+load skeletonhead
+
+##REMAPS
+alternatepal	data/chars/misc/alt1.gif
+alternatepal	data/chars/misc/alt2.gif
+alternatepal	data/chars/misc/alt3.gif
+alternatepal	data/chars/misc/alt4.gif
+alternatepal	data/chars/misc/alt5.gif
+alternatepal	data/chars/misc/alt6.gif
+alternatepal	data/chars/misc/alt7.gif
+alternatepal	data/chars/misc/alt8.gif
+alternatepal	data/chars/misc/alt9.gif
+alternatepal	data/chars/misc/alt10.gif
+
+com    A2    freespecial
+com    F A2  freespecial2
+com    U     freespecial6
+
+load skeletonname
+
+anim	waiting
+	delay	12
+	offset	25 67
+	frame	data/chars/skeleton/spawn1.png
+	frame	data/chars/skeleton/spawn2.png
+	frame	data/chars/skeleton/spawn3.png
+	frame	data/chars/skeleton/spawn4.png
+	frame	data/chars/skeleton/spawn5.png
+	frame	data/chars/skeleton/spawn6.png
+	frame	data/chars/skeleton/spawn7.png
+	frame	data/chars/skeleton/spawn8.png
+	loop	1 9 30
+	offset	18 68
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png	
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle1.png
+
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle2.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle2.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle2.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle3.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle3.png	
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle3.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle4.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle4.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle4.png
+	@cmd	shootname "skeletonname" -25 140 	
+	frame	data/chars/skeleton/idle5.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle5.png
+	@cmd	shootname "skeletonname" -25 140 0
+	frame	data/chars/skeleton/idle5.png	
+	
+anim select
+	delay	2
+	spawnframe 0 2 0 0 1
+	custentity Gerbang
+	offset	18 68
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	sound	data/sounds/hahaha.wav
+	frame	data/chars/skeleton/idle1.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/skeleton/idle2.png
+	delay	3
+	drawmethod tintmode 4
+	drawmethod tintcolor 0
+	frame	data/chars/skeleton/idle3.png
+	delay	2
+	nodrawmethod
+	frame	data/chars/skeleton/idle2.png
+	delay	30
+	offset	15 79
+	frame	data/chars/skeleton/win1.png
+	frame	data/chars/skeleton/win2.png
+	frame	data/chars/skeleton/win3.png
+	frame	data/chars/skeleton/win2.png
+
+anim	spawn
+	delay	12
+	offset	25 67
+	sound	data/voice/skeleton_spawn.wav	
+	frame	data/chars/skeleton/spawn1.png
+	frame	data/chars/skeleton/spawn2.png
+	frame	data/chars/skeleton/spawn3.png
+	frame	data/chars/skeleton/spawn4.png
+	frame	data/chars/skeleton/spawn5.png
+	frame	data/chars/skeleton/spawn6.png
+	frame	data/chars/skeleton/spawn7.png
+	frame	data/chars/skeleton/spawn8.png
+
+anim	idle
+	loop	1
+	offset	18 68
+	bbox 6 14 23 55
+	delay	100
+	frame	data/chars/skeleton/idle1.png
+	frame	data/chars/skeleton/idle1.png
+	delay	30
+	frame	data/chars/skeleton/idle2.png
+	frame	data/chars/skeleton/idle3.png
+	frame	data/chars/skeleton/idle2.png
+	
+anim	victory
+	delay	80
+	offset	15 79
+	sound	data/voice/skeleton_gameover.wav		
+	frame	data/chars/skeleton/win1.png
+	frame	data/chars/skeleton/win2.png
+	frame	data/chars/skeleton/win3.png
+	frame	data/chars/skeleton/win2.png
+	delay	180
+	frame	data/chars/skeleton/win3.png	
+
+anim	walk
+	loop	1
+	offset	18 68
+	bbox 6 14 23 55
+	delay	10
+	@cmd	keyint "ANI_FOLLOW6" 0 "U" 0
+	cancel  0 5 0 D freespecial12
+	frame	data/chars/skeleton/walk1.png
+	frame	data/chars/skeleton/walk2.png
+	frame	data/chars/skeleton/walk3.png
+	frame	data/chars/skeleton/walk4.png	
+
+anim	run
+	loop	1
+	offset	22 68
+	bbox 6 14 23 55
+	cancel  0 5 0 D freespecial12
+	delay	10
+	frame	data/chars/skeleton/run1.png
+	frame	data/chars/skeleton/run2.png
+	frame	data/chars/skeleton/run3.png
+
+anim	runattack #Head Chop
+	delay	7
+	offset	18 80
+	bbox 13 17 21 63
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/headchop1.png
+	sound	data/voice/skeleton_headchop.wav
+	frame	data/chars/skeleton/headchop2.png
+	frame	data/chars/skeleton/headchop3.png
+	attack2 28 8 40 19 30 1 0 0 0 0
+	delay	15
+	frame	data/chars/skeleton/headchop4.png
+	frame	data/chars/skeleton/headchop4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	@cmd	stop
+	frame	data/chars/skeleton/headchop2.png
+	frame	data/chars/skeleton/headchop1.png
+
+anim turn
+	offset	18 68
+	bbox 6 14 23 55
+	frame data/chars/skeleton/idle2.png
+	delay	6
+	frame data/chars/skeleton/idle2.png
+
+anim	duck
+	offset	26 68
+	bbox 13 18 22 50
+	delay	6
+	frame	data/chars/skeleton/duck.png
+	frame	data/chars/skeleton/duck.png
+
+anim	duckattack #Crouching Slash
+	delay	10
+	offset	26 68
+	bbox 13 18 22 50
+	sound	data/voice/skeleton_attack.wav	
+	hitflash blooddown
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/duckattack1.png
+	frame	data/chars/skeleton/duckattack2.png
+	frame	data/chars/skeleton/duckattack3.png
+	sound	data/sounds/slash.wav	
+	attack1 32 26 54 28 0 0 0 0 0 0
+	frame	data/chars/skeleton/duckattack4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/duckattack2.png
+	frame	data/chars/skeleton/duckattack1.png
+	delay	2
+	frame	data/chars/skeleton/duck.png
+	
+anim	jump
+	delay	18
+	offset	15 79
+	bbox 6 30 24 49
+	frame	data/chars/skeleton/jump1.png
+	frame	data/chars/skeleton/jump2.png
+	
+anim	follow6
+	delay	18
+	offset	37 82
+	bbox 21 14 32 49
+	jumpframe 0 3 1.5 0
+	frame	data/chars/skeleton/jump1.png
+	frame	data/chars/skeleton/jump2.png
+
+anim jumpland
+	offset	49 68
+	bbox 35 18 35 50
+	delay	6
+	frame	data/chars/skeleton/duck.png
+	frame	data/chars/skeleton/duck.png
+
+anim	jumpattack #jump Attack
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	37 82
+	bbox 21 16 32 49
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	sound	data/voice/skeleton_attack.wav	
+	hitflash bloodup
+	frame	data/chars/skeleton/jump2.png
+	frame	data/chars/skeleton/jumpattack1.png
+	frame	data/chars/skeleton/jumpattack2.png
+	sound	data/sounds/slash.wav	
+	attack1 35 57 50 20 10 1 1 0 0 0
+	frame	data/chars/skeleton/jumpattack3.png
+	frame	data/chars/skeleton/jumpattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/jumpattack1.png
+
+anim	jumpforward #jump Front Attack
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+	offset	37 82
+	bbox 21 16 32 49
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	sound	data/voice/skeleton_attack.wav
+	hitflash bloodup
+	frame	data/chars/skeleton/jump2.png
+	frame	data/chars/skeleton/jumpattack1.png
+	frame	data/chars/skeleton/jumpattack2.png
+	attack1 35 57 50 20 10 1 1 0 0 0
+	frame	data/chars/skeleton/jumpattack3.png
+	frame	data/chars/skeleton/jumpattack3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/jumpattack1.png
+
+anim	attack1 #Sickle Combo 1
+	delay	6
+	offset	18 68
+	bbox 6 14 23 55
+	hitflash blood
+	sound	data/voice/skeleton_attack.wav
+	frame	data/chars/skeleton/attack1.png
+	frame	data/chars/skeleton/attack2.png
+	frame	data/chars/skeleton/attack3.png
+	sound	data/sounds/slash.wav	
+	attack1 22 17 54 28 10 0 0 0 0 0
+	frame	data/chars/skeleton/attack4.png
+	frame	data/chars/skeleton/attack4.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/attack2.png
+	frame	data/chars/skeleton/attack1.png
+	
+anim	freespecial #Web of Death
+	delay	10
+	offset	18 68
+	bbox 6 14 23 55
+	sound	data/voice/skeleton_gameover.wav
+	hitfx	data/sounds/blood.wav
+	frame	data/chars/skeleton/webdeath1.png
+	attack1 20 16 38 24 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/skeleton/webdeath2.png
+	sound	data/sounds/slash.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/skeleton/webdeath3.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/webdeath4.png
+	sound	data/sounds/slash.wav
+	frame	data/chars/skeleton/webdeath5.png
+	attack1 20 0 38 29 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/skeleton/webdeath6.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/slash.wav
+	attack1 20 25 38 27 10 1 0 0 0 0
+	dropv 	2.5 0.2 0
+	frame	data/chars/skeleton/webdeath7.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/webdeath8.png	
+	
+anim	freespecial2 #Head Throw
+	delay	10
+	offset	43 68
+	bbox 37 14 19 55
+	hitflash blood
+	sound	data/voice/skeleton_headchop.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/throw1.png
+	frame	data/chars/skeleton/throw2.png
+	frame	data/chars/skeleton/throw3.png
+	frame	data/chars/skeleton/throw4.png
+	frame	data/chars/skeleton/throw5.png
+	@cmd tosser3 "skeletonhead" 30 40 0 1 1.3 0
+	offset	20 45
+	bbox 12 9 19 37
+	delay	10
+	@cmd	dasher 2 0 0 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/skeleton/rollnohead1.png
+	hitflash basic
+	#attack1 12 9 19 37 0 1 0 0 0 0
+	attack1 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/skeleton/rollnohead2.png
+	frame	data/chars/skeleton/rollnohead3.png
+	frame	data/chars/skeleton/rollnohead4.png
+	frame	data/chars/skeleton/rollnohead5.png
+	frame	data/chars/skeleton/rollnohead6.png
+	frame	data/chars/skeleton/rollnohead7.png
+	frame	data/chars/skeleton/rollnohead8.png
+	@cmd	stop	
+	frame	data/chars/skeleton/rollnohead9.png
+	frame	data/chars/skeleton/rollnohead10.png
+	frame	data/chars/skeleton/rollnohead11.png
+	
+	
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	jumpframe 0 0 0
+	delay	12
+	sound	data/voice/skeleton_pain.wav
+	offset	55 69
+	bbox 51 14 17 55
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/skeleton/hit.png
+	
+anim	fall
+	jumpframe 0 0 0
+	landframe 1
+	loop	0
+	delay	20
+	offset	55 69
+	sound	data/voice/skeleton_pain.wav
+	frame	data/chars/skeleton/fall1.png
+	frame	data/chars/skeleton/fall2.png
+	frame	data/chars/skeleton/fall3.png
+
+anim	rise
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+	offset	55 69
+	delay	12
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/skeleton/rise1.png
+	frame	data/chars/skeleton/rise2.png
+	frame	data/chars/skeleton/rise1.png
+	frame	data/chars/skeleton/rise3.png
+
+anim	death
+	loop	0
+	offset	25 67
+	delay	24
+	jumpframe 0 0 0
+	sound	data/sounds/hahaha.wav
+    frame	data/chars/skeleton/spawn8.png
+    frame	data/chars/skeleton/spawn7.png
+    frame	data/chars/skeleton/spawn6.png
+    frame	data/chars/skeleton/spawn5.png
+    frame	data/chars/skeleton/spawn4.png
+    frame	data/chars/skeleton/spawn3.png
+    frame	data/chars/skeleton/spawn2.png
+    frame	data/chars/skeleton/spawn1.png
+
+anim	slide #roll
+	offset	20 45
+	bbox 12 9 19 37
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/skeleton/roll1.png
+	hitflash basic
+	attack1 12 9 19 37 0 1 0 0 0 0
+	frame	data/chars/skeleton/roll2.png
+	frame	data/chars/skeleton/roll3.png
+	frame	data/chars/skeleton/roll4.png
+	frame	data/chars/skeleton/roll5.png
+	frame	data/chars/skeleton/roll6.png
+	frame	data/chars/skeleton/roll7.png
+	frame	data/chars/skeleton/roll8.png
+	frame	data/chars/skeleton/roll1.png
+
+anim	freespecial12 #roll front
+	offset	20 45
+	bbox 12 9 19 37
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/skeleton/roll1.png
+	hitflash basic
+	attack1 12 9 19 37 0 1 0 0 0 0
+	frame	data/chars/skeleton/roll2.png
+	frame	data/chars/skeleton/roll3.png
+	frame	data/chars/skeleton/roll4.png
+	frame	data/chars/skeleton/roll5.png
+	frame	data/chars/skeleton/roll6.png
+	frame	data/chars/skeleton/roll7.png
+	frame	data/chars/skeleton/roll8.png
+	frame	data/chars/skeleton/roll1.png
+
+anim	freespecial13 #roll back
+	offset	20 45
+	bbox 12 9 19 37
+	delay	10
+	flipframe 1
+	jumpframe 0 0 -2 1
+	sound	data/sounds/roll.wav
+	frame	data/chars/skeleton/roll1.png
+	hitflash basic
+	attack1 12 9 19 37 0 1 0 0 0 0
+	frame	data/chars/skeleton/roll2.png
+	frame	data/chars/skeleton/roll3.png
+	frame	data/chars/skeleton/roll4.png
+	frame	data/chars/skeleton/roll5.png
+	frame	data/chars/skeleton/roll6.png
+	frame	data/chars/skeleton/roll7.png
+	frame	data/chars/skeleton/roll8.png
+	frame	data/chars/skeleton/roll1.png
+	
+anim	block
+	delay	20
+	offset	18 68
+	bbox 7 10 22 59
+	cancel  0 5 0 F freespecial12
+	cancel  0 5 0 B freespecial13
+	frame	data/chars/skeleton/block.png
