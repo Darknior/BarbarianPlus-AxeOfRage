@@ -4,25 +4,23 @@
 ![AxeOfRage Logo](_art/logo.png)
 
 
-Original Author	Kimono
-Project started 29/03/2020
-First release   05/03/2021
-Version         0.2 beta
-Screen ratio    4/3
-
-New team        Kimono, Darknior
-Started		01/01/2022
-First release	
-Version		
-Screen ratio	16/9
+- Project started by	Kimono the 29/03/2020
+- Last release version was 0.2 beta in 4/3 the 05/03/2021
+- Darknior joined the team on January 2022
+- Now project will show a 16/9 screen ratio
 
 Forum		[Chronocrash](https://www.chronocrash.com/forum/index.php?threads/barbarian-axe-of-rage.4343/)
 
 
-## Description
+## Project
 
 Remake of the Amiga "Barbarian Plus" on the OpenBOR engine with the original author agreement.
+Amiga games was made by "Colin Vella" for code, "Christoper Romagnoli" for GFX and "saimon69" for SFX in 2018.
 
+Amiga : [Facebook](https://www.facebook.com/BarbarianPlus/)
+
+
+## Description
 
 [![Barbarian + Axe of Rage Demo - Playthrough Openbor](https://i.ytimg.com/vi/g8IZhLvGI2Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=g8IZhLvGI2Y "Barbarian + Axe of Rage Demo - Playthrough Openbor")
 
@@ -40,7 +38,7 @@ You control an anonymous barbarian whose goal is to defeat the evil wizard Drax 
 You can move the character around the arena and perform jumps and rolls to avoid a hit. By holding down the attack button, you can kick or head and attack with the sword. Each barbarian has twelve health points, represented by six circles in the upper corners of the interface, with a successful attack dealing one point of damage. But beware, a single precise blow to the neck can behead an opponent and kill him instantly.
 
 
-![AxeOfRage Logo](_art/boxfront.png)
+![AxeOfRage Cover](_art/boxfront.jpg)
 
 
 ## Old updates:
