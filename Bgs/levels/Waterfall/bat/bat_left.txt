@@ -1,0 +1,110 @@
+name            bat_left
+type            none
+shadow          0
+setlayer        120
+offscreenkill   50
+
+animationscript data/scripts/script.c
+
+anim spawn
+    offset  33 31
+    delay   40
+    palette data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/chars/misc/empty.gif
+
+anim idle
+    delay   15
+    
+    drawmethod scale 0.1 0.1
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.2 0.2
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.3 0.3
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.4 0.4
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.5 0.5
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+
+    delay   10
+    move    -1
+    movea   1
+
+    drawmethod scale 0.6 0.6
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.7 0.7
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.8 0.8
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 0.9 0.9
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 1 1
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+
+    delay   12
+    move    -2
+    movea   2
+
+    drawmethod scale 1.1 1.1
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 1.2 1.2
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 1.3 1.3
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 1.4 1.4
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    drawmethod scale 1.5 1.5
+    frame   data/bgs/levels/Waterfall/bat/front01.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png
+    frame   data/bgs/levels/Waterfall/bat/front03.png
+    frame   data/bgs/levels/Waterfall/bat/front02.png

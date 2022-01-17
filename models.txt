@@ -11,28 +11,28 @@ nodropen
 
 
 # Required objects. These must always be loaded.
-load    Flash        data/chars/misc/blood/blood.txt
-load    Bloodup      data/chars/misc/blood/bloodup.txt
-load    Blooddown    data/chars/misc/blood/blooddown.txt
-load    Block        data/chars/misc/blood/block.txt
-load    Basic        data/chars/misc/blood/basic.txt
-load    HealFX       data/chars/misc/HealFX/HealFX.txt
-load    handskull    data/chars/misc/handskull/handskull.txt
+load    Flash           data/chars/misc/blood/blood.txt
+load    Bloodup         data/chars/misc/blood/bloodup.txt
+load    Blooddown       data/chars/misc/blood/blooddown.txt
+load    Block           data/chars/misc/blood/block.txt
+load    Basic           data/chars/misc/blood/basic.txt
+load    HealFX          data/chars/misc/HealFX/HealFX.txt
+load    handskull       data/chars/misc/handskull/handskull.txt
 
 # Players must also be loaded.
-load    Gorth        data/chars/gorth/gorth.txt
-load    Mariana      data/chars/mariana/mariana.txt
-load    Kran         data/chars/kran/kran.txt
-load    Broda        data/chars/broda/broda.txt
-load    Keymaster    data/chars/keymaster/keymaster.txt
-load    Zagul        data/chars/zagul/zagul.txt
-load    Drax         data/chars/drax/drax.txt
-load    Skeleton     data/chars/skeleton/skeleton.txt
-load    T.Bird       data/chars/t.bird/t.bird.txt
-load    Goblin       data/chars/axe_goblin/axe_goblin.txt
-#load   Ape          data/chars/ape/ape.txt
-load    Apeboss      data/chars/apeboss/apeboss.txt
-know    _____        data/chars/misc/kosong.txt
+load    Gorth           data/chars/gorth/gorth.txt
+load    Mariana         data/chars/mariana/mariana.txt
+load    Kran            data/chars/kran/kran.txt
+load    Broda           data/chars/broda/broda.txt
+load    Keymaster       data/chars/keymaster/keymaster.txt
+load    Zagul           data/chars/zagul/zagul.txt
+load    Drax            data/chars/drax/drax.txt
+load    Skeleton        data/chars/skeleton/skeleton.txt
+load    T.Bird          data/chars/t.bird/t.bird.txt
+load    Goblin          data/chars/axe_goblin/axe_goblin.txt
+#load   Ape             data/chars/ape/ape.txt
+load    Apeboss         data/chars/apeboss/apeboss.txt
+know    _____           data/chars/misc/kosong.txt
 
 # Name Texts
 know    gorthname       data/chars/gorth/gorthname.txt
@@ -163,10 +163,14 @@ know    waterfall_leaf      data/bgs/levels/Waterfall/leaf/waterfall_leaf.txt
 know    waterfall_anim      data/bgs/levels/Waterfall/waterfall/waterfall_anim.txt
 know    waterfall_crystal1  data/bgs/levels/Waterfall/crystals/waterfall_crystal1.txt
 know    waterfall_crystal2  data/bgs/levels/Waterfall/crystals/waterfall_crystal2.txt
+know    bat_spawner         data/bgs/levels/Waterfall/bat/bat_spawner.txt
+know    bat_left            data/bgs/levels/Waterfall/bat/bat_left.txt
+know    bat_right           data/bgs/levels/Waterfall/bat/bat_right.txt
+know    bat_tree            data/bgs/levels/Waterfall/bat/bat_tree.txt
 
 
 # Dungeon of Drax stages
-know    volcano1_1anim      data/bgs/levels/dungeon_of_drax/volcano1_1anim.txt
+know    volcano1_1anim  data/bgs/levels/dungeon_of_drax/volcano1_1anim.txt
 
 #Magic
 load    energyball      data/chars/magic/energyball.txt

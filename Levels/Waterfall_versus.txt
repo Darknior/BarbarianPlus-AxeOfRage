@@ -60,6 +60,16 @@ coords      165 165
 flip        1
 at          0
 
+load bat_spawner 3
+load bat_tree 3
+spawn       bat_spawner
+coords      0 0
+at          0
+spawn       bat_tree
+coords      306 47
+flip        1
+at          0
+
 
 #------------------------------------------
 #------------------------------------------

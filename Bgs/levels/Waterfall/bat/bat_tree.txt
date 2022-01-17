@@ -1,0 +1,31 @@
+name            bat_tree
+type            none
+shadow          0
+setlayer        120
+
+animationscript data/scripts/script.c
+
+anim idle
+    loop    1
+    offset  0 0
+    
+    delay   60
+    frame   data/bgs/levels/Waterfall/bat/stand01.png
+    frame   data/bgs/levels/Waterfall/bat/stand01.png
+    delay   20
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    frame   data/bgs/levels/Waterfall/bat/stand03.png
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    delay   20
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    delay   20
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    frame   data/bgs/levels/Waterfall/bat/stand03.png
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    delay   20
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    frame   data/bgs/levels/Waterfall/bat/stand02.png
+    delay   700
+    frame   data/bgs/levels/Waterfall/bat/stand01.png
+    frame   data/bgs/levels/Waterfall/bat/stand01.png
