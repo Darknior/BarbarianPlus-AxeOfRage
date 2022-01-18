@@ -1,3 +1,0 @@
-# Stage select
-
-know    mini_select2    data/bgs/stage_select/mini_select2.txt
