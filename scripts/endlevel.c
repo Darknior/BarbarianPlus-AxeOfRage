@@ -9,6 +9,8 @@ void main()
     setglobalvar("Kalah3", NULL());
 
     setglobalvar("C1", 0);
+    setglobalvar("Ack", 0);
+    setglobalvar("Pilihs", 0);
     setglobalvar("Destine", NULL());
 
     setglobalvar("0X", NULL());

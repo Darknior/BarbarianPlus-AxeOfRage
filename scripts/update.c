@@ -12,6 +12,8 @@ void main()
 
       setglobalvar("WDrop1", NULL());
       setglobalvar("C1", 0);
+      setglobalvar("Pilihs", 0);
+      setglobalvar("Ack", 0);
 
       setglobalvar("Destine", NULL());
       setglobalvar("MariDed", NULL());
@@ -29,6 +31,9 @@ void main()
 //      drawstring(150,60,2, getglobalvar("GortDed"));
 //      drawstring(150,80,2, getglobalvar("MariDed"));
 //      drawstring(150,100,2, getglobalvar("KranDed"));
+//      void PName = getplayerproperty(0, "name");
+
+//      drawstring(150,60,2, PName);
     }
 }
 

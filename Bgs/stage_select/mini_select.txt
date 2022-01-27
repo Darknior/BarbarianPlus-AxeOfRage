@@ -2,7 +2,7 @@ name		mini_select
 type		panel
 speed		10
 shadow		0
-setlayer	13
+setlayer	10010010113
 facing		1
 palette		none
 

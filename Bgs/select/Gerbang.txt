@@ -6,7 +6,7 @@ palette		none
 
 
 anim	idle
-	delay	40
+	delay	20
 	offset	400 0
 	frame   data/bgs/select/select1.png
 	frame   data/bgs/select/select2.png

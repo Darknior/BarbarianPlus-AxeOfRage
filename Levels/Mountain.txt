@@ -16,15 +16,20 @@ flip		1
 coords		0 0 0
 at			0
 
-spawn		Animated_Mountain
-flip		1
-coords		0 0 0
-at			0
+spawn       mountain_snake_l
+flip        1
+coords      13 5
+at          0
+spawn       mountain_snake_r
+coords      387 5
+at          0
 
-#spawn		Squirrel
-#flip		1
-#coords		0 0 0
-#at			0
+spawn       mountain_spawner
+coords      0 0
+at          0
+spawn       larva
+coords      285 162
+at          0
 
 spawn	P1HUD
 alias	Player

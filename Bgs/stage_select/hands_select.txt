@@ -1,6 +1,6 @@
 name    	hands_select
 type		none
-setlayer	14
+setlayer	10010010114
 facing		1
 
 
@@ -9,8 +9,13 @@ anim	idle
   if(frame>=1){
     int Dest = getglobalvar("Destine");
     int A1 = getglobalvar("0A"); // gets attack pressed status from player 1
+    int A31 = getglobalvar("0A3"); // gets attack3 pressed status from player 1
 
-    if(A1 == 1 && Dest){ // attack is pressed
+    if(A31 == 1){ // attack3 is pressed
+      setglobalvar("0A3", NULL());
+      jumptobranch("End", 1);
+    }
+    if(A1 == 1 && Dest){ // attack is pressed & destination is valid
       void self = getlocalvar("self");
 
       setglobalvar("0A", NULL());

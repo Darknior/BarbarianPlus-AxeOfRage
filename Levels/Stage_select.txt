@@ -4,18 +4,13 @@ panel		data/bgs/select/Select1.png none	none
 order		a 
 settime		0
 notime		1
-#wall		50 240 -500 -500 0 0 100 5000
-#wall		350 240 0 0 500 500 100 5000
 spawn1		120 170
 spawn2		280 170
 noslow 		1
 nopause		1
-#type		1 0 0
+nofadeout	1
 type		2 0 0
 
-
-nojoin
-at		0
 
 spawn		empty
 flip		1
@@ -54,6 +49,7 @@ void main(){
     changeentityproperty(P1,"noaicontrol",1);
   }
   if(P2){
+    changeentityproperty(P2,"direction",0);
     changeentityproperty(P2,"noaicontrol",1);
   }
   setglobalvar("Destine", "Forest");
