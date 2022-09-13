@@ -1,12 +1,3 @@
-# List level filenames here.
-#
-# Syntax:
-#	set	[difficulty]	Start a new set of levels (e.g. "normal")
-#
-#	file	[filename]	A level or part of a level
-#	next			Go to next level (show "stage clear" and stuff)
-#	scene	[filename]	Show a cut-scene
-#
 loadingbg 1 -110 -100 10 200 240 0
 
 timeicon data/chars/misc/timeicon.png -180 192
@@ -46,15 +37,6 @@ e4name -200 -200
 e4icon -200 -200
 
 #---------------------------------------------------
-#set		Pit_Creature_test
-#maxplayers 	1
-#lives		1
-#nosame		1
-#noshare		1
-#disablegameover 1
-#disablehof 	1
-#z	189	189
-#file	data/levels/Bonus_CreaturePit.txt
 
 set		Custom_select_combo
 maxplayers 	2
@@ -64,6 +46,7 @@ noshare		1
 disablegameover 1
 disablehof 	1
 skipselect	Gorth Mariana
+
 z		170 170
 file		data/levels/vilih2.txt
 branch		Forest
@@ -107,6 +90,7 @@ file		data/levels/Arena.txt
 branch		End
 file		data/levels/quick.txt # quick level
 
+#---------------------------------------------------
 
 set		Versus_test
 maxplayers	2
@@ -115,109 +99,217 @@ nosame		1
 noshare		1
 disablegameover 1
 disablehof	1
-z		178 178
-file		data/levels/Forest_versus.txt
-z		178 178
-file		data/levels/Lake_versus.txt
 
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Forest
+z        178 178
+file     data/levels/Forest_versus.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Lake
+z        178 178
+file     data/levels/Lake_versus.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Mountain
+z        178 178
+file     data/levels/Mountain_versus.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Waterfall
+z        184 184 # 178    178
+file     data/levels/Waterfall_versus.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Castle
+z        184 184
+file     data/levels/Castle.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Pit
+z        186 186
+file     data/levels/Pit.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Throne
+z        178 178
+file     data/levels/Throne.txt
+z        170 170
+file     data/levels/Stage_select.txt
+branch   Arena
+z        186 186
+file     data/levels/Arena.txt
+z        170 170
+file     data/levels/Stage_select.txt
+file     data/levels/Stage_select.txt # dummy level
 
+#---------------------------------------------------
 
-set	Dungeon_of_Drax
-maxplayers 1
-credits	1
-lives	10
-noshare 1
-branch	Volcano
-z	178	178
-file	data/levels/Dungeon_of_Drax/Volcano_1.txt
-branch	Cave
-z	178	178
-file	data/levels/Dungeon_of_Drax/Cave_1.txt
-file	data/levels/Dungeon_of_Drax/Cave_1.txt # dummy level
+set             Tournament
+maxplayers      1
+credits         1
+lives           1
+noshare         1
+hiscorebg       1
 
-set	Tournament
-maxplayers 1
-credits	1
-lives	1
-noshare 1
-hiscorebg 1
-scene	data/scenes/cutscene_rollcombo.txt
-z	178	178
-file	data/levels/Forest.txt
-z	178	178
-file	data/levels/Lake.txt
-scene	data/scenes/cutscene_T.Birds.txt
-z	178	178
-file	data/levels/Bonus_T.Bird.txt
-z	178	178
-file	data/levels/Mountain.txt
-z	178	178
-file	data/levels/Waterfall.txt
-z	184 184
-file	data/levels/Castle.txt
-z	186	186
-file	data/levels/Pit.txt
-scene	data/scenes/cutscene_Pitcreature.txt
-#scene	data/scenes/cutscene_creaturepit.txt
-z	189	189
-file	data/levels/Bonus_CreaturePit.txt
-z	178	178
-file	data/levels/Throne.txt
-z	186	186
-file	data/levels/Arena.txt
-z	186	186
-file	data/levels/Arena_Ending.txt
+scene   data/scenes/cutscene_rollcombo.txt
+z       178    178
+file    data/levels/Forest.txt
+z       178    178
+file    data/levels/Lake.txt
+scene   data/scenes/cutscene_T.Birds.txt
+z       178    178
+file    data/levels/Bonus_T.Bird.txt
+z       178    178
+file    data/levels/Mountain.txt
+z       178    178
+file    data/levels/Waterfall.txt
+z       184 184
+file    data/levels/Castle.txt
+z       186    186
+file    data/levels/Pit.txt
+scene   data/scenes/cutscene_Pitcreature.txt
+#scene   data/scenes/cutscene_creaturepit.txt
+z       189    189
+file    data/levels/Bonus_CreaturePit.txt
+z       178    178
+file    data/levels/Throne.txt
+z       186    186
+file    data/levels/Arena.txt
+z       186    186
+file    data/levels/Arena_Ending.txt
 
-set	Evil_Forces
-ifcomplete 1
-maxplayers 1
-credits	1
-lives	1
-hiscorebg 1
-noshare 1
-scene	data/scenes/cutscene_rollcombo.txt
-z	178	178
-file	data/levels/Forest2.txt
-z	178	178
-file	data/levels/Lake2.txt
-z	178	178
-file	data/levels/Mountain2.txt
-scene	data/scenes/cutscene_Axegoblin.txt
-z	178	178
-file	data/levels/Bonus_Axegoblin.txt
-z	178	178
-file	data/levels/Waterfall2.txt
-z	184 184
-file	data/levels/Castle2.txt
-z	186	186
-file	data/levels/Pit2.txt
-scene	data/scenes/cutscene_Pitcreature.txt
-#scene	data/scenes/cutscene_creaturepit.txt
-z	189	189
-file	data/levels/Bonus_CreaturePit.txt
-z	178	178
-file	data/levels/Throne2.txt
-z	186	186
-file	data/levels/Arena2.txt
-z	186	186
-file	data/levels/Arena_Ending.txt
+#---------------------------------------------------
 
-#set	TerrorBirds_Training
-#maxplayers 1
-#credits	1
-#lives	1
-#hiscorebg 1
-#noshare 1
-#scene	data/scenes/cutscene_T.Birds.txt
-#z	178	178
-#file	data/levels/Bonus_T.Bird.txt
+set             Evil_Forces
+ifcomplete      1
+maxplayers      1
+credits         1
+lives           1
+hiscorebg       1
+noshare         1
 
-#set	AxeGoblin_Training
-#maxplayers 1
-#credits	1
-#lives	1
-#hiscorebg 1
-#noshare 1
-#scene	data/scenes/cutscene_Axegoblin.txt
-#z	178	178
-#file	data/levels/Bonus_AxeGoblin.txt
+scene   data/scenes/cutscene_rollcombo.txt
+z       178    178
+file    data/levels/Forest2.txt
+z       178    178
+file    data/levels/Lake2.txt
+z       178    178
+file    data/levels/Mountain2.txt
+scene   data/scenes/cutscene_Axegoblin.txt
+z       178    178
+file    data/levels/Bonus_Axegoblin.txt
+z       178    178
+file    data/levels/Waterfall2.txt
+z       184 184
+file    data/levels/Castle2.txt
+z       186    186
+file    data/levels/Pit2.txt
+scene   data/scenes/cutscene_Pitcreature.txt
+#scene   data/scenes/cutscene_creaturepit.txt
+z       189    189
+file    data/levels/Bonus_CreaturePit.txt
+z       178    178
+file    data/levels/Throne2.txt
+z       186    186
+file    data/levels/Arena2.txt
+z       186    186
+file    data/levels/Arena_Ending.txt
+
+#---------------------------------------------------
+
+set             Dungeon_of_Drax
+maxplayers      1
+credits         1
+lives           1
+noshare         1
+
+branch  Volcano
+z       178    178
+file    data/levels/Dungeon_of_Drax/Volcano_1.txt
+
+branch  Cave
+z       178    178
+file    data/levels/Dungeon_of_Drax/Cave_1.txt
+file    data/levels/Dungeon_of_Drax/Cave_1.txt # dummy level
+
+#---------------------------------------------------
+
+set             Forest_test
+maxplayers      2
+lives           1
+nosame          1
+noshare         1
+disablegameover 1
+disablehof      1
+skipselect      gorth
+z       178    178
+file    data/levels/Forest_versus.txt
+
+set             Lake_test
+maxplayers      2
+lives           1
+nosame          1
+noshare         1
+disablegameover 1
+disablehof      1
+skipselect      gorth
+z       178    178
+file    data/levels/Lake_versus.txt
+
+set             Mountain_test
+maxplayers      2
+lives           1
+nosame          1
+noshare         1
+disablegameover 1
+disablehof      1
+skipselect      gorth
+z       178    178
+file    data/levels/Mountain_versus.txt
+
+set             Waterfall_test
+maxplayers      2
+lives           1
+nosame          1
+noshare         1
+disablegameover 1
+disablehof      1
+skipselect      gorth
+z       184 184 # 178    178
+file    data/levels/Waterfall_versus.txt
+
+#---------------------------------------------------
+
+#set            Pit_Creature_test
+#maxplayers     1
+#lives          1
+#nosame         1
+#noshare        1
+#disablegameover 1
+#disablehof     1
+#z      189    189
+#file   data/levels/Bonus_CreaturePit.txt
+
+#set            TerrorBirds_Training
+#maxplayers     1
+#credits        1
+#lives          1
+#hiscorebg      1
+#noshare        1
+#scene  data/scenes/cutscene_T.Birds.txt
+#z      178    178
+#file   data/levels/Bonus_T.Bird.txt
+
+#set            AxeGoblin_Training
+#maxplayers     1
+#credits        1
+#lives          1
+#hiscorebg      1
+#noshare        1
+#scene  data/scenes/cutscene_Axegoblin.txt
+#z      178    178
+#file   data/levels/Bonus_AxeGoblin.txt
+
+#---------------------------------------------------
