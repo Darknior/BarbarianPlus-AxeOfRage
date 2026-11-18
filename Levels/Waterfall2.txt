@@ -31,10 +31,10 @@ alias	Player
 coords	30 205 0
 at      0
 
-spawn	zagulE
-spawnscript data/scripts/enHUD2.c
-alias 	Zonda
-boss	1
-map		4
+spawn DragonE
+spawnscript data/scripts/EnHUD2.c
+alias Dragon
+boss 1
+map 0
 coords	250 178 0
 at      0

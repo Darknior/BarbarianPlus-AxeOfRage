@@ -1,0 +1,26 @@
+name DragonIconer
+type panel
+facing 1
+setlayer 9999
+palette data/chars/dragon/materials/base.gif
+alternatepal data/chars/dragon/materials/alt01.gif
+alternatepal data/chars/dragon/materials/alt02.gif
+alternatepal data/chars/dragon/materials/alt03.gif
+alternatepal data/chars/dragon/materials/alt04.gif
+alternatepal data/chars/dragon/materials/alt05.gif
+alternatepal data/chars/dragon/materials/alt06.gif
+alternatepal data/chars/dragon/materials/alt07.gif
+alternatepal data/chars/dragon/materials/alt08.gif
+alternatepal data/chars/dragon/materials/alt09.gif
+alternatepal data/chars/dragon/materials/alt10.gif
+alternatepal data/chars/dragon/materials/alt11.gif
+anim idle
+@script
+ void self=getlocalvar("self");void fighter=getentityproperty(self,"parent");
+ if(fighter!=NULL()){changeentityproperty(self,"map",getentityproperty(fighter,"map"));}
+@end_script
+ loop 1
+ delay 5
+ offset 0 0
+ frame data/chars/dragon/icon.png
+ frame data/chars/dragon/icon.png

@@ -1,0 +1,94 @@
+name				dragonhead #THROWNED
+type				none
+palette data/chars/dragon/materials/base.gif
+nolife				1
+lifespan			6
+remove				1
+noquake 			1
+gfxshadow 0
+shadow 0
+noatflash 			1
+flash				flash
+facing		0
+offscreenkill	20
+subject_to_wall 0
+subject_to_hole 1
+no_adjust_base  0
+noquake		1
+subject_to_gravity 1
+subject_to_obstacle 0
+subject_to_platform 0
+
+animationscript	data/scripts/player.c
+
+##REMAPS
+alternatepal data/chars/dragon/materials/alt01.gif
+alternatepal data/chars/dragon/materials/alt02.gif
+alternatepal data/chars/dragon/materials/alt03.gif
+alternatepal data/chars/dragon/materials/alt04.gif
+alternatepal data/chars/dragon/materials/alt05.gif
+alternatepal data/chars/dragon/materials/alt06.gif
+alternatepal data/chars/dragon/materials/alt07.gif
+alternatepal data/chars/dragon/materials/alt08.gif
+alternatepal data/chars/dragon/materials/alt09.gif
+alternatepal data/chars/dragon/materials/alt10.gif
+alternatepal data/chars/dragon/materials/alt11.gif
+
+
+
+
+
+anim idle
+	loop	0
+	delay	6
+	offset 20 36
+	bbox 3 3 26 26
+	bounce		1
+	bouncefactor 1
+	sound	data/sounds/bounce.wav
+	@cmd	bbounce "ANI_FOLLOW1"
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head4.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head4.png
+
+anim follow1
+	landframe 1
+	loop	0
+	delay	6
+	offset 20 36
+	bbox 3 3 26 26
+	jumpframe	1 1.5 -0.30000000000000004 0
+	move    -1.5
+	hitfx	data/sounds/bounce.wav
+	sound	data/sounds/bounce.wav
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head4.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head4.png
+	bouncefactor 0.5
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head4.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head4.png
+	bounce 0
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head4.png
+	frame	data/chars/dragon/head3.png
+	frame	data/chars/dragon/head2.png
+	frame	data/chars/dragon/head1.png
+	frame	data/chars/dragon/head4.png

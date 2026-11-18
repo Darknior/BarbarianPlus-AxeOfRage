@@ -1,6 +1,11 @@
+#import "data/scripts/Library/hopping_kicks.h"
+#import "data/scripts/Library/aerial_spin.h"
+#import "data/scripts/Library/goblin_cleanup.h"
+
 void main()
 {//
     if(openborvariant("in_menuscreen")==1 || openborvariant("in_titlescreen")){
+      setglobalvar("dragon_victory_level", NULL());
       setglobalvar("F1", NULL());
       setglobalvar("F2", NULL());
       setglobalvar("F3", NULL());
@@ -27,7 +32,10 @@ void main()
       } //start it off.
       seed++; //increment seed.
       srand(seed); //apply seed to random function.
-    } else if(openborvariant("in_level")){ //  currently for testing
+    } else if(openborvariant("in_level") && openborvariant("current_set") == 3){
+      hoppingUpdate();
+      aerialSpinUpdate();
+      goblinRoundEnd();
 //      drawstring(150,60,2, getglobalvar("GortDed"));
 //      drawstring(150,80,2, getglobalvar("MariDed"));
 //      drawstring(150,100,2, getglobalvar("KranDed"));

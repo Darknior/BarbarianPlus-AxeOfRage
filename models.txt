@@ -6,7 +6,7 @@ ajspecial       1
 maxattacks      20
 maxfreespecials 20
 maxattacktypes  20
-maxfollows      20
+maxfollows      24
 nodropen
 
 
@@ -238,3 +238,7 @@ know	GOpen		data/bgs/select/gopen.txt
 know	PHold		data/bgs/select/phold.txt
 know	Vanager1	data/bgs/select/vanager1.txt
 know	Vanager2	data/bgs/select/vanager2.txt
+# Evil Forces waterfall boss
+load DragonE data/chars/dragon/dragone.txt
+load dragonhead data/chars/dragon/dragonhead.txt
+load DragonIconer data/chars/dragon/dragoniconer.txt

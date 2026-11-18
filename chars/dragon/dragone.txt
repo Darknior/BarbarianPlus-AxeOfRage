@@ -1,0 +1,1497 @@
+name DragonE
+type		 enemy
+palette data/chars/dragon/materials/base.gif
+hostile player
+candamage player
+aimove 		 chase
+aimove 		 wander
+aggression   50
+health 110
+mp		 	 100
+mprate		 5
+speed 10
+running 16 3 1.5 1 1
+jumpmove	 2
+jumpheight	 3
+noquake		 1
+bounce		 0
+blockpain 	 15
+thold 		 0
+holdblock 	 1
+blockback	 1
+nopassiveblock	1
+blockodds 	 1
+backpain 	 1
+falldie      1
+death		 1
+nodieblink	 3
+atchain      1 1 2 3
+icon		 data/chars/dragon/icon.png 1
+antigravity	 15
+makeinv		 3 0
+gfxshadow 0
+shadow 0
+bflash		 block
+
+
+animationscript data/scripts/dragon_enemy.c
+
+##REMAPS
+alternatepal data/chars/dragon/materials/alt01.gif
+alternatepal data/chars/dragon/materials/alt02.gif
+alternatepal data/chars/dragon/materials/alt03.gif
+alternatepal data/chars/dragon/materials/alt04.gif
+alternatepal data/chars/dragon/materials/alt05.gif
+alternatepal data/chars/dragon/materials/alt06.gif
+alternatepal data/chars/dragon/materials/alt07.gif
+alternatepal data/chars/dragon/materials/alt08.gif
+alternatepal data/chars/dragon/materials/alt09.gif
+alternatepal data/chars/dragon/materials/alt10.gif
+alternatepal data/chars/dragon/materials/alt11.gif
+
+
+
+
+
+anim	spawn
+     delay	1
+ offset 80 128
+     frame	data/chars/misc/empty.png
+     delay	10
+ offset 80 128
+ frame data/chars/dragon/pose42.png
+ frame data/chars/dragon/pose42.png
+ frame data/chars/dragon/pose42.png
+ frame data/chars/dragon/pose43.png
+ frame data/chars/dragon/pose43.png
+ frame data/chars/dragon/pose43.png
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native00.png
+
+
+anim	idle
+@script
+  HealAct(20, 100, "ANI_FOLLOW8");
+  attackF("ANI_FOLLOW3");
+  React("ANI_FREESPECIAL12", 50);
+balanceAttack();
+@end_script
+	range	0 80
+	loop	1
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native01.png
+ frame data/chars/dragon/native01.png
+ frame data/chars/dragon/native01.png
+ frame data/chars/dragon/native02.png
+ frame data/chars/dragon/native02.png
+ frame data/chars/dragon/native02.png
+	delay	30
+ frame data/chars/dragon/native03.png
+ frame data/chars/dragon/native03.png
+ frame data/chars/dragon/native03.png
+
+
+anim	faint
+@script
+  HealAct(20, 100, "ANI_FOLLOW8");
+  attackF("ANI_FOLLOW3");
+  React("ANI_FREESPECIAL12", 50);
+@end_script
+	range	0 100
+	loop	1
+ offset 80 128
+ bbox 54 46 56 82
+	delay	15
+ frame data/chars/dragon/pose44.png
+ frame data/chars/dragon/pose44.png
+ frame data/chars/dragon/pose44.png
+ frame data/chars/dragon/pose44.png
+
+
+anim	victory
+	delay	30
+ offset 80 128
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose41.png
+ frame data/chars/dragon/pose41.png
+
+
+
+anim	walk
+@script
+  HealAct(20, 100, "ANI_FOLLOW8");
+  attackF("ANI_FOLLOW3");
+  React("ANI_FREESPECIAL12", 50);
+balanceAttack();
+@end_script
+	range	0 80
+	loop	1
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native01.png
+ frame data/chars/dragon/native02.png
+
+
+anim	follow3 # taunt
+	delay	20
+ offset 80 128
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/native00.png
+ frame data/chars/dragon/native00.png
+
+
+
+anim	run
+	loop	1
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+ frame data/chars/dragon/native04.png
+ frame data/chars/dragon/native04.png
+ frame data/chars/dragon/native06.png
+ frame data/chars/dragon/native06.png
+ frame data/chars/dragon/native07.png
+ frame data/chars/dragon/native07.png
+ frame data/chars/dragon/native08.png
+ frame data/chars/dragon/native08.png
+
+
+
+anim	runattack #Body ram
+	delay	7
+ offset 80 128
+ bbox 54 46 56 82
+	forcedirection -1
+	@cmd	dasher 1 0 0 1
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose30.png
+ frame data/chars/dragon/pose30.png
+ frame data/chars/dragon/pose30.png
+	sound	data/sounds/iiaaah.wav
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose30.png
+ frame data/chars/dragon/pose31.png
+ frame data/chars/dragon/pose31.png
+ attack1 92 57 48 24 30 1 0 0 0 0
+	delay	15
+ frame data/chars/dragon/pose31.png
+ frame data/chars/dragon/pose30.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	delay	12
+	@cmd	stop
+ frame data/chars/dragon/pose30.png
+ frame data/chars/dragon/pose30.png
+
+
+anim freespecial5 # Running A2 hop 1
+ loop 1 2 3
+ fastattack 0
+ forcedirection -1
+ offset 80 128
+ bbox 54 46 56 82
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ attack1 0
+ delay 6
+ @cmd hoppingStart 1
+ frame data/chars/dragon/pose13.png
+ delay 8
+ @cmd hoppingContact
+ sound data/sounds/hii.wav
+ attack1 66 60 86 60 6 0 0 0 0 0
+ dropv 1.8 0.6 0
+ frame data/chars/dragon/pose14.png
+ attack1 0
+ delay 5
+ frame data/chars/dragon/pose13.png
+ frame data/chars/dragon/pose14.png
+
+anim get
+	loop	0
+	delay	12
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose00.png
+
+
+anim	duck
+ offset 80 128
+ bbox 53 80 58 48
+	delay	6
+ frame data/chars/dragon/pose00.png
+
+
+anim	ducking
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 2);
+  }
+@end_script
+ offset 80 128
+ bbox 53 80 58 48
+	cancel 0 5 0  A2 freespecial2
+ frame data/chars/dragon/pose00.png
+	delay	6
+ frame data/chars/dragon/pose00.png
+
+
+anim	duckrise
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose00.png
+	delay	6
+ frame data/chars/dragon/native00.png
+
+
+anim duckattack # Crouched combo hit 1/3
+	delay 6
+ offset 80 128
+ bbox 53 80 58 48
+	hitflash Basic
+	hitfx data/sounds/hit1.wav
+	sound data/sounds/hit1.wav
+	attack1 0
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ attack1 88 90 54 25 10 0 0 0 0 0
+ frame data/chars/dragon/pose02.png
+ frame data/chars/dragon/pose02.png
+	attack1 0
+ frame data/chars/dragon/pose03.png
+ frame data/chars/dragon/pose03.png
+
+anim	freespecial2 #Rising claw
+	delay	8
+ offset 80 128
+ bbox 54 46 56 82
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose06.png
+	jumpframe 0 0 2
+ attack1 86 84 60 54 20 1 0 0 0 0
+ frame data/chars/dragon/pose06.png
+ frame data/chars/dragon/pose07.png
+	jumpframe 0 3 1
+ frame data/chars/dragon/pose07.png
+ frame data/chars/dragon/pose07.png
+ frame data/chars/dragon/pose07.png
+ frame data/chars/dragon/pose06.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose06.png
+
+
+anim	freespecial11 #Long-neck bite
+	range 50 80
+	rangea 0 100
+ offset 80 128
+ bbox 54 46 56 82
+	forcedirection -1
+	delay 6
+	@cmd	dasher 1 0 0 1
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose22.png
+ frame data/chars/dragon/pose22.png
+ frame data/chars/dragon/pose22.png
+	sound	data/sounds/iiaaah.wav
+ frame data/chars/dragon/pose23.png
+ frame data/chars/dragon/pose23.png
+ frame data/chars/dragon/pose23.png
+ attack1 81 83 60 25 30 1 0 0 0 0
+ frame data/chars/dragon/pose23.png
+ frame data/chars/dragon/pose23.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose23.png
+	@cmd	stop
+ frame data/chars/dragon/pose22.png
+	@cmd	beidle
+ frame data/chars/dragon/pose22.png
+
+
+anim turn
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/native01.png
+	delay	6
+ frame data/chars/dragon/native01.png
+
+
+anim	jump
+@script
+if(frame>=1){balanceAir();}
+@end_script
+	delay	12
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose09.png
+
+
+anim jumpland
+ offset 80 128
+ bbox 54 46 56 82
+	delay	12
+ frame data/chars/dragon/pose12.png
+
+
+anim	jumpattack #Static Jump Sword
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+ offset 80 128
+ bbox 54 46 56 82
+	delay	6
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose08.png
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose10.png
+ attack1 73 90 60 19 10 1 1 0 0 0
+ frame data/chars/dragon/pose10.png
+ frame data/chars/dragon/pose11.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose11.png
+
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+ offset 80 128
+ bbox 54 46 56 82
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose09.png
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose10.png
+ frame data/chars/dragon/pose10.png
+ attack1 73 90 60 19 10 1 1 0 0 0
+ frame data/chars/dragon/pose10.png
+ frame data/chars/dragon/pose11.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose11.png
+
+
+anim freespecial3 # A2 aerial spin: rise, rotate, descend
+ loop 0
+ fastattack 0
+ jugglecost 3
+ offset 80 128
+ bbox 54 46 56 82
+ delay 10
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ sound data/sounds/hit1.wav
+ @cmd aerialSpinStart 0
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose09.png
+ @cmd aerialSpinDescend
+ attack1 49 43 98 100 12 0 0 0 0 0
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose28.png
+ @cmd aerialSpinWait
+ frame data/chars/dragon/pose29.png
+
+anim	forwardjump
+@script
+if(frame>=1){balanceAir();}
+@end_script
+	delay	12
+ offset 80 128
+ bbox 54 46 56 82
+	cancel	0 5 0 a2 freespecial3
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose10.png
+
+
+anim	freespecial6 #Jump
+	@script
+	if(frame==1){
+    void self = getlocalvar("self");
+    changeentityproperty(self, "aiflag", "jumping", 1);
+    changeentityproperty(self, "takeaction", "common_jump");
+  }
+if(frame>=1){balanceAir();}
+@end_script
+	delay	1
+	jumpframe 0 3 0 0
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose08.png
+	delay	12
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose11.png
+ frame data/chars/dragon/pose11.png
+
+
+anim	follow6 #Jump Forward
+@script
+if(frame>=1){balanceAir();}
+@end_script
+ offset 80 128
+ bbox 54 46 56 82
+	delay	12
+	jumpframe 0 3 1.5 0
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose10.png
+
+
+anim	jumpforward #Front Jump Punch
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+ offset 80 128
+ bbox 54 46 56 82
+	cancel	0 5 0 a2 freespecial3
+	delay	6
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose09.png
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose09.png
+ frame data/chars/dragon/pose10.png
+ frame data/chars/dragon/pose10.png
+ attack1 73 90 60 19 10 1 1 0 0 0
+ frame data/chars/dragon/pose10.png
+ frame data/chars/dragon/pose11.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose11.png
+
+
+anim freespecial4 # A2 aerial spin: rise, rotate, descend
+ loop 0
+ fastattack 0
+ jugglecost 3
+ offset 80 128
+ bbox 54 46 56 82
+ delay 10
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ sound data/sounds/hit1.wav
+ @cmd aerialSpinStart 1
+ frame data/chars/dragon/pose08.png
+ frame data/chars/dragon/pose09.png
+ @cmd aerialSpinDescend
+ attack1 49 43 98 100 12 0 0 0 0 0
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose28.png
+ @cmd aerialSpinWait
+ frame data/chars/dragon/pose29.png
+
+anim	runjumpattack #Vertical Split
+	fastattack	1
+	jugglecost	5
+	forcedirection	-1
+ offset 80 128
+ bbox 54 46 56 82
+	cancel	0 5 0 a2 freespecial3
+	delay	4
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose19.png
+ frame data/chars/dragon/pose19.png
+ frame data/chars/dragon/pose19.png
+	sound	data/sounds/iiaaah.wav
+ attack1 70 96 60 19 30 1 1 0 0 0
+ frame data/chars/dragon/pose19.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ attack1 70 108 60 31 30 1 1 0 0 0
+ frame data/chars/dragon/pose19.png
+ frame data/chars/dragon/pose20.png
+ frame data/chars/dragon/pose20.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose20.png
+ frame data/chars/dragon/pose20.png
+ frame data/chars/dragon/pose20.png
+ frame data/chars/dragon/pose21.png
+	delay	12
+ attack1 73 90 60 19 30 1 1 0 0 0
+ frame data/chars/dragon/pose21.png
+ frame data/chars/dragon/pose21.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose21.png
+
+
+
+anim attack1 # Claw combo 1
+	range 20 70
+	delay	6
+ offset 80 128
+ bbox 54 46 56 82
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose16.png
+ frame data/chars/dragon/pose16.png
+ frame data/chars/dragon/pose16.png
+ attack1 88 72 55 28 10 0 0 0 0 0
+ frame data/chars/dragon/pose17.png
+ frame data/chars/dragon/pose17.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose18.png
+ frame data/chars/dragon/pose18.png
+
+
+
+anim attack2 # Claw combo 2
+	delay	6
+ offset 80 128
+ bbox 54 46 56 82
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose19.png
+ frame data/chars/dragon/pose19.png
+ frame data/chars/dragon/pose19.png
+ attack1 88 72 55 28 12 0 0 0 0 0
+ frame data/chars/dragon/pose20.png
+ frame data/chars/dragon/pose20.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose21.png
+ frame data/chars/dragon/pose21.png
+
+
+
+anim attack3 # Claw combo 3
+	delay	6
+ offset 80 128
+ bbox 54 46 56 82
+	hitflash Basic
+	sound	data/sounds/hit1.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose22.png
+ frame data/chars/dragon/pose22.png
+ frame data/chars/dragon/pose22.png
+ attack1 88 72 55 28 14 1 0 0 0 0
+ frame data/chars/dragon/pose23.png
+ frame data/chars/dragon/pose23.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose22.png
+ frame data/chars/dragon/pose22.png
+
+
+
+anim	freespecial #Tail sweep
+	delay	10
+ offset 80 128
+ bbox 54 46 56 82
+	sound	data/sounds/hii.wav
+	hitfx	data/sounds/hit1.wav
+ frame data/chars/dragon/pose24.png
+ attack1 82 57 46 30 10 0 0 0 0 0
+ frame data/chars/dragon/pose24.png
+	sound	data/sounds/hit1.wav
+	attack1 0 0 0 0 0 0 0 0 0 0
+ attack1 82 68 46 34 10 0 0 0 0 0
+ frame data/chars/dragon/pose25.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose26.png
+	sound	data/sounds/hit1.wav
+ frame data/chars/dragon/pose24.png
+ attack1 82 37 46 36 10 0 0 0 0 0
+ frame data/chars/dragon/pose24.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/hit1.wav
+ attack1 82 68 46 34 10 0 0 0 0 0
+ frame data/chars/dragon/pose25.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose26.png
+
+
+
+anim	follow8 # Heal self
+ mpcost 100
+@script
+  if(frame==5){
+    void self = getlocalvar("self");
+    int HP = getentityproperty(self,"health");
+
+    changeentityproperty(self, "health", HP+80);
+  }
+@end_script
+	delay	16
+ offset 80 128
+ bbox 54 46 56 82
+	delay	16
+	sound	data/sounds/what_the_hell.wav
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose40.png
+ frame data/chars/dragon/pose41.png
+ frame data/chars/dragon/pose41.png
+	@cmd	mpcost 100
+	@cmd	spawn01 "HealFX" 0 0 1
+ frame data/chars/dragon/pose41.png
+
+
+anim	freespecial9 #Kick
+	delay	12
+ offset 80 128
+ bbox 54 46 56 82
+	hitflash basic
+	sound	data/sounds/hii.wav
+ frame data/chars/dragon/pose13.png
+ attack1 88 72 58 31 16 1 0 0 0 0
+ frame data/chars/dragon/pose13.png
+ frame data/chars/dragon/pose14.png
+	attack1 0 0 0 0 0 0 0 0 0 0
+ frame data/chars/dragon/pose14.png
+ frame data/chars/dragon/pose15.png
+
+
+anim	pain
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+    int Duck = getentityvar(self, 1);
+    if(Duck == 2){
+      changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+    }
+  }
+@end_script
+	jumpframe 0 0 0
+	delay	12
+ bbox 54 46 56 82
+	sound	data/sounds/hit2.wav
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose32.png
+ frame data/chars/dragon/pose32.png
+	delay	1
+	@cmd	React "ANI_FREESPECIAL12" 60
+ frame data/chars/dragon/pose32.png
+
+
+anim	backpain
+ bbox 54 46 56 82
+	sound	data/sounds/hit2.wav
+ offset 80 128
+ bbox 54 46 56 82
+	delay	12
+ frame data/chars/dragon/pose33.png
+ frame data/chars/dragon/pose33.png
+	delay	1
+	@cmd	React "ANI_FREESPECIAL12" 60
+ frame data/chars/dragon/pose33.png
+
+
+anim grabbed
+ offset 80 128
+	delay 150
+ frame data/chars/dragon/pose44.png
+ frame data/chars/dragon/pose44.png
+
+
+anim	fall
+ offset 80 128
+	delay 12
+ bbox 54 46 56 82
+	sound	data/sounds/hit1.wav
+ frame data/chars/dragon/pose32.png
+ frame data/chars/dragon/pose32.png
+ frame data/chars/dragon/pose34.png
+ frame data/chars/dragon/pose35.png
+ frame data/chars/dragon/pose36.png
+
+
+anim	backfall
+	delay	12
+ offset 80 128
+	sound	data/sounds/hit1.wav
+ frame data/chars/dragon/pose33.png
+ frame data/chars/dragon/pose33.png
+ frame data/chars/dragon/pose34.png
+ frame data/chars/dragon/pose34.png
+ frame data/chars/dragon/pose35.png
+ frame data/chars/dragon/pose35.png
+ frame data/chars/dragon/pose37.png
+
+
+anim	rise
+@script
+  if(frame==0){
+    void self = getlocalvar("self");
+
+    setentityvar(self, 1, 0);
+  }
+@end_script
+ offset 80 128
+	delay	12
+ frame data/chars/dragon/pose36.png
+ frame data/chars/dragon/pose36.png
+ frame data/chars/dragon/pose38.png
+	delay	1
+	@cmd	React "ANI_FREESPECIAL12" 60
+ frame data/chars/dragon/pose39.png
+
+
+anim	backrise
+ offset 80 128
+	delay	12
+ frame data/chars/dragon/pose37.png
+ frame data/chars/dragon/pose37.png
+ frame data/chars/dragon/pose38.png
+ offset 80 128
+ frame data/chars/dragon/pose38.png
+	delay	1
+	@cmd	React "ANI_FREESPECIAL12" 60
+ frame data/chars/dragon/pose39.png
+
+
+anim death
+	delay 18
+	offset 80 128
+	jumpframe 0 0 0
+	frame data/chars/dragon/fall0.png
+	frame data/chars/dragon/fall1.png
+	frame data/chars/dragon/fall2.png
+	frame data/chars/dragon/fall3.png
+ offset 500 100
+ delay 11
+ move 0
+ @cmd goblinGate 95 ""
+ frame data/chars/amiga_cleanup/dragon/death/frame000.png
+ frame data/chars/amiga_cleanup/dragon/death/frame001.png
+ frame data/chars/amiga_cleanup/dragon/death/frame002.png
+ frame data/chars/amiga_cleanup/dragon/death/frame003.png
+ frame data/chars/amiga_cleanup/dragon/death/frame004.png
+ frame data/chars/amiga_cleanup/dragon/death/frame005.png
+ frame data/chars/amiga_cleanup/dragon/death/frame006.png
+ frame data/chars/amiga_cleanup/dragon/death/frame007.png
+ frame data/chars/amiga_cleanup/dragon/death/frame008.png
+ frame data/chars/amiga_cleanup/dragon/death/frame009.png
+ frame data/chars/amiga_cleanup/dragon/death/frame010.png
+ frame data/chars/amiga_cleanup/dragon/death/frame011.png
+ frame data/chars/amiga_cleanup/dragon/death/frame012.png
+ frame data/chars/amiga_cleanup/dragon/death/frame013.png
+ frame data/chars/amiga_cleanup/dragon/death/frame014.png
+ frame data/chars/amiga_cleanup/dragon/death/frame015.png
+ frame data/chars/amiga_cleanup/dragon/death/frame016.png
+ frame data/chars/amiga_cleanup/dragon/death/frame017.png
+ frame data/chars/amiga_cleanup/dragon/death/frame018.png
+ frame data/chars/amiga_cleanup/dragon/death/frame019.png
+ frame data/chars/amiga_cleanup/dragon/death/frame020.png
+ frame data/chars/amiga_cleanup/dragon/death/frame021.png
+ frame data/chars/amiga_cleanup/dragon/death/frame022.png
+ frame data/chars/amiga_cleanup/dragon/death/frame023.png
+ frame data/chars/amiga_cleanup/dragon/death/frame024.png
+ frame data/chars/amiga_cleanup/dragon/death/frame025.png
+ frame data/chars/amiga_cleanup/dragon/death/frame026.png
+ frame data/chars/amiga_cleanup/dragon/death/frame027.png
+ frame data/chars/amiga_cleanup/dragon/death/frame028.png
+ frame data/chars/amiga_cleanup/dragon/death/frame029.png
+ frame data/chars/amiga_cleanup/dragon/death/frame030.png
+ frame data/chars/amiga_cleanup/dragon/death/frame031.png
+ frame data/chars/amiga_cleanup/dragon/death/frame032.png
+ frame data/chars/amiga_cleanup/dragon/death/frame033.png
+ frame data/chars/amiga_cleanup/dragon/death/frame034.png
+ frame data/chars/amiga_cleanup/dragon/death/frame035.png
+ frame data/chars/amiga_cleanup/dragon/death/frame036.png
+ frame data/chars/amiga_cleanup/dragon/death/frame037.png
+ frame data/chars/amiga_cleanup/dragon/death/frame038.png
+ frame data/chars/amiga_cleanup/dragon/death/frame039.png
+ frame data/chars/amiga_cleanup/dragon/death/frame040.png
+ frame data/chars/amiga_cleanup/dragon/death/frame041.png
+ frame data/chars/amiga_cleanup/dragon/death/frame042.png
+ frame data/chars/amiga_cleanup/dragon/death/frame043.png
+ frame data/chars/amiga_cleanup/dragon/death/frame044.png
+ frame data/chars/amiga_cleanup/dragon/death/frame045.png
+ frame data/chars/amiga_cleanup/dragon/death/frame046.png
+ frame data/chars/amiga_cleanup/dragon/death/frame047.png
+ frame data/chars/amiga_cleanup/dragon/death/frame048.png
+ frame data/chars/amiga_cleanup/dragon/death/frame049.png
+ frame data/chars/amiga_cleanup/dragon/death/frame050.png
+ frame data/chars/amiga_cleanup/dragon/death/frame051.png
+ frame data/chars/amiga_cleanup/dragon/death/frame052.png
+ frame data/chars/amiga_cleanup/dragon/death/frame053.png
+ frame data/chars/amiga_cleanup/dragon/death/frame054.png
+ frame data/chars/amiga_cleanup/dragon/death/frame055.png
+ frame data/chars/amiga_cleanup/dragon/death/frame056.png
+ frame data/chars/amiga_cleanup/dragon/death/frame057.png
+ frame data/chars/amiga_cleanup/dragon/death/frame058.png
+ frame data/chars/amiga_cleanup/dragon/death/frame059.png
+ frame data/chars/amiga_cleanup/dragon/death/frame060.png
+ frame data/chars/amiga_cleanup/dragon/death/frame061.png
+ frame data/chars/amiga_cleanup/dragon/death/frame062.png
+ frame data/chars/amiga_cleanup/dragon/death/frame063.png
+ frame data/chars/amiga_cleanup/dragon/death/frame064.png
+ frame data/chars/amiga_cleanup/dragon/death/frame065.png
+ frame data/chars/amiga_cleanup/dragon/death/frame066.png
+ frame data/chars/amiga_cleanup/dragon/death/frame067.png
+ frame data/chars/amiga_cleanup/dragon/death/frame068.png
+ frame data/chars/amiga_cleanup/dragon/death/frame069.png
+ frame data/chars/amiga_cleanup/dragon/death/frame070.png
+ frame data/chars/amiga_cleanup/dragon/death/frame071.png
+ frame data/chars/amiga_cleanup/dragon/death/frame072.png
+ frame data/chars/amiga_cleanup/dragon/death/frame073.png
+ frame data/chars/amiga_cleanup/dragon/death/frame074.png
+ frame data/chars/amiga_cleanup/dragon/death/frame075.png
+ frame data/chars/amiga_cleanup/dragon/death/frame076.png
+ frame data/chars/amiga_cleanup/dragon/death/frame077.png
+ frame data/chars/amiga_cleanup/dragon/death/frame078.png
+ frame data/chars/amiga_cleanup/dragon/death/frame079.png
+ frame data/chars/amiga_cleanup/dragon/death/frame080.png
+ frame data/chars/amiga_cleanup/dragon/death/frame081.png
+ frame data/chars/amiga_cleanup/dragon/death/frame082.png
+ frame data/chars/amiga_cleanup/dragon/death/frame083.png
+ frame data/chars/amiga_cleanup/dragon/death/frame084.png
+ frame data/chars/amiga_cleanup/dragon/death/frame085.png
+ frame data/chars/amiga_cleanup/dragon/death/frame086.png
+ frame data/chars/amiga_cleanup/dragon/death/frame087.png
+ frame data/chars/amiga_cleanup/dragon/death/frame088.png
+ frame data/chars/amiga_cleanup/dragon/death/frame089.png
+ frame data/chars/amiga_cleanup/dragon/death/frame090.png
+ delay 1
+ @cmd goblinFinish
+ frame data/chars/misc/empty.png
+
+anim death2
+	delay 18
+	offset 80 128
+	jumpframe 0 0 0
+	@cmd spawnM "dragonhead" 0 48 0
+	frame data/chars/dragon/fall0.png
+	frame data/chars/dragon/fall1.png
+	frame data/chars/dragon/fall2.png
+	frame data/chars/dragon/decap_rest.png
+ offset 500 100
+ delay 11
+ move 0
+ @cmd goblinGate 104 "dragonhead"
+ frame data/chars/amiga_cleanup/dragon/death2/frame000.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame001.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame002.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame003.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame004.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame005.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame006.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame007.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame008.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame009.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame010.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame011.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame012.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame013.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame014.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame015.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame016.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame017.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame018.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame019.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame020.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame021.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame022.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame023.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame024.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame025.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame026.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame027.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame028.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame029.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame030.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame031.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame032.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame033.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame034.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame035.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame036.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame037.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame038.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame039.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame040.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame041.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame042.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame043.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame044.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame045.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame046.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame047.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame048.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame049.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame050.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame051.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame052.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame053.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame054.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame055.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame056.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame057.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame058.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame059.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame060.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame061.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame062.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame063.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame064.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame065.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame066.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame067.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame068.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame069.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame070.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame071.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame072.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame073.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame074.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame075.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame076.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame077.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame078.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame079.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame080.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame081.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame082.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame083.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame084.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame085.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame086.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame087.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame088.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame089.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame090.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame091.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame092.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame093.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame094.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame095.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame096.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame097.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame098.png
+ frame data/chars/amiga_cleanup/dragon/death2/frame099.png
+ delay 1
+ @cmd goblinFinish
+ frame data/chars/misc/empty.png
+
+anim death3
+	delay 18
+	offset 80 128
+	jumpframe 0 0 0
+	frame data/chars/dragon/fall0.png
+	frame data/chars/dragon/fall1.png
+	frame data/chars/dragon/fall2.png
+	frame data/chars/dragon/split_rest.png
+ offset 500 100
+ delay 11
+ move 0
+ @cmd goblinGate 95 ""
+ frame data/chars/amiga_cleanup/dragon/death3/frame000.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame001.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame002.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame003.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame004.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame005.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame006.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame007.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame008.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame009.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame010.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame011.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame012.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame013.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame014.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame015.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame016.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame017.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame018.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame019.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame020.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame021.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame022.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame023.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame024.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame025.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame026.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame027.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame028.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame029.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame030.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame031.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame032.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame033.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame034.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame035.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame036.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame037.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame038.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame039.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame040.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame041.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame042.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame043.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame044.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame045.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame046.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame047.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame048.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame049.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame050.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame051.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame052.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame053.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame054.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame055.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame056.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame057.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame058.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame059.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame060.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame061.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame062.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame063.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame064.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame065.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame066.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame067.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame068.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame069.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame070.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame071.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame072.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame073.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame074.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame075.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame076.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame077.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame078.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame079.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame080.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame081.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame082.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame083.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame084.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame085.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame086.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame087.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame088.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame089.png
+ frame data/chars/amiga_cleanup/dragon/death3/frame090.png
+ delay 1
+ @cmd goblinFinish
+ frame data/chars/misc/empty.png
+
+anim death4
+	delay 18
+	offset 80 128
+	jumpframe 0 0 0
+	frame data/chars/dragon/fall0.png
+	frame data/chars/dragon/fall1.png
+	frame data/chars/dragon/fall2.png
+	frame data/chars/dragon/split_rest.png
+ offset 500 100
+ delay 11
+ move 0
+ @cmd goblinGate 95 ""
+ frame data/chars/amiga_cleanup/dragon/death4/frame000.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame001.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame002.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame003.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame004.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame005.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame006.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame007.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame008.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame009.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame010.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame011.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame012.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame013.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame014.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame015.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame016.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame017.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame018.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame019.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame020.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame021.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame022.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame023.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame024.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame025.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame026.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame027.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame028.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame029.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame030.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame031.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame032.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame033.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame034.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame035.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame036.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame037.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame038.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame039.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame040.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame041.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame042.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame043.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame044.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame045.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame046.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame047.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame048.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame049.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame050.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame051.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame052.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame053.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame054.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame055.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame056.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame057.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame058.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame059.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame060.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame061.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame062.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame063.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame064.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame065.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame066.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame067.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame068.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame069.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame070.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame071.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame072.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame073.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame074.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame075.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame076.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame077.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame078.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame079.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame080.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame081.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame082.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame083.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame084.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame085.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame086.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame087.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame088.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame089.png
+ frame data/chars/amiga_cleanup/dragon/death4/frame090.png
+ delay 1
+ @cmd goblinFinish
+ frame data/chars/misc/empty.png
+
+anim	slide #roll
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+ frame data/chars/dragon/pose27.png
+	hitflash basic
+ bbox 54 46 56 82
+ attack1 56 98 37 30 0 1 0 0 0 0
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose29.png
+
+
+anim	freespecial12 #roll front
+@script
+  if(frame==1){
+    void self = getlocalvar("self");
+    int r = rand()%30;
+
+    if(r > 0){
+      performattack(self, openborconstant("ANI_FREESPECIAL13"));
+    }
+  }
+@end_script
+	range	0 -100
+ offset 80 128
+	delay	1
+	jumpframe 1 0 2 1
+	sound	data/sounds/roll.wav
+ frame data/chars/dragon/pose27.png
+	delay	10
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose29.png
+
+
+anim	freespecial13 #roll back
+	range	0 -100
+ offset 80 128
+	delay	1
+	flipframe 2
+	jumpframe 1 0 -2 1
+	sound	data/sounds/roll.wav
+ frame data/chars/dragon/pose29.png
+	delay	10
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose28.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose27.png
+
+
+anim	freespecial16 #Esquive front
+	range	0 -100
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+	jumpframe 0 0 2 1
+	sound	data/sounds/roll.wav
+ frame data/chars/dragon/pose27.png
+ bbox 54 46 56 82
+	hitflash basic
+ attack1 56 98 37 30 0 1 0 0 0 0
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ bbox 54 46 56 82
+	@cmd	beidle
+ frame data/chars/dragon/pose29.png
+
+
+anim	freespecial17 #Esquive back
+	range	0 -100
+ offset 80 128
+ bbox 54 46 56 82
+	delay	10
+	flipframe 1
+	jumpframe 0 0 -2 1
+	hitflash basic
+	sound	data/sounds/roll.wav
+ frame data/chars/dragon/pose29.png
+ bbox 54 46 56 82
+ attack1 56 98 37 30 0 1 0 0 0 0
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose29.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ frame data/chars/dragon/pose27.png
+ bbox 54 46 56 82
+	@cmd	beidle
+ frame data/chars/dragon/pose27.png
+
+
+
+anim	block
+	range	0 100
+	delay	50
+ offset 80 128
+ bbox 54 46 56 82
+ frame data/chars/dragon/pose04.png
+
+
+anim follow19 # Crouched combo hit 2/3
+	delay 6
+ offset 80 128
+ bbox 53 80 58 48
+	hitflash Basic
+	hitfx data/sounds/hit1.wav
+	sound data/sounds/hit1.wav
+	attack1 0
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ attack1 88 90 54 25 10 0 0 0 0 0
+ frame data/chars/dragon/pose02.png
+ frame data/chars/dragon/pose02.png
+	attack1 0
+ frame data/chars/dragon/pose03.png
+ frame data/chars/dragon/pose03.png
+
+anim follow20 # Crouched combo hit 3/3
+	delay 6
+ offset 80 128
+ bbox 53 80 58 48
+	hitflash Basic
+	hitfx data/sounds/hit1.wav
+	sound data/sounds/hit1.wav
+	attack1 0
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ frame data/chars/dragon/pose01.png
+ attack1 88 90 54 25 10 1 0 0 0 0
+ frame data/chars/dragon/pose02.png
+ frame data/chars/dragon/pose02.png
+	attack1 0
+ frame data/chars/dragon/pose03.png
+ frame data/chars/dragon/pose03.png
+
+
+anim follow10
+ offset 80 128
+ delay 8
+ bbox 53 80 58 48
+ frame data/chars/dragon/pose05.png
+
+anim follow11
+ offset 80 128
+ delay 8
+ bbox 53 80 58 48
+ frame data/chars/dragon/pose05.png
+
+anim follow21 # Aerial spin grounded impact and recovery
+ loop 0
+ offset 80 128
+ bbox 54 46 56 82
+ delay 6
+ quakeframe 0 2 2
+ sound data/sounds/hit1.wav
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ attack1 54 90 108 40 18 1 0 0 0 0
+ dropv 1.8 0.6 0
+ frame data/chars/dragon/pose12.png
+ attack1 0
+ delay 5
+ frame data/chars/dragon/pose12.png
+ offset 80 128
+ delay 8
+ @cmd aerialSpinEnd
+ frame data/chars/dragon/native00.png
+
+
+anim follow22 # Running A2 hop 2
+ loop 1 2 3
+ fastattack 0
+ forcedirection -1
+ offset 80 128
+ bbox 54 46 56 82
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ attack1 0
+ delay 6
+ @cmd hoppingStart 2
+ frame data/chars/dragon/pose13.png
+ delay 8
+ @cmd hoppingContact
+ sound data/sounds/hii.wav
+ attack1 66 60 86 60 6 0 0 0 0 0
+ dropv 1.8 0.6 0
+ frame data/chars/dragon/pose14.png
+ attack1 0
+ delay 5
+ frame data/chars/dragon/pose13.png
+ frame data/chars/dragon/pose14.png
+
+anim follow23 # Running A2 hop 3
+ loop 1 2 3
+ fastattack 0
+ forcedirection -1
+ offset 80 128
+ bbox 54 46 56 82
+ hitflash Basic
+ hitfx data/sounds/hit1.wav
+ attack1 0
+ delay 6
+ @cmd hoppingStart 3
+ frame data/chars/dragon/pose13.png
+ delay 8
+ @cmd hoppingContact
+ sound data/sounds/hii.wav
+ attack1 66 60 86 60 10 1 0 0 0 0
+ dropv 1.8 0.6 0
+ frame data/chars/dragon/pose14.png
+ attack1 0
+ delay 5
+ frame data/chars/dragon/pose13.png
+ frame data/chars/dragon/pose14.png
+
+anim follow24 # Grounded recovery
+ loop 0
+ offset 80 128
+ bbox 54 46 56 82
+ attack1 0
+ delay 8
+ @cmd hoppingEnd
+ frame data/chars/dragon/pose15.png
+ frame data/chars/dragon/pose15.png
+
+anim freespecial18 # Low guard
+ loop 0
+ offset 80 128
+ bbox 53 80 58 48
+ delay 10
+ @cmd dragonGuard 1
+ frame data/chars/dragon/pose05.png
+ frame data/chars/dragon/pose05.png
+ frame data/chars/dragon/pose05.png
+ @cmd dragonGuard 0
+ frame data/chars/dragon/pose05.png
