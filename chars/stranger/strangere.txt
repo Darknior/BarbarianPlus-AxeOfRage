@@ -93,7 +93,7 @@ anim	faint
 	frame	data/chars/stranger/faint2.png
 	frame	data/chars/stranger/faint3.png
 	frame	data/chars/stranger/faint2.png
-	
+
 anim	victory
 	delay	30
 	offset	21 68
@@ -101,7 +101,7 @@ anim	victory
 	frame	data/chars/stranger/win2.png
 	frame	data/chars/stranger/win3.png
 	frame	data/chars/stranger/win4.png
-	
+
 anim	walk
 @script
   HealAct(20, 100, "ANI_FOLLOW8");
@@ -130,7 +130,7 @@ anim	run
 	frame	data/chars/stranger/run6.png
 	frame	data/chars/stranger/run7.png
 	frame	data/chars/stranger/run8.png
-	
+
 anim	follow3 # taunt
 	delay	20
 	offset	21 68
@@ -138,7 +138,7 @@ anim	follow3 # taunt
 	frame	data/chars/stranger/win2.png
 	frame	data/chars/stranger/win3.png
 	frame	data/chars/stranger/win4.png
-		
+
 anim	freespecial14 #Head Chop
 	range 50 80
 	rangea 0 100
@@ -148,7 +148,7 @@ anim	freespecial14 #Head Chop
 	forcedirection -1
 	@cmd	dasher 1 0 0 1
 	sound	data/sounds/slash.wav
-	hitfx	data/sounds/blood.wav	
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/headchop1.png
 	frame	data/chars/stranger/headchop2.png
 	frame	data/chars/stranger/headchop3.png
@@ -170,7 +170,7 @@ anim	freespecial14 #Head Chop
 anim	freespecial5 #Dropkick runattack
 	delay	10
 	offset	18 65
-	jumpframe 0 0 2 
+	jumpframe 0 0 2
 	forcedirection -1
 	hitflash Basic
 	hitfx	data/sounds/blood.wav
@@ -217,7 +217,7 @@ anim	ducking
 	offset	18 63
 	bbox 3 12 26 51
 	cancel 0 5 0  A2 freespecial2
-	frame	data/chars/stranger/ducking.png	
+	frame	data/chars/stranger/ducking.png
 	delay	6
 	frame	data/chars/stranger/ducking.png
 
@@ -240,7 +240,7 @@ anim	duckattack #Crouching Slash
 	delay	10
 	offset	24 62
 	bbox 7 21 35 42
-	hitflash blooddown	
+	hitflash blooddown
 	sound	data/sounds/slash.wav
 	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/duckattack1.png
@@ -281,8 +281,8 @@ anim	freespecial11 #Chest Chop
 	delay 6
 	@cmd	dasher 1 0 0 1
 	hitflash blooddown
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/chestchop1.png
 	frame	data/chars/stranger/chestchop2.png
 	frame	data/chars/stranger/chestchop3.png
@@ -329,9 +329,9 @@ anim	jumpattack #Static Jump Sword
 	bbox 10 2 25 41
 	cancel	0 5 0 a2 freespecial3
 	delay	6
-	hitflash bloodup	
+	hitflash bloodup
 	sound	data/sounds/slash.wav
-	hitfx	data/sounds/blood.wav	
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/jump2.png
 	offset	18 78
 	bbox 10 14 25 41
@@ -355,9 +355,9 @@ anim	jumpforward #Front Jump Punch
 	bbox 10 2 25 41
 	cancel	0 5 0 a2 freespecial3
 	delay	6
-	hitflash bloodup	
+	hitflash bloodup
 	sound	data/sounds/slash.wav
-	hitfx	data/sounds/blood.wav	
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/jump2.png
 	offset	18 78
 	bbox 10 14 25 41
@@ -382,8 +382,8 @@ anim 	freespecial3 #Static Jump special
 	bbox 10 17 25 41
 	delay	4
 	hitflash bloodup
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/jumpspecial1.png
 	frame	data/chars/stranger/jumpspecial2.png
 	attack1 24 45 20 35 10 1 0 0 0 0
@@ -410,7 +410,7 @@ anim	freespecial6 #Jump
   if(frame==1){
     void self = getlocalvar("self");
     changeentityproperty(self, "aiflag", "jumping", 1);
-    changeentityproperty(self, "takeaction", "common_jump");   
+    changeentityproperty(self, "takeaction", "common_jump");
   }
 @end_script
 	delay	1
@@ -444,9 +444,9 @@ anim	jumpforward #Front Jump Punch
 	bbox 10 2 25 41
 	cancel	0 5 0 a2 freespecial3
 	delay	6
-	hitflash bloodup	
+	hitflash bloodup
 	sound	data/sounds/slash.wav
-	hitfx	data/sounds/blood.wav	
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/jump2.png
 	offset	18 78
 	bbox 10 14 25 41
@@ -472,8 +472,8 @@ anim	freespecial4 #Jump Front special
 	bbox 10 17 25 41
 	delay	12
 	hitflash bloodup
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/jumpspecial1.png
 	frame	data/chars/stranger/jumpspecial2.png
 	attack1 24 45 20 35 10 1 0 0 0 0
@@ -485,7 +485,7 @@ anim	freespecial4 #Jump Front special
 	offset	18 61
 	bbox 10 2 25 41
 	frame	data/chars/stranger/jump2.png
-	
+
 anim	runjumpattack #Vertical Split
 	fastattack	1
 	jugglecost	5
@@ -496,7 +496,7 @@ anim	runjumpattack #Vertical Split
 	delay	4
 	hitflash bloodup
 	sound	data/sounds/slash.wav
-	hitfx	data/sounds/blood.wav	
+	hitfx	data/sounds/blood.wav
 	offset	18 78
 	bbox 10 14 25 41
 	frame	data/chars/stranger/verticalchop1.png
@@ -529,8 +529,8 @@ anim	attack1 #Sword Combo 1
 	delay	6
 	offset	29 76
 	bbox 18 18 28 58
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/attack1.png
 	frame	data/chars/stranger/attack2.png
 	frame	data/chars/stranger/attack3.png
@@ -540,14 +540,14 @@ anim	attack1 #Sword Combo 1
 	attack1 0 0 0 0 0 0 0 0 0 0
 	frame	data/chars/stranger/attack2.png
 	frame	data/chars/stranger/attack1.png
-	
+
 anim	attack2 #Sword Combo 2
 	delay	6
 	offset	29 76
 	bbox 18 18 28 58
-	hitflash blooddown	
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	hitflash blooddown
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/attack5.png
 	frame	data/chars/stranger/attack6.png
 	frame	data/chars/stranger/attack7.png
@@ -556,15 +556,15 @@ anim	attack2 #Sword Combo 2
 	frame	data/chars/stranger/attack8.png
 	attack1 0 0 0 0 0 0 0 0 0 0
 	frame	data/chars/stranger/attack6.png
-	frame	data/chars/stranger/attack5.png	
-	
+	frame	data/chars/stranger/attack5.png
+
 anim	attack3 #Sword Combo 3
 	delay	6
 	offset	29 76
 	bbox 18 18 28 58
-	hitflash bloodup	
-	sound	data/sounds/slash.wav	
-	hitfx	data/sounds/blood.wav	
+	hitflash bloodup
+	sound	data/sounds/slash.wav
+	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/attack9.png
 	frame	data/chars/stranger/attack10.png
 	frame	data/chars/stranger/attack11.png
@@ -573,30 +573,30 @@ anim	attack3 #Sword Combo 3
 	frame	data/chars/stranger/attack12.png
 	attack1 0 0 0 0 0 0 0 0 0 0
 	frame	data/chars/stranger/attack10.png
-	frame	data/chars/stranger/attack9.png	
+	frame	data/chars/stranger/attack9.png
 
 
 anim	freespecial #Web of Death
 	delay	10
 	offset	18 73
 	bbox 3 14 28 61
-	sound	data/sounds/hii.wav	
+	sound	data/sounds/hii.wav
 	hitfx	data/sounds/blood.wav
 	frame	data/chars/stranger/webdeath1.png
 	attack1 20 16 38 24 10 0 0 0 0 0
 	frame	data/chars/stranger/webdeath2.png
-	sound	data/sounds/slash.wav	
+	sound	data/sounds/slash.wav
 	attack1 0 0 0 0 0 0 0 0 0 0
 	attack1 20 25 38 27 10 0 0 0 0 0
 	frame	data/chars/stranger/webdeath3.png
 	attack1 0 0 0 0 0 0 0 0 0 0
 	frame	data/chars/stranger/webdeath4.png
-	sound	data/sounds/slash.wav	
+	sound	data/sounds/slash.wav
 	frame	data/chars/stranger/webdeath5.png
 	attack1 20 0 38 29 10 0 0 0 0 0
 	frame	data/chars/stranger/webdeath6.png
 	attack1 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/slash.wav	
+	sound	data/sounds/slash.wav
 	attack1 20 25 38 27 10 0 0 0 0 0
 	frame	data/chars/stranger/webdeath7.png
 	attack1 0 0 0 0 0 0 0 0 0 0
@@ -630,7 +630,7 @@ anim	freespecial9 #Kick
 	offset	18 64
 	bbox 3 2 26 62
 	hitflash basic
-	sound	data/sounds/hii.wav	
+	sound	data/sounds/hii.wav
 	frame	data/chars/stranger/kick1.png
 	attack1 68 33 70 20 10 0 0 0 0 0
 	frame	data/chars/stranger/kick2.png
@@ -651,7 +651,7 @@ anim	pain
     }
   }
 @end_script
-	jumpframe 0 0 0	
+	jumpframe 0 0 0
 	delay	12
 	sound	data/sounds/hit2.wav
 	offset	18 61
@@ -740,7 +740,7 @@ anim	death
 	delay	24
 	jumpframe 0 0 0
 	offset	16 62
-	sound	data/sounds/hahaha.wav	
+	sound	data/sounds/hahaha.wav
 	frame	data/chars/stranger/backfall1.png
 	frame	data/chars/stranger/backfall2.png
 	frame	data/chars/stranger/backfall3.png
@@ -748,13 +748,13 @@ anim	death
 	frame	data/chars/stranger/backfall5.png
 	frame	data/chars/stranger/backfall6.png
 	frame	data/chars/stranger/backfall7.png
-	
+
 anim	death2
 	delay	30
 	jumpframe 0 0 0
 	offset	16 62
 	spawnframe 0 0 0 0 0
-	
+
 	sound	data/sounds/hahaha.wav
 	frame	data/chars/stranger/decap1.png
 	frame	data/chars/stranger/decap2.png
@@ -791,7 +791,7 @@ anim	death3
 	offset	16 62
 	spawnframe 0 0 0 0 0
 
-	sound	data/sounds/hahaha.wav		
+	sound	data/sounds/hahaha.wav
 	frame	data/chars/stranger/chestrip1.png
 	frame	data/chars/stranger/chestrip2.png
 	frame	data/chars/stranger/chestrip3.png
@@ -855,7 +855,7 @@ anim	death4
 	frame	data/chars/stranger/verticaldeath24.png
 	frame	data/chars/stranger/verticaldeath25.png
 	frame	data/chars/misc/empty.png
-	
+
 
 anim	slide #roll
 	offset	20 43
@@ -963,7 +963,7 @@ anim	freespecial17 #Esquive back
 	delay	10
 	flipframe 1
 	jumpframe 0 0 -2 1
-	hitflash basic	
+	hitflash basic
 	sound	data/sounds/roll.wav
 	frame	data/chars/stranger/roll1.png
 	bbox 0 19 31 24
