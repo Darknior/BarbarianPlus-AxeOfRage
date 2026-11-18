@@ -31,10 +31,10 @@ alias	Player
 coords	30 205 0
 at      0
 
-spawn	gorthE
+spawn StrangerE
 spawnscript data/scripts/enHUD2.c
-alias	Theoderic
+alias	Stranger
 boss 1
-map		6
+map 0
 coords	320 178 0
 at      0

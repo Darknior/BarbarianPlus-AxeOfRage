@@ -242,3 +242,7 @@ know	Vanager2	data/bgs/select/vanager2.txt
 load DragonE data/chars/dragon/dragone.txt
 load dragonhead data/chars/dragon/dragonhead.txt
 load DragonIconer data/chars/dragon/dragoniconer.txt
+
+# Stranger, replacing the repeated Gorth opponent at Castle
+load StrangerE data/chars/stranger/strangere.txt
+load StrangerIconer data/chars/stranger/iconer.txt

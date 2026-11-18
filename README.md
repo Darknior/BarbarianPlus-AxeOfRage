@@ -72,3 +72,7 @@ You can move the character around the arena and perform jumps and rolls to avoid
 - First initial demo using "Tenshu" sprites he has kindly accepted to use as a base.
 The Barbarian+ facebook page: https://www.facebook.com/BarbarianPlus/
 
+
+## Stranger opponent
+
+Stranger replaces Theoderic, the repeated Gorth opponent in the Castle duel. Frames are adapted from the supplied `Stranger.png` sheet, with generated guard, roll, knockdown and victory poses, using the Gorth palette. The opponent keeps the existing enemy AI and attack timing. Fatal hits use knockdown poses. The Castle encounter is shared by stage selection and Tournament. Asset references and palette consistency have been checked. In-engine gameplay validation is pending.

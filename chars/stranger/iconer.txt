@@ -1,0 +1,9 @@
+name StrangerIconer
+type panel
+facing 1
+setlayer 9999
+anim idle
+ loop 1
+ delay 100
+ offset 0 0
+ frame data/chars/stranger/icon.png

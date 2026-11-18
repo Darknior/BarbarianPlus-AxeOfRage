@@ -16,6 +16,9 @@ void spawnM(void vName, float fX, float fY, float fZ)
     if (vName == "Iconer" && Par != NULL() && getentityproperty(Par, "defaultname") == "DragonE") {
         vName = "DragonIconer";
     }
+    if (vName == "Iconer" && Par != NULL() && getentityproperty(Par, "defaultname") == "StrangerE") {
+        vName = "StrangerIconer";
+    }
     vSpawn = spawn01(vName, fX, fY, fZ); //Spawn in entity.
 
 	changeentityproperty(vSpawn, "map", iMap);
